@@ -6,9 +6,9 @@
     <meta name="description" content="স্কাউট আন্দোলনের প্রতিষ্ঠাতা রবার্ট ব্যাডেন-পাওয়েলের প্রতি শ্রদ্ধাঞ্জলি, মোঃ আশফাকুর রহমান তানিম কর্তৃক। তাঁর জীবন, সামরিক কর্মজীবন এবং উত্তরাধিকার সম্পর্কে জানুন।">
     <meta name="keywords" content="রবার্ট ব্যাডেন-পাওয়েল, স্কাউটিং, বয় স্কাউটস, গার্ল গাইডস, শ্রদ্ধাঞ্জলি, মোঃ আশফাকুর রহমান তানিম, Robert Baden-Powell, Scouting, Boy Scouts, Girl Guides, Tribute, Md. Ashfaqur Rahman Tanim">
     <meta name="author" content="Md. Ashfaqur Rahman Tanim">
-    <title>রবার্ট স্টিফেনস স্মিথ লর্ড ব্যাডেন-পাওয়েলকে শ্রদ্ধাঞ্জলি - মোঃ আশফাকুর রহমান তানিম</title>
+    <title>রবার্ট ব্যাডেন-পাওয়েলকে শ্রদ্ধাঞ্জলি - মোঃ আশফাকুর রহমান তানিম</title>
     <link rel="canonical" href="https://yourwebsite.com/baden-powell-tribute"> <!-- Replace with your actual URL -->
-    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm_5tFfqd5iMTdDh2nQQuPxylvRC7GDcEV2DmUrWkIj2zCJMHFAEqMcVnVyuzzrlP9B8ilzo0qhgbSz8BeGtGpqzbjllhpf9OEfDi-NjGYSTLWk5aihJnLX8NpQber6KhXmphcuq1CF3THhTJRVFzz5A8pZxG1uz0av8mvb3A5Y4QdoWboyWZu8E-yKP8/s1240/1000035400.png" type="image/png">
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_cxCZ222PmFnHhuTXn8pqevPBJJI2WSreFF-9cnLRh0Tm8Um5fhVVIxgP-dNZAOJfEnR9xz_8fzdK32b6u9lYAPISnz5BfC2hXkhCvdlA0y3IpOf77mgznJmbFcl5lqCvmyuvPlBYf7g-fzVZ1N_wdkD96zD_FjGTBW2C9Bxa0j_QTuD9T9zLUNlB-S8/s416/1000040326.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -634,6 +634,27 @@
             animation-delay: 0.3s;
         }
 
+        /* Flex container for content inside section cards */
+        .section-content-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .section-content-flex img {
+            margin: 0; /* Override default margin for img */
+            flex-shrink: 0; /* Prevent image from shrinking */
+            width: 200px; /* Fixed width for desktop */
+            height: 250px; /* Fixed height for desktop */
+            object-fit: cover;
+        }
+
+        .section-content-flex .text-content {
+            flex-grow: 1;
+            min-width: 300px; /* Allow text to wrap if necessary */
+        }
+
         /* Responsive Design */
         @media (max-width: 900px) {
             .header {
@@ -684,15 +705,15 @@
             .section-card {
                 padding: 25px;
             }
-            .section-card > div { /* For flex containers within section-card */
+            /* Adjust image and text for smaller screens */
+            .section-content-flex {
                 flex-direction: column;
             }
-            .section-card img {
-                margin: 15px auto;
-                display: block;
-            }
-             .section-card .text-content {
-                width: 100%;
+            .section-content-flex img {
+                width: 100%; /* Full width on mobile */
+                max-width: 300px; /* Max width for images on smaller screens */
+                height: auto; /* Auto height to maintain aspect ratio */
+                margin: 15px auto; /* Center image */
             }
         }
 
@@ -779,9 +800,9 @@
         <div class="container main-content">
             <section id="about" class="section-card">
                 <h2 data-en="Early Life and Inspiration" data-bn="প্রাথমিক জীবন ও অনুপ্রেরণা">প্রাথমিক জীবন ও অনুপ্রেরণা</h2>
-                <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Robert_Baden-Powell_Vanity_Fair_19_April_1911.jpg/250px-Robert_Baden-Powell_Vanity_Fair_19_April_1911.jpg" loading="lazy" alt="Baden-Powell in 1911" style="max-width: 200px; max-height: 250px; object-fit: cover; flex-shrink: 0;">
-                    <div class="text-content" style="flex-grow: 1;">
+                <div class="section-content-flex">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Robert_Baden-Powell_Vanity_Fair_19_April_1911.jpg/250px-Robert_Baden-Powell_Vanity_Fair_19_April_1911.jpg" loading="lazy" alt="Baden-Powell in 1911">
+                    <div class="text-content">
                         <p data-en="Robert Stephenson Smyth Lord Baden-Powell was born on 22 February 1857, in Paddington, London, Robert Baden-Powell was destined for a life of adventure and leadership. The penultimate son of Professor Baden Powell and Henrietta Grace Smyth, he grew up in a household that valued intellect and resilience. After his father's early passing, his mother ensured her children were educated and encouraged their independent spirit." data-bn="রবার্ট স্টিফেনসন স্মিথ পাওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।">রবার্ট স্টিফেনসন স্মিথ পাওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।</p>
                         <p data-en="Educated at Charterhouse School, Baden-Powell developed a keen interest in outdoor skills, often exploring the nearby woods, honing his abilities in stalking and cooking while evading teachers. These early experiences laid the foundation for his later philosophies on self-reliance and nature." data-bn="চার্টারহাউস স্কুলে পড়াশোনা করার সময়, ব্যাডেন-পাওয়েল আউটডোর দক্ষতার প্রতি গভীর আগ্রহ তৈরি করেন, প্রায়শই কাছাকাছি বনভূমি অন্বেষণ করতেন, শিক্ষকদের এড়িয়ে চলার সময় শিকার এবং রান্নার দক্ষতা অর্জন করতেন। এই প্রাথমিক অভিজ্ঞতাগুলি আত্মনির্ভরশীলতা এবং প্রকৃতি সম্পর্কে তার পরবর্তী দর্শনের ভিত্তি স্থাপন করেছিল।">চার্টারহাউস স্কুলে পড়াশোনা করার সময়, ব্যাডেন-পাওয়েল আউটডোর দক্ষতার প্রতি গভীর আগ্রহ তৈরি করেন, প্রায়শই কাছাকাছি বনভূমি অন্বেষণ করতেন, শিক্ষকদের এড়িয়ে চলার সময় শিকার এবং রান্নার দক্ষতা অর্জন করতেন। এই প্রাথমিক অভিজ্ঞতাগুলি আত্মনির্ভরশীলতা এবং প্রকৃতি সম্পর্কে তার পরবর্তী দর্শনের ভিত্তি স্থাপন করেছিল।</p>
                     </div>
@@ -790,21 +811,21 @@
 
             <section id="military-career" class="section-card">
                 <h2 data-en="Distinguished Military Career" data-bn="বিশিষ্ট সামরিক কর্মজীবন">বিশিষ্ট সামরিক কর্মজীবন</h2>
-                <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
-                    <div class="text-content" style="flex-grow: 1;">
+                <div class="section-content-flex">
+                    <div class="text-content">
                         <p data-en="Baden-Powell's early military career included service in India with the 13th Hussars in 1876. He later served in Africa, learning scouting skills from the Zulu people in the 1880s. In 1896, he served in the Second Matabele War where he met American scout Frederick Russell Burnham, who introduced him to woodcraft and the practical uses of the campaign hat and neckerchief - elements that would later become integral to Scouting." data-bn="ব্যাডেন-পাওয়েলের প্রাথমিক সামরিক কর্মজীবনে ১৮৭৬ সালে ভারতে ১৩তম হুসার্স-এ তার দায়িত্ব অন্তর্ভুক্ত ছিল। তিনি পরে আফ্রিকায় দায়িত্ব পালন করেন, যেখানে তিনি ১৮৮০-এর দশকে জুলু জনগণের কাছ থেকে স্কাউটিং দক্ষতা শেখেন। ১৮৯৬ সালে, তিনি দ্বিতীয় মাতাবেলে যুদ্ধে দায়িত্ব পালন করেন যেখানে তিনি আমেরিকান স্কাউট ফ্রেডেরিক রাসেল বার্নহামের সাথে দেখা হন, যিনি তাকে উডক্রাফ্ট এবং ক্যাম্পেইন হ্যাট ও নেকারচিফের ব্যবহারিক ব্যবহারের সাথে পরিচয় করিয়ে দেন -এই উপাদানগুলো পরে স্কাউটিং-এর অবিচ্ছেদ্য অংশ হয়ে ওঠে।">ব্যাডেন-পাওয়েলের প্রাথমিক সামরিক কর্মজীবনে ১৮৭৬ সালে ভারতে ১৩তম হুসার্স-এ তার দায়িত্ব অন্তর্ভুক্ত ছিল। তিনি পরে আফ্রিকায় দায়িত্ব পালন করেন, যেখানে তিনি ১৮৮০-এর দশকে জুলু জনগণের কাছ থেকে স্কাউটিং দক্ষতা শেখেন। ১৮৯৬ সালে, তিনি দ্বিতীয় মাতাবেলে যুদ্ধে দায়িত্ব পালন করেন যেখানে তিনি আমেরিকান স্কাউট ফ্রেডেরিক রাসেল বার্নহামের সাথে দেখা হন, যিনি তাকে উডক্রাফ্ট এবং ক্যাম্পেইন হ্যাট ও নেকারচিফের ব্যবহারিক ব্যবহারের সাথে পরিচয় করিয়ে দেন -এই উপাদানগুলো পরে স্কাউটিং-এর অবিচ্ছেদ্য অংশ হয়ে ওঠে।</p>
                         <p data-en="During the 217-day Siege of Mafeking, Baden-Powell employed ingenious military deceptions including fake minefields and soldiers pretending to avoid non-existent barbed wire. He also used an armored locomotive loaded with sharpshooters to attack Boer encampments. His leadership during the siege made him a national hero in Britain." data-bn="২১৭ দিনব্যাপী মাফেকিং অবরোধের সময়, ব্যাডেন-পাওয়েল উদ্ভাবনী সামরিক কৌশল employed করেছিলেন যার মধ্যে নকল মাইনফিল্ড এবং অস্তিত্বহীন barbed wire এড়িয়ে চলার ভান করা soldiers অন্তর্ভুক্ত ছিল। তিনি বোর শিবিরে আক্রমণ করার জন্য sharpশুটার-ভরা একটি সাঁজোয়া লোকোমোটিভও ব্যবহার করেছিলেন। অবরোধের সময় তার নেতৃত্ব তাকে ব্রিটেনে একটি জাতীয় বীরে পরিণত করেছিল।">২১৭ দিনব্যাপী মাফেকিং অবরোধের সময়, ব্যাডেন-পাওয়েল উদ্ভাবনী সামরিক কৌশল employed করেছিলেন যার মধ্যে নকল মাইনফিল্ড এবং অস্তিত্বহীন barbed wire এড়িয়ে চলার ভান করা soldiers অন্তর্ভুক্ত ছিল। তিনি বোর শিবিরে আক্রমণ করার জন্য sharpশুটার-ভরা একটি সাঁজোয়া লোকোমোটিভও ব্যবহার করেছিলেন। অবরোধের সময় তার নেতৃত্ব তাকে ব্রিটেনে একটি জাতীয় বীরে পরিণত করেছিল।</p>
                         <p data-en="He retired from the army in 1910 as a Lieutenant-General, dedicating his life fully to the burgeoning Scout Movement." data-bn="তিনি ১৯১০ সালে লেফটেন্যান্ট-জেনারেল হিসাবে সেনাবাহিনী থেকে অবসর গ্রহণ করেন, এবং তার জীবন সম্পূর্ণরূপে ক্রমবর্ধমান স্কাউট আন্দোলনের জন্য উৎসর্গ করেন।">তিনি ১৯১০ সালে লেফটেন্যান্ট-জেনারেল হিসাবে সেনাবাহিনী থেকে অবসর গ্রহণ করেন, এবং তার জীবন সম্পূর্ণরূপে ক্রমবর্ধমান স্কাউট আন্দোলনের জন্য উৎসর্গ করেন।</p>
                     </div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SA-S654b-Boer_War-Mafeking-10_Shillings_%281900%29.jpg/250px-SA-S654b-Boer_War-Mafeking-10_Shillings_%281900%29.jpg" loading="lazy" alt="Siege of Mafeking currency" style="max-width: 200px; max-height: 250px; object-fit: cover; flex-shrink: 0;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SA-S654b-Boer_War-Mafeking-10_Shillings_%281900%29.jpg/250px-SA-S654b-Boer_War-Mafeking-10_Shillings_%281900%29.jpg" loading="lazy" alt="Siege of Mafeking currency">
                 </div>
             </section>
 
             <section id="scout-movement" class="section-card">
                 <h2 data-en="Founding the Scout Movement" data-bn="স্কাউট আন্দোলনের প্রতিষ্ঠা">স্কাউট আন্দোলনের প্রতিষ্ঠা</h2>
-                <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Butt%2C_Baden-Powell%2C_Taft%2C_Bryce2.jpg/250px-Butt%2C_Baden-Powell%2C_Taft%2C_Bryce2.jpg" loading="lazy" alt="Reviewing Boy Scouts" style="max-width: 200px; max-height: 250px; object-fit: cover; flex-shrink: 0;">
-                    <div class="text-content" style="flex-grow: 1;">
+                <div class="section-content-flex">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Butt%2C_Baden-Powell%2C_Taft%2C_Bryce2.jpg/250px-Butt%2C_Baden-Powell%2C_Taft%2C_Bryce2.jpg" loading="lazy" alt="Reviewing Boy Scouts">
+                    <div class="text-content">
                         <p data-en="Upon his return from Africa, Baden-Powell discovered that his military manual, <em>Aids to Scouting</em>, had become unexpectedly popular among youth organizations. Inspired by this, and encouraged by figures like Ernest Thompson Seton, he reimagined his ideas for young people." data-bn="আফ্রিকা থেকে ফিরে আসার পর, ব্যাডেন-পাওয়েল দেখতে পান যে তার সামরিক ম্যানুয়াল, <em>এইডস টু স্কাউটিং</em>, যুব সংগঠনগুলির মধ্যে অপ্রত্যাশিতভাবে জনপ্রিয় হয়ে উঠেছে। এর দ্বারা অনুপ্রাণিত হয়ে, এবং আর্নেস্ট থম্পসন সেটনের মতো ব্যক্তিদের দ্বারা উৎসাহিত হয়ে, তিনি তরুণদের জন্য তার ধারণাগুলিকে নতুন করে কল্পনা করেন।">আফ্রিকা থেকে ফিরে আসার পর, ব্যাডেন-পাওয়েল দেখতে পান যে তার সামরিক ম্যানুয়াল, <em>এইডস টু স্কাউটিং</em>, যুব সংগঠনগুলির মধ্যে অপ্রত্যাশিতভাবে জনপ্রিয় হয়ে উঠেছে। এর দ্বারা অনুপ্রাণিত হয়ে, এবং আর্নেস্ট থম্পসন সেটনের মতো ব্যক্তিদের দ্বারা উৎসাহিত হয়ে, তিনি তরুণদের জন্য তার ধারণাগুলিকে নতুন করে কল্পনা করেন।</p>
                         <p data-en="In August 1907, he organized an experimental camp on Brownsea Island with about twenty boys, testing his methods for character development, outdoor skills, and citizenship. This camp is widely regarded as the beginning of the Scout Movement." data-bn="১৯০৭ সালের আগস্ট মাসে, তিনি ব্রাউনসি দ্বীপে প্রায় বিশ জন ছেলেকে নিয়ে একটি পরীক্ষামূলক ক্যাম্পের আয়োজন করেন, যেখানে চরিত্র গঠন, আউটডোর দক্ষতা এবং নাগরিকত্বের জন্য তার পদ্ধতিগুলি পরীক্ষা করা হয়। এই ক্যাম্পটিকে স্কাউট আন্দোলনের সূচনা হিসাবে ব্যাপকভাবে বিবেচনা করা হয়।">১৯০৭ সালের আগস্ট মাসে, তিনি ব্রাউনসি দ্বীপে প্রায় বিশ জন ছেলেকে নিয়ে একটি পরীক্ষামূলক ক্যাম্পের আয়োজন করেন, যেখানে চরিত্র গঠন, আউটডোর দক্ষতা এবং নাগরিকত্বের জন্য তার পদ্ধতিগুলি পরীক্ষা করা হয়। এই ক্যাম্পটিকে স্কাউট আন্দোলনের সূচনা হিসাবে ব্যাপকভাবে বিবেচনা করা হয়।</p>
                         <p data-en="In 1908, he published <a href='https://en.wikipedia.org/wiki/Scouting_for_Boys' target='_blank' style='color: var(--accent-color); text-decoration: none;'><em>Scouting for Boys</em></a>, which quickly became a global phenomenon. The movement grew organically, leading to the formation of the Boy Scouts Association. Recognizing the enthusiasm of girls, he also co-founded The Girl Guides Association with his sister Agnes in 1910. By 1939, Scouting had reached over 3.3 million young people in 32 countries, a testament to his enduring vision." data-bn="১৯০৮ সালে, তিনি <a href='https://en.wikipedia.org/wiki/Scouting_for_Boys' target='_blank' style='color: var(--accent-color); text-decoration: none;'><em>স্কাউটিং ফর বয়েজ</em></a> প্রকাশ করেন, যা দ্রুত বিশ্বব্যাপী জনপ্রিয় হয়ে ওঠে। আন্দোলনটি স্বতঃস্ফূর্তভাবে বৃদ্ধি পায়, যার ফলে বয় স্কাউটস অ্যাসোসিয়েশন গঠিত হয়। মেয়েদের উৎসাহ দেখে, তিনি ১৯১০ সালে তার বোন অ্যাগনেস-এর সাথে গার্ল গাইডস অ্যাসোসিয়েশনও সহ-প্রতিষ্ঠা করেন। ১৯৩৯ সালের মধ্যে, স্কাউটিং ৩২টি দেশে ৩৩ লক্ষেরও বেশি তরুণ-তরুণীর কাছে পৌঁছেছিল, যা তার স্থায়ী দৃষ্টিভঙ্গির প্রমাণ।">১৯০৮ সালে, তিনি <a href='https://en.wikipedia.org/wiki/Scouting_for_Boys' target='_blank' style='color: var(--accent-color); text-decoration: none;'><em>Scouting for Boys</em></a> প্রকাশ করেন, যা দ্রুত বিশ্বব্যাপী জনপ্রিয় হয়ে ওঠে। আন্দোলনটি স্বতঃস্ফূর্তভাবে বৃদ্ধি পায়, যার ফলে বয় স্কাউটস অ্যাসোসিয়েশন গঠিত হয়। মেয়েদের উৎসাহ দেখে, তিনি ১৯১০ সালে তার বোন অ্যাগনেস-এর সাথে গার্ল গাইডস অ্যাসোসিয়েশনও সহ-প্রতিষ্ঠা করেন। ১৯৩৯ সালের মধ্যে, স্কাউটিং ৩২টি দেশে ৩৩ লক্ষেরও বেশি তরুণ-তরুণীর কাছে পৌঁছেছিল, যা তার স্থায়ী দৃষ্টিভঙ্গির প্রমাণ।</p>
@@ -818,8 +839,8 @@
 
             <section id="writings" class="section-card">
                 <h2 data-en="Writings and Publications" data-bn="লেখালেখি ও প্রকাশনা">লেখালেখি ও প্রকাশনা</h2>
-                <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
-                    <div class="text-content" style="flex-grow: 1;">
+                <div class="section-content-flex">
+                    <div class="text-content">
                         <p data-en="Baden-Powell was a prolific writer, using his literary talents to document his experiences, educate his troops, and later, to guide the expanding Scout Movement. His publications ranged from military manuals to inspiring books for youth, many adorned with his unique and often humorous illustrations. Key works include:" data-bn="ব্যাডেন-পাওয়েল একজন অত্যন্ত ফলপ্রসূ লেখক ছিলেন, যিনি তার সাহিত্যিক প্রতিভাকে তার অভিজ্ঞতা নথিভুক্ত করতে, তার সৈন্যদের শিক্ষিত করতে এবং পরে, ক্রমবর্ধমান স্কাউট আন্দোলনকে পথ দেখাতে ব্যবহার করেছিলেন। তার প্রকাশনাগুলি সামরিক ম্যানুয়াল থেকে শুরু করে যুবকদের জন্য অনুপ্রেরণামূলক বই পর্যন্ত বিস্তৃত ছিল, যার অনেকগুলিতে তার অনন্য এবং প্রায়শই হাস্যকর চিত্রাবলী শোভা পেত। প্রধান কাজগুলির মধ্যে রয়েছে:">ব্যাডেন-পাওয়েল একজন অত্যন্ত ফলপ্রসূ লেখক ছিলেন, যিনি তার সাহিত্যিক প্রতিভাকে তার অভিজ্ঞতা নথিভুক্ত করতে, তার সৈন্যদের শিক্ষিত করতে এবং পরে, ক্রমবর্ধমান স্কাউট আন্দোলনকে পথ দেখাতে ব্যবহার করেছিলেন। তার প্রকাশনাগুলি সামরিক ম্যানুয়াল থেকে শুরু করে যুবকদের জন্য অনুপ্রেরণামূলক বই পর্যন্ত বিস্তৃত ছিল, যার অনেকগুলিতে তার অনন্য এবং প্রায়শই হাস্যকর চিত্রাবলী শোভা পেত। প্রধান কাজগুলির মধ্যে রয়েছে:</p>
                         <ul>
                             <li data-en="<strong>1884: <em>Reconnaissance and Scouting</em></strong> - A foundational military training manual." data-bn="<strong>১৮৮৪: <em>রিকনেসান্স অ্যান্ড স্কাউটিং</em></strong> - একটি মৌলিক সামরিক প্রশিক্ষণ ম্যানুয়াল।"><strong>১৮৮৪: <em>রিকনেসান্স অ্যান্ড স্কাউটিং</em></strong> - একটি মৌলিক সামরিক প্রশিক্ষণ ম্যানুয়াল।</li>
@@ -831,25 +852,25 @@
                         </ul>
                         <p data-en="His writings underscore his deep belief in practical education, character development, and the importance of outdoor living." data-bn="তার লেখাগুলি ব্যবহারিক শিক্ষা, চরিত্র গঠন এবং আউটডোর জীবনযাপনের গুরুত্বে তার গভীর বিশ্বাসকে তুলে ধরে।">তার লেখাগুলি ব্যবহারিক শিক্ষা, চরিত্র গঠন এবং আউটডোর জীবনযাপনের গুরুত্বে তার গভীর বিশ্বাসকে তুলে ধরে।</p>
                     </div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Scouting_for_boys_1_1908.jpg/190px-Scouting_for_boys_1_1908.jpg" loading="lazy" alt="Scouting for Boys cover" style="max-width: 150px; max-height: 250px; object-fit: cover; flex-shrink: 0;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Scouting_for_boys_1_1908.jpg/190px-Scouting_for_boys_1_1908.jpg" loading="lazy" alt="Scouting for Boys cover">
                 </div>
             </section>
 
             <section id="artistic-skills" class="section-card">
                 <h2 data-en="Artistic Talents" data-bn="শৈল্পিক দক্ষতা">শৈল্পিক দক্ষতা</h2>
-                <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
-                    <div class="text-content" style="flex-grow: 1;">
+                <div class="section-content-flex">
+                    <div class="text-content">
                         <p data-en="Baden-Powell was an accomplished artist who painted or sketched almost every day of his life. He was ambidextrous and could draw equally well with either hand. His books are filled with his whimsical pen-and-ink illustrations, and he always traveled with a sketchpad. Many of his works had humorous or informative character, and twelve of his paintings hang in the British Scout Headquarters at Gilwell Park." data-bn="ব্যাডেন-পাওয়েল একজন দক্ষ শিল্পী ছিলেন যিনি তার জীবনের প্রায় প্রতিদিনই আঁকতেন বা স্কেচ করতেন। তিনি ছিলেন ambidextrous এবং উভয় হাত দিয়ে সমানভাবে ভালো আঁকতে পারতেন। তার বইগুলি তার হাস্যরসাত্মক pen-and-ink চিত্রাঙ্কনে পূর্ণ, এবং তিনি সর্বদা একটি sketchpad নিয়ে ভ্রমণ করতেন। তার অনেক কাজই হাস্যরসাত্মক বা তথ্যপূর্ণ চরিত্রের ছিল, এবং বারোটি painting ব্রিটিশ স্কাউট সদর দপ্তর Gilwell Park-এ টাঙানো আছে।">ব্যাডেন-পাওয়েল একজন দক্ষ শিল্পী ছিলেন যিনি তার জীবনের প্রায় প্রতিদিনই আঁকতেন বা স্কেচ করতেন। তিনি ছিলেন ambidextrous এবং উভয় হাত দিয়ে সমানভাবে ভালো আঁকতে পারতেন। তার বইগুলি তার হাস্যরসাত্মক pen-and-ink চিত্রাঙ্কনে পূর্ণ, এবং তিনি সর্বদা একটি sketchpad নিয়ে ভ্রমণ করতেন। তার অনেক কাজই হাস্যরসাত্মক বা তথ্যপূর্ণ চরিত্রের ছিল, এবং বারোটি painting ব্রিটিশ স্কাউট সদর দপ্তর Gilwell Park-এ টাঙানো আছে।</p>
                     </div>
-                    <img src="https://greenhowards.org.uk/wp-content/uploads/2018/07/R-Baden-Powell.jpg" loading="lazy" alt="Baden-Powell Self Portrait" style="max-width: 200px; max-height: 250px; object-fit: cover; flex-shrink: 0;">
+                    <img src="https://greenhowards.org.uk/wp-content/uploads/2018/07/R-Baden-Powell.jpg" loading="lazy" alt="Baden-Powell Self Portrait">
                 </div>
             </section>
 
             <section id="personal-life" class="section-card">
                 <h2 data-en="Personal Life and Legacy" data-bn="ব্যক্তিগত জীবন ও উত্তরাধিকার">ব্যক্তিগত জীবন ও উত্তরাধিকার</h2>
-                <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC1vXMtOYgqkNIMSEG4YXxREYf1g2C7bGA5SA205IRxQ&s" loading="lazy" alt="Baden-Powell family" style="max-width: 200px; max-height: 250px; object-fit: cover; flex-shrink: 0;">
-                    <div class="text-content" style="flex-grow: 1;">
+                <div class="section-content-flex">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC1vXMtOYgqkNIMSEG4YXxREYf1g2C7bGA5SA205IRxQ&s" loading="lazy" alt="Baden-Powell family">
+                    <div class="text-content">
                         <p data-en="In 1912, Robert Baden-Powell married Olave St Clair Soames, a woman 32 years his junior who would become a formidable partner in the Scouting and Guiding movements. They shared a birthday, February 22nd, a date now celebrated as Founder's Day by Scouts and World Thinking Day by Guides." data-bn="১৯১২ সালে, রবার্ট ব্যাডেন-পাওয়েল ওলাভ সেন্ট ক্লেয়ার সোমসের সাথে বিবাহ বন্ধনে আবদ্ধ হন, যিনি তার থেকে ৩২ বছরের ছোট ছিলেন এবং স্কাউটিং ও গাইডিং আন্দোলনে একজন শক্তিশালী অংশীদার হয়ে ওঠেন। তাদের জন্মদিন ছিল ২২শে ফেব্রুয়ারি, যা এখন স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়।">১৯১২ সালে, রবার্ট ব্যাডেন-পাওয়েল ওলাভ সেন্ট ক্লেয়ার সোমসের সাথে বিবাহ বন্ধনে আবদ্ধ হন, যিনি তার থেকে ৩২ বছরের ছোট ছিলেন এবং স্কাউটিং ও গাইডিং আন্দোলনে একজন শক্তিশালী অংশীদার হয়ে ওঠেন। তাদের জন্মদিন ছিল ২২শে ফেব্রুয়ারি, যা এখন স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়।</p>
                         <p data-en="Baden-Powell and Olave shared the same birthday, February 22nd, which is now celebrated worldwide as Founder's Day by Scouts and World Thinking Day by Guides. Their wedding gift from Scouts was a 20 h.p. Standard motor car, paid for by 100,000 Scouts who each donated one penny." data-bn="ব্যাডেন-পাওয়েল এবং ওলাভের একই জন্মদিন ছিল, ২২শে ফেব্রুয়ারি, যা এখন বিশ্বব্যাপী স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়। স্কাউটদের কাছ থেকে তাদের wedding gift ছিল একটি ২০ h.p. স্ট্যান্ডার্ড মোটর গাড়ি, যা ১০০,০০০ স্কাউট প্রদান করেছিল যারা প্রত্যেকে এক পেনি দান করেছিল।">ব্যাডেন-পাওয়েল এবং ওলাভের একই জন্মদিন ছিল, ২২শে ফেব্রুয়ারি, যা এখন বিশ্বব্যাপী স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়। স্কাউটদের কাছ থেকে তাদের wedding gift ছিল একটি ২০ h.p. স্ট্যান্ডার্ড মোটর গাড়ি, যা ১০০,০০০ স্কাউট প্রদান করেছিল যারা প্রত্যেকে এক পেনি দান করেছিল।</p>
                         <p data-en="Together, they had three children: Arthur Robert Peter, Heather Grace, and Betty St Clair. Olave became the World Chief Guide, making the Baden-Powells a dynamic duo at the helm of the global youth movements." data-bn="একসাথে, তাদের তিনটি সন্তান ছিল: আর্থার রবার্ট পিটার, হেদার গ্রেস এবং বেটি সেন্ট ক্লেয়ার। ওলাভ বিশ্ব প্রধান গাইড হয়েছিলেন, যা ব্যাডেন-পাওয়েলদের বিশ্বব্যাপী যুব আন্দোলনের নেতৃত্বে একটি গতিশীল জুটি করে তুলেছিল।">একসাথে, তাদের তিনটি সন্তান ছিল: আর্থার রবার্ট পিটার, হেদার গ্রেস এবং বেটি সেন্ট ক্লেয়ার। ওলাভ বিশ্ব প্রধান গাইড হয়েছিলেন, যা ব্যাডেন-পাওয়েলদের বিশ্বব্যাপী যুব আন্দোলনের নেতৃত্বে একটি গতিশীল জুটি করে তুলেছিল।</p>
@@ -860,8 +881,8 @@
 
             <section id="recognition" class="section-card">
                 <h2 data-en="Awards and Recognition" data-bn="পুরস্কার ও স্বীকৃতি">পুরস্কার ও স্বীকৃতি</h2>
-                <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
-                    <div class="text-content" style="flex-grow: 1;">
+                <div class="section-content-flex">
+                    <div class="text-content">
                         <p data-en="Robert Baden-Powell received numerous accolades for his military service and his pioneering work with youth. These honors reflect the global impact of his vision:" data-bn="রবার্ট ব্যাডেন-পাওয়েল তার সামরিক পরিষেবা এবং যুবকদের সাথে তার অগ্রণী কাজের জন্য অসংখ্য প্রশংসা পেয়েছিলেন। এই সম্মাননাগুলি তার দৃষ্টিভঙ্গির বিশ্বব্যাপী প্রভাবকে প্রতিফলিত করে:">রবার্ট ব্যাডেন-পাওয়েল তার সামরিক পরিষেবা এবং যুবকদের সাথে তার অগ্রণী কাজের জন্য অসংখ্য প্রশংসা পেয়েছিলেন। এই সম্মাননাগুলি তার দৃষ্টিভঙ্গির বিশ্বব্যাপী প্রভাবকে প্রতিফলিত করে:</p>
                         <ul>
                             <li data-en="<strong>Order of Merit (OM):</strong> One of the most exclusive awards in the British honours system, bestowed in 1937." data-bn="<strong>অর্ডার অফ মেরিট (OM):</strong> ব্রিটিশ সম্মাননা পদ্ধতির অন্যতম একচেটিয়া পুরস্কার, যা ১৯৩৭ সালে প্রদান করা হয়।"><strong>Order of Merit (OM):</strong> ব্রিটিশ সম্মাননা পদ্ধতির অন্যতম একচেটিয়া পুরস্কার, যা ১৯৩৭ সালে প্রদান করা হয়।</li>
@@ -873,7 +894,7 @@
                         </ul>
                         <p data-en="In 2002, he was named 13th in the BBC's list of the 100 Greatest Britons, underscoring his lasting influence on British and global culture." data-bn="২০০২ সালে, তাকে বিবিসির ১০০ গ্রেটেস্ট ব্রিটিশনস-এর তালিকায় ১৩তম স্থান দেওয়া হয়, যা ব্রিটিশ এবং বিশ্ব সংস্কৃতিতে তার স্থায়ী প্রভাবকে তুলে ধরে।">In 2002, he was named 13th in the BBC's list of the 100 Greatest Britons, underscoring his lasting influence on British and global culture.</p>
                     </div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Robert_Baden-Powell_Monument_London.jpg/190px-Robert_Baden-Powell_Monument_London.jpg" loading="lazy" alt="Baden-Powell Monument London" style="max-width: 150px; max-height: 250px; object-fit: cover; flex-shrink: 0;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Robert_Baden-Powell_Monument_London.jpg/190px-Robert_Baden-Powell_Monument_London.jpg" loading="lazy" alt="Baden-Powell Monument London">
                 </div>
             </section>
         </div>
