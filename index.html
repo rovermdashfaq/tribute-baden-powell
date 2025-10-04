@@ -26,7 +26,7 @@
             --shadow-color-dark: rgba(0, 0, 0, 0.3);
             --font-family-heading: 'Playfair Display', 'Hind Siliguri', serif;
             --font-family-body: 'Montserrat', 'Hind Siliguri', sans-serif;
-            --header-height: 80px;
+            --header-height: 80px; /* Base height for header */
         }
 
         body {
@@ -40,12 +40,12 @@
             scroll-behavior: smooth;
         }
 
+        /* Dark Mode Styles */
         body.dark-mode {
             background-color: var(--background-dark);
             color: var(--text-color-dark);
         }
 
-        body.dark-mode .container,
         body.dark-mode .header,
         body.dark-mode .section-card,
         body.dark-mode .footer {
@@ -69,8 +69,47 @@
 
         body.dark-mode .section-card {
             box-shadow: 0 4px 12px var(--shadow-color-dark);
-            border-left: 5px solid var(--accent-color);
+            border-left-color: var(--accent-color);
         }
+        body.dark-mode .section-card:hover {
+            box-shadow: 0 8px 20px var(--shadow-color-dark);
+        }
+
+        body.dark-mode .nav-menu .nav-link:hover {
+            color: var(--secondary-color);
+        }
+        body.dark-mode .menu-toggle span {
+            background-color: var(--text-color-dark);
+        }
+        body.dark-mode .blockquote {
+            background-color: rgba(45, 55, 72, 0.7); /* Adjusted for dark mode */
+            border-left-color: var(--secondary-color);
+            color: var(--text-color-dark);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        body.dark-mode .blockquote::before {
+            color: var(--secondary-color);
+        }
+        body.dark-mode .blockquote footer {
+            color: var(--accent-color);
+        }
+        body.dark-mode .section-card p, body.dark-mode .section-card ul {
+            color: var(--text-color-dark);
+        }
+        body.dark-mode .section-card ul li:hover {
+            color: var(--secondary-color);
+        }
+        body.dark-mode .section-card img {
+            box-shadow: 0 3px 8px var(--shadow-color-dark);
+        }
+        body.dark-mode .section-card img:hover {
+            box-shadow: 0 6px 15px var(--shadow-color-dark);
+        }
+         body.dark-mode .nav-menu.active {
+             background-color: var(--card-background-dark);
+             box-shadow: 0 4px 8px var(--shadow-color-dark);
+        }
+
 
         .container {
             max-width: 1200px;
@@ -90,6 +129,7 @@
             top: 0;
             z-index: 1000;
             transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+            min-height: var(--header-height); /* Ensure minimum height */
         }
 
         .header .logo {
@@ -153,9 +193,6 @@
             color: var(--primary-color);
             transform: translateY(-2px);
         }
-        body.dark-mode .nav-menu .nav-link:hover {
-            color: var(--secondary-color);
-        }
 
         .menu-toggle {
             display: none;
@@ -167,7 +204,8 @@
             transition: background-color 0.3s ease;
         }
         .menu-toggle:hover {
-            background-color: rgba(var(--primary-color), 0.1);
+            background-color: rgba(var(--primary-color), 0.1); /* This won't work with custom properties directly in rgba() */
+            background-color: rgba(63, 81, 181, 0.1); /* Use direct values or calculate in JS */
         }
 
         .menu-toggle span {
@@ -176,9 +214,6 @@
             background-color: var(--text-color-light);
             transition: all 0.3s ease;
             border-radius: 2px;
-        }
-        body.dark-mode .menu-toggle span {
-            background-color: var(--text-color-dark);
         }
 
         /* Hamburger animation */
@@ -337,9 +372,6 @@
             transform: translateY(-8px);
             box-shadow: 0 8px 20px var(--shadow-color);
         }
-        body.dark-mode .section-card:hover {
-            box-shadow: 0 8px 20px var(--shadow-color-dark);
-        }
 
         .section-card h2 {
             font-family: var(--font-family-heading);
@@ -352,9 +384,6 @@
             position: relative;
             display: inline-block;
             transition: color 0.3s ease;
-        }
-        body.dark-mode .section-card h2 {
-            color: var(--secondary-color);
         }
         .section-card h2::before {
             content: '';
@@ -379,9 +408,6 @@
             font-size: 1.6em;
             transition: color 0.3s ease;
         }
-        body.dark-mode .section-card h3 {
-            color: var(--accent-color);
-        }
         .section-card h3:hover {
             letter-spacing: 0.5px;
         }
@@ -390,9 +416,6 @@
             margin-bottom: 18px;
             font-size: 1.1em;
             color: var(--text-color-light);
-        }
-        body.dark-mode .section-card p, body.dark-mode .section-card ul {
-            color: var(--text-color-dark);
         }
 
         .section-card ul {
@@ -408,9 +431,6 @@
             transform: translateX(5px);
             color: var(--primary-color);
         }
-        body.dark-mode .section-card ul li:hover {
-            color: var(--secondary-color);
-        }
 
 
         .section-card img {
@@ -424,12 +444,6 @@
         .section-card img:hover {
             transform: scale(1.03);
             box-shadow: 0 6px 15px var(--shadow-color);
-        }
-        body.dark-mode .section-card img {
-            box-shadow: 0 3px 8px var(--shadow-color-dark);
-        }
-        body.dark-mode .section-card img:hover {
-            box-shadow: 0 6px 15px var(--shadow-color-dark);
         }
 
         .blockquote {
@@ -446,12 +460,6 @@
             overflow: hidden;
         }
 
-        body.dark-mode .blockquote {
-            background-color: rgba(45, 55, 72, 0.7); /* Adjusted for dark mode */
-            border-left-color: var(--secondary-color);
-            color: var(--text-color-dark);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
         .blockquote:hover {
             transform: translateX(5px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -465,9 +473,6 @@
             color: var(--primary-color);
             opacity: 0.1;
             transition: transform 0.3s ease;
-        }
-        body.dark-mode .blockquote::before {
-            color: var(--secondary-color);
         }
         .blockquote:hover::before {
             transform: scale(1.1);
@@ -485,9 +490,6 @@
             text-align: right;
             color: var(--primary-color);
             font-weight: 600;
-        }
-        body.dark-mode .blockquote footer {
-            color: var(--accent-color);
         }
 
         .footer {
@@ -637,12 +639,20 @@
             .header {
                 flex-wrap: wrap;
                 justify-content: space-between;
-                height: auto; /* Allow header to expand */
+                padding: 15px 20px;
+                min-height: auto; /* Allow height to adjust */
             }
             .header .logo {
-                width: auto;
-                margin-bottom: 0;
+                flex-grow: 1;
                 font-size: 1.6em;
+                margin-bottom: 0; /* Remove margin-bottom */
+            }
+            .controls {
+                order: 3; /* Move controls to bottom on small screens */
+                width: 100%;
+                justify-content: center;
+                margin-top: 15px;
+                gap: 15px;
             }
             .nav-menu {
                 display: none;
@@ -658,15 +668,12 @@
                 padding: 15px 0;
                 border-radius: 0 0 8px 8px;
             }
-            body.dark-mode .nav-menu {
-                 background-color: var(--card-background-dark);
-                 box-shadow: 0 4px 8px var(--shadow-color-dark);
-            }
             .nav-menu.active {
                 display: flex;
             }
             .menu-toggle {
                 display: flex;
+                order: 2; /* Place toggle between logo and controls */
             }
             .hero-content h1 {
                 font-size: 3em;
@@ -677,11 +684,15 @@
             .section-card {
                 padding: 25px;
             }
-            .controls {
-                width: auto;
-                justify-content: flex-end;
-                margin-top: 0;
-                order: 2; /* Move controls after logo on smaller screens */
+            .section-card > div { /* For flex containers within section-card */
+                flex-direction: column;
+            }
+            .section-card img {
+                margin: 15px auto;
+                display: block;
+            }
+             .section-card .text-content {
+                width: 100%;
             }
         }
 
@@ -708,27 +719,14 @@
             .controls {
                 flex-direction: column;
                 gap: 10px;
-                align-items: flex-end;
-                width: 100%;
+                align-items: center; /* Center controls on smallest screens */
             }
             .lang-switcher button {
-                width: 100%;
-                text-align: center;
+                width: auto; /* Allow button to size naturally */
             }
             .theme-switcher {
-                justify-content: flex-end;
-                width: 100%;
-            }
-            .section-card > div {
-                flex-direction: column;
-            }
-            .section-card img {
-                float: none !important;
-                margin: 15px auto;
-                display: block;
-            }
-             .section-card .text-content {
-                width: 100%;
+                justify-content: center;
+                width: auto;
             }
         }
     </style>
@@ -771,7 +769,6 @@
 
     <main>
         <section class="hero-section">
-            <!-- Particles will be generated here by JS -->
             <div class="hero-content">
                 <h1 data-en="Robert Stephenson Smyth Lord Baden-Powell of Gilwell" data-bn="রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েল অফ গিলওয়েল">রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েল অফ গিলওয়েল</h1>
                 <p data-en="The visionary founder of the worldwide Scout and Guide Movements, whose principles continue to inspire millions globally." data-bn="বিশ্বব্যাপী স্কাউট এবং গাইড আন্দোলনের দূরদর্শী প্রতিষ্ঠাতা, যার নীতিগুলি বিশ্বজুড়ে লক্ষ লক্ষ মানুষকে অনুপ্রাণিত করে চলেছে।">বিশ্বব্যাপী স্কাউট এবং গাইড আন্দোলনের দূরদর্শী প্রতিষ্ঠাতা, যার নীতিগুলি বিশ্বজুড়ে লক্ষ লক্ষ মানুষকে অনুপ্রাণিত করে চলেছে।</p>
@@ -785,7 +782,7 @@
                 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Robert_Baden-Powell_Vanity_Fair_19_April_1911.jpg/250px-Robert_Baden-Powell_Vanity_Fair_19_April_1911.jpg" loading="lazy" alt="Baden-Powell in 1911" style="max-width: 200px; max-height: 250px; object-fit: cover; flex-shrink: 0;">
                     <div class="text-content" style="flex-grow: 1;">
-                        <p data-en="Born Robert Stephenson Smyth Powell on 22 February 1857, in Paddington, London, Robert Baden-Powell was destined for a life of adventure and leadership. The penultimate son of Professor Baden Powell and Henrietta Grace Smyth, he grew up in a household that valued intellect and resilience. After his father's early passing, his mother ensured her children were educated and encouraged their independent spirit." data-bn="রবার্ট স্টিফেনসন স্মিথ পাওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।">রবার্ট স্টিফেনসন স্মিথ পাওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।</p>
+                        <p data-en="Robert Stephenson Smyth Lord Baden-Powell was born on 22 February 1857, in Paddington, London, Robert Baden-Powell was destined for a life of adventure and leadership. The penultimate son of Professor Baden Powell and Henrietta Grace Smyth, he grew up in a household that valued intellect and resilience. After his father's early passing, his mother ensured her children were educated and encouraged their independent spirit." data-bn="রবার্ট স্টিফেনসন স্মিথ পাওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।">রবার্ট স্টিফেনসন স্মিথ পাওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।</p>
                         <p data-en="Educated at Charterhouse School, Baden-Powell developed a keen interest in outdoor skills, often exploring the nearby woods, honing his abilities in stalking and cooking while evading teachers. These early experiences laid the foundation for his later philosophies on self-reliance and nature." data-bn="চার্টারহাউস স্কুলে পড়াশোনা করার সময়, ব্যাডেন-পাওয়েল আউটডোর দক্ষতার প্রতি গভীর আগ্রহ তৈরি করেন, প্রায়শই কাছাকাছি বনভূমি অন্বেষণ করতেন, শিক্ষকদের এড়িয়ে চলার সময় শিকার এবং রান্নার দক্ষতা অর্জন করতেন। এই প্রাথমিক অভিজ্ঞতাগুলি আত্মনির্ভরশীলতা এবং প্রকৃতি সম্পর্কে তার পরবর্তী দর্শনের ভিত্তি স্থাপন করেছিল।">চার্টারহাউস স্কুলে পড়াশোনা করার সময়, ব্যাডেন-পাওয়েল আউটডোর দক্ষতার প্রতি গভীর আগ্রহ তৈরি করেন, প্রায়শই কাছাকাছি বনভূমি অন্বেষণ করতেন, শিক্ষকদের এড়িয়ে চলার সময় শিকার এবং রান্নার দক্ষতা অর্জন করতেন। এই প্রাথমিক অভিজ্ঞতাগুলি আত্মনির্ভরশীলতা এবং প্রকৃতি সম্পর্কে তার পরবর্তী দর্শনের ভিত্তি স্থাপন করেছিল।</p>
                     </div>
                 </div>
@@ -896,9 +893,20 @@
             const sections = document.querySelectorAll('.section-card');
             const currentYearSpan = document.getElementById('currentYear');
             const heroSection = document.querySelector('.hero-section');
+            const header = document.querySelector('.header');
 
             // Set current year in footer
             currentYearSpan.textContent = new Date().getFullYear();
+
+            // Function to update header height variable
+            const updateHeaderHeight = () => {
+                document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
+            };
+
+            // Update header height on load and resize
+            updateHeaderHeight();
+            window.addEventListener('resize', updateHeaderHeight);
+
 
             // Generate particles for hero section
             function createParticle() {
@@ -932,10 +940,10 @@
                     recognition: "Recognition",
                     darkMode: "Dark Mode",
                     heroTitle: "Robert Stephenson Smyth Lord Baden-Powell of Gilwell",
-                    heroSubtitle: "The visionary founder of the worldwide Scout and Movements, whose principles continue to inspire millions globally.",
+                    heroSubtitle: "The visionary founder of the worldwide Scout and Guide Movements, whose principles continue to inspire millions globally.",
                     learnMore: "Learn More About His Legacy",
                     earlyLifeTitle: "Early Life and Inspiration",
-                    earlyLifeP1: "Robert Stephenson Smyth Lord Baden-Powell of Gilwell was born on 22 February 1857, in Paddington, London, Robert Baden-Powell was destined for a life of adventure and leadership. The penultimate son of Professor Baden Powell and Henrietta Grace Smyth, he grew up in a household that valued intellect and resilience. After his father's early passing, his mother ensured her children were educated and encouraged their independent spirit.",
+                    earlyLifeP1: "Robert Stephenson Smyth Lord Baden-Powell was born on 22 February 1857, in Paddington, London, Robert Baden-Powell was destined for a life of adventure and leadership. The penultimate son of Professor Baden Powell and Henrietta Grace Smyth, he grew up in a household that valued intellect and resilience. After his father's early passing, his mother ensured her children were educated and encouraged their independent spirit.",
                     earlyLifeP2: "Educated at Charterhouse School, Baden-Powell developed a keen interest in outdoor skills, often exploring the nearby woods, honing his abilities in stalking and cooking while evading teachers. These early experiences laid the foundation for his later philosophies on self-reliance and nature.",
                     militaryCareerTitle: "Distinguished Military Career",
                     militaryCareerP1: "Baden-Powell's early military career included service in India with the 13th Hussars in 1876. He later served in Africa, learning scouting skills from the Zulu people in the 1880s. In 1896, he served in the Second Matabele War where he met American scout Frederick Russell Burnham, who introduced him to woodcraft and the practical uses of the campaign hat and neckerchief - elements that would later become integral to Scouting.",
@@ -987,10 +995,10 @@
                     recognition: "স্বীকৃতি",
                     darkMode: "ডার্ক মোড",
                     heroTitle: "রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েল অফ গিলওয়েল",
-                    heroSubtitle: "বিশ্বব্যাপী স্কাউট আন্দোলনের দূরদর্শী প্রতিষ্ঠাতা, যার নীতিগুলি বিশ্বজুড়ে লক্ষ লক্ষ মানুষকে অনুপ্রাণিত করে চলেছে।",
+                    heroSubtitle: "বিশ্বব্যাপী স্কাউট এবং গাইড আন্দোলনের দূরদর্শী প্রতিষ্ঠাতা, যার নীতিগুলি বিশ্বজুড়ে লক্ষ লক্ষ মানুষকে অনুপ্রাণিত করে চলেছে।",
                     learnMore: "তাঁর জীবনবৃত্তান্ত",
                     earlyLifeTitle: "প্রাথমিক জীবন ও অনুপ্রেরণা",
-                    earlyLifeP1: "রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েল অফ গিলওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।",
+                    earlyLifeP1: "রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েল অফ গিলওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।",
                     earlyLifeP2: "চার্টারহাউস স্কুলে পড়াশোনা করার সময়, ব্যাডেন-পাওয়েল আউটডোর দক্ষতার প্রতি গভীর আগ্রহ তৈরি করেন, প্রায়শই কাছাকাছি বনভূমি অন্বেষণ করতেন, শিক্ষকদের এড়িয়ে চলার সময় শিকার এবং রান্নার দক্ষতা অর্জন করতেন। এই প্রাথমিক অভিজ্ঞতাগুলি আত্মনির্ভরশীলতা এবং প্রকৃতি সম্পর্কে তার পরবর্তী দর্শনের ভিত্তি স্থাপন করেছিল।",
                     militaryCareerTitle: "বিশিষ্ট সামরিক কর্মজীবন",
                     militaryCareerP1: "ব্যাডেন-পাওয়েলের প্রাথমিক সামরিক কর্মজীবনে ১৮৭৬ সালে ভারতে ১৩তম হুসার্স-এ তার দায়িত্ব অন্তর্ভুক্ত ছিল। তিনি পরে আফ্রিকায় দায়িত্ব পালন করেন, যেখানে তিনি ১৮৮০-এর দশকে জুলু জনগণের কাছ থেকে স্কাউটিং দক্ষতা শেখেন। ১৮৯৬ সালে, তিনি দ্বিতীয় মাতাবেলে যুদ্ধে দায়িত্ব পালন করেন যেখানে তিনি আমেরিকান স্কাউট ফ্রেডেরিক রাসেল বার্নহামের সাথে দেখা হন, যিনি তাকে উডক্রাফ্ট এবং ক্যাম্পেইন হ্যাট ও নেকারচিফের ব্যবহারিক ব্যবহারের সাথে পরিচয় করিয়ে দেন -এই উপাদানগুলো পরে স্কাউটিং-এর অবিচ্ছেদ্য অংশ হয়ে ওঠে।",
@@ -1081,7 +1089,6 @@
                 document.querySelector('#artistic-skills .text-content p').innerHTML = translations[lang].artisticSkillsP1;
 
                 document.querySelector('#personal-life h2').innerHTML = translations[lang].personalLifeTitle;
-                // Note: swapped P1 and P2 in the HTML, so adjusting here.
                 document.querySelector('#personal-life .text-content p:nth-of-type(1)').innerHTML = translations[lang].personalLifeP1; 
                 document.querySelector('#personal-life .text-content p:nth-of-type(2)').innerHTML = translations[lang].personalLifeP2; 
                 document.querySelector('#personal-life .text-content p:nth-of-type(3)').innerHTML = translations[lang].personalLifeP3;
