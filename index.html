@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="স্কাউট আন্দোলনের প্রতিষ্ঠাতা রবার্ট ব্যাডেন-পাওয়েলের প্রতি শ্রদ্ধাঞ্জলি, মোঃ আশফাকুর রহমান তানিম কর্তৃক। তাঁর জীবন, সামরিক কর্মজীবন এবং উত্তরাধিকার সম্পর্কে জানুন।">
-    <meta name="keywords" content="রবার্ট ব্যাডেন-পাওয়েল, ব্যাডেন পাওয়েল, স্কাউটিং, বয় স্কাউটস, গার্ল গাইডস, রোভার স্কাউট, বাংলাদেশ রোভার স্কাউট, বিশ্ব স্কাউট আন্দোলন, স্কাউট ইতিহাস, স্কাউট প্রতিজ্ঞা, স্কাউট আইন, স্কাউট মূল্যবোধ, নেতৃত্ব, সমাজসেবা, রোভার, স্কাউট ক্যাম্প, গুরুদয়াল সরকারি কলেজ রোভার স্কাউট, স্কাউট প্রকল্প, Messenger of Peace, MoP, Baden-Powell, Robert Baden-Powell, Founder of Scouting, Scouting Movement, World Organization of the Scout Movement, WOSM, Scouts Bangladesh, Rover Scouts Bangladesh, Community Service, Leadership, Brotherhood, Adventure, Nature, Volunteerism, Scout Spirit, Scout Tribute, Tribute to Baden-Powell, Md. Ashfaqur Rahman Tanim, Ashfaqur Rahman Tanim, Tanim Rover, Gurudayal Govt College Rover Scout, Bangladesh Scouts, Scout Life, Scout Inspiration, Scout Heritage, Scout Founder, Scout History, Scout Ideals, Scout Promise, Scout Law, World Scout, Scouting Worldwide, Scouting Bangladesh, Scout Tribute Page, Scout Legacy">
+    <meta name="description" content="স্কাউট আন্দোলনের প্রতিষ্ঠাতা রবার্ট ব্যাডেন-পাওয়েলের প্রতি শ্রদ্ধাঞ্জলি, মোঃ আশফাকুর রহমান তানিম কর্তৃক। তাঁর জীবন, সামরিক কর্মজীবন, লেখালেখি এবং উত্তরাধিকার সম্পর্কে বিস্তারিত জানুন।">
+    <meta name="keywords" content="রবার্ট ব্যাডেন-পাওয়েল, ব্যাডেন পাওয়েল, স্কাউটিং, বয় স্কাউটস, গার্ল গাইডস, রোভার স্কাউট, বাংলাদেশ রোভার স্কাউট, বিশ্ব স্কাউট আন্দোলন, স্কাউট ইতিহাস, স্কাউট প্রতিজ্ঞা, স্কাউট আইন, স্কাউট মূল্যবোধ, নেতৃত্ব, সমাজসেবা, রোভার, স্কাউট ক্যাম্প, গুরুদয়াল সরকারি কলেজ রোভার স্কাউট, স্কাউট প্রকল্প, Messenger of Peace, MoP, Baden-Powell, Robert Baden-Powell, Founder of Scouting, Scouting Movement, World Organization of the Scout Movement, WOSM, Scouts Bangladesh, Rover Scouts Bangladesh, Community Service, Leadership, Brotherhood, Adventure, Nature, Volunteerism, Scout Spirit, Scout Tribute, Tribute to Baden-Powell, Md. Ashfaqur Rahman Tanim, Ashfaqur Rahman Tanim, Tanim Rover, Gurudayal Govt College Rover Scout, Bangladesh Scouts, Scout Life, Scout Inspiration, Scout Heritage, Scout Founder, Scout History, Scout Ideals, Scout Promise, Scout Law, World Scout, Scouting Worldwide, Scouting Bangladesh, Scout Tribute Page, Scout Legacy, Siege of Mafeking, Brownsea Island, Matabele War, Order of Merit, Bronze Wolf, Silver Buffalo">
 
     <meta name="author" content="Md. Ashfaqur Rahman Tanim">
     <title>রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েলকে শ্রদ্ধাঞ্জলি - মোঃ আশফাকুর রহমান তানিম</title>
@@ -30,6 +30,10 @@
             --header-height: 80px; /* Base height for header */
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: var(--font-family-body);
             line-height: 1.7;
@@ -49,14 +53,17 @@
 
         body.dark-mode .header,
         body.dark-mode .section-card,
-        body.dark-mode .footer {
+        body.dark-mode .footer,
+        body.dark-mode .honours-table,
+        body.dark-mode .timeline-item {
             background-color: var(--card-background-dark);
             color: var(--text-color-dark);
         }
 
         body.dark-mode .nav-link,
         body.dark-mode .section-card h2,
-        body.dark-mode .section-card h3 {
+        body.dark-mode .section-card h3,
+        body.dark-mode .honours-table th {
             color: var(--secondary-color);
         }
 
@@ -68,11 +75,14 @@
             box-shadow: 0 4px 15px var(--shadow-color-dark);
         }
 
-        body.dark-mode .section-card {
+        body.dark-mode .section-card,
+        body.dark-mode .honours-table,
+        body.dark-mode .timeline-item {
             box-shadow: 0 4px 12px var(--shadow-color-dark);
             border-left-color: var(--accent-color);
         }
-        body.dark-mode .section-card:hover {
+        body.dark-mode .section-card:hover,
+        body.dark-mode .timeline-item:hover {
             box-shadow: 0 8px 20px var(--shadow-color-dark);
         }
 
@@ -83,7 +93,7 @@
             background-color: var(--text-color-dark);
         }
         body.dark-mode .blockquote {
-            background-color: rgba(45, 55, 72, 0.7); /* Adjusted for dark mode */
+            background-color: rgba(45, 55, 72, 0.7);
             border-left-color: var(--secondary-color);
             color: var(--text-color-dark);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -94,23 +104,32 @@
         body.dark-mode .blockquote footer {
             color: var(--accent-color);
         }
-        body.dark-mode .section-card p, body.dark-mode .section-card ul {
+        body.dark-mode .section-card p, 
+        body.dark-mode .section-card ul,
+        body.dark-mode .honours-table td,
+        body.dark-mode .honours-table {
             color: var(--text-color-dark);
         }
         body.dark-mode .section-card ul li:hover {
             color: var(--secondary-color);
         }
-        body.dark-mode .section-card img {
+        body.dark-mode .section-card img,
+        body.dark-mode .honours-table img {
             box-shadow: 0 3px 8px var(--shadow-color-dark);
         }
         body.dark-mode .section-card img:hover {
             box-shadow: 0 6px 15px var(--shadow-color-dark);
         }
-         body.dark-mode .nav-menu.active {
-             background-color: var(--card-background-dark);
-             box-shadow: 0 4px 8px var(--shadow-color-dark);
+        body.dark-mode .nav-menu.active {
+            background-color: var(--card-background-dark);
+            box-shadow: 0 4px 8px var(--shadow-color-dark);
         }
-
+        body.dark-mode .honours-table th {
+            background-color: #1e3a5f;
+        }
+        body.dark-mode .honours-table tr:nth-child(even) {
+            background-color: rgba(255,255,255,0.05);
+        }
 
         .container {
             max-width: 1200px;
@@ -130,7 +149,7 @@
             top: 0;
             z-index: 1000;
             transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
-            min-height: var(--header-height); /* Ensure minimum height */
+            min-height: var(--header-height);
         }
 
         .header .logo {
@@ -205,8 +224,7 @@
             transition: background-color 0.3s ease;
         }
         .menu-toggle:hover {
-            background-color: rgba(var(--primary-color), 0.1); /* This won't work with custom properties directly in rgba() */
-            background-color: rgba(63, 81, 181, 0.1); /* Use direct values or calculate in JS */
+            background-color: rgba(63, 81, 181, 0.1);
         }
 
         .menu-toggle span {
@@ -228,7 +246,6 @@
             transform: translateY(-8px) rotate(-45deg);
         }
 
-
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://upload.wikimedia.org/wikipedia/commons/2/20/General_Baden-Powell%2C_Bain_news_service_portrait.jpg') no-repeat center center/cover;
             color: #ffffff;
@@ -240,7 +257,7 @@
             align-items: center;
             justify-content: center;
             min-height: 50vh;
-            overflow: hidden; /* For particle effect */
+            overflow: hidden;
         }
         
         .hero-section::before {
@@ -282,7 +299,6 @@
             }
         }
 
-
         .hero-content {
             position: relative;
             z-index: 2;
@@ -293,7 +309,7 @@
 
         .hero-content h1 {
             font-family: var(--font-family-heading);
-            font-size: 4em;
+            font-size: 3.5em;
             margin-bottom: 20px;
             text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
             line-height: 1.2;
@@ -302,11 +318,17 @@
             -webkit-text-fill-color: transparent;
             animation: textHighlight 3s infinite alternate;
         }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+        }
+
         @keyframes textHighlight {
             0% { background-position: 0% 50%; }
             100% { background-position: 100% 50%; }
         }
-
 
         .hero-content p {
             font-size: 1.4em;
@@ -331,7 +353,7 @@
         }
 
         .cta-button:hover {
-            background-color: #388e3c; /* Darker green */
+            background-color: #388e3c;
             transform: translateY(-5px) scale(1.02);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
         }
@@ -363,10 +385,10 @@
             box-shadow: 0 4px 12px var(--shadow-color);
             transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
             border-left: 6px solid var(--primary-color);
-            position: relative; /* For animation */
-            opacity: 0; /* Hidden initially for scroll animation */
+            position: relative;
+            opacity: 0;
             transform: translateY(30px);
-            overflow: hidden; /* For inner elements animations */
+            overflow: hidden;
         }
 
         .section-card:hover {
@@ -400,7 +422,6 @@
             width: 100%;
         }
 
-
         .section-card h3 {
             font-family: var(--font-family-heading);
             color: var(--secondary-color);
@@ -422,7 +443,7 @@
         .section-card ul {
             list-style-type: disc;
             margin-left: 25px;
-            padding-left: 0; /* Override default padding for ul */
+            padding-left: 0;
         }
         .section-card ul li {
             margin-bottom: 8px;
@@ -432,7 +453,6 @@
             transform: translateX(5px);
             color: var(--primary-color);
         }
-
 
         .section-card img {
             max-width: 100%;
@@ -448,7 +468,7 @@
         }
 
         .blockquote {
-            background-color: rgba(63, 81, 181, 0.08); /* Lighter primary */
+            background-color: rgba(63, 81, 181, 0.08);
             border-left: 6px solid var(--primary-color);
             padding: 25px;
             margin: 30px 0;
@@ -465,7 +485,7 @@
             transform: translateX(5px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
-         .blockquote::before {
+        .blockquote::before {
             content: '❝';
             position: absolute;
             top: 10px;
@@ -491,6 +511,242 @@
             text-align: right;
             color: var(--primary-color);
             font-weight: 600;
+        }
+
+        /* Honours Table */
+        .honours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95em;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            background-color: var(--card-background-light);
+        }
+
+        .honours-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 700;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .honours-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        .honours-table tr:nth-child(even) {
+            background-color: rgba(0,0,0,0.02);
+        }
+
+        .honours-table tr:hover {
+            background-color: rgba(255,152,0,0.1);
+        }
+
+        .honours-table img {
+            max-width: 85px;
+            height: auto;
+            border-radius: 5px;
+            margin: 0;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 40px 0;
+            background-color: var(--card-background-light);
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(50% - 40px);
+            box-shadow: 0 4px 12px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: calc(50% + 40px);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 30px;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -34px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -34px;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 17px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            border: 3px solid var(--secondary-color);
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -44px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -44px;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 20px var(--shadow-color);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: calc(100% - 60px);
+                left: 40px !important;
+            }
+            
+            .timeline-item::before,
+            .timeline-item::after {
+                display: none;
+            }
+        }
+
+        /* Flex container for content inside section cards */
+        .section-content-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .section-content-flex img {
+            margin: 0;
+            flex-shrink: 0;
+            width: 250px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .section-content-flex .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Family tree styling */
+        .family-tree {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .family-member {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px var(--shadow-color);
+            transition: transform 0.3s ease;
+        }
+
+        .family-member:hover {
+            transform: translateY(-5px) rotate(1deg);
+        }
+
+        .family-member .name {
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .family-member .years {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        /* Publications grid */
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .publication-item {
+            background-color: rgba(63,81,181,0.05);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .publication-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px var(--shadow-color);
+        }
+
+        .publication-year {
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 1.1em;
+        }
+
+        .publication-title {
+            font-weight: 600;
+            margin: 8px 0;
         }
 
         .footer {
@@ -635,26 +891,35 @@
             animation-delay: 0.3s;
         }
 
-        /* Flex container for content inside section cards */
-        .section-content-flex {
+
+
+        .badge-container {
             display: flex;
             flex-wrap: wrap;
-            align-items: flex-start;
-            gap: 20px;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
         }
 
-        .section-content-flex img {
-            margin: 0; /* Override default margin for img */
-            flex-shrink: 0; /* Prevent image from shrinking */
-            width: 200px; /* Fixed width for desktop */
-            height: 250px; /* Fixed height for desktop */
-            object-fit: cover;
+        .badge {
+            padding: 12px 25px;
+            border-radius: 40px;
+            font-weight: 700;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
         }
 
-        .section-content-flex .text-content {
-            flex-grow: 1;
-            min-width: 300px; /* Allow text to wrap if necessary */
+        .badge:hover {
+            transform: translateY(-5px) scale(1.05);
         }
+
+        .badge.om { background: linear-gradient(135deg, #800080, #4b0082); }
+        .badge.gcmg { background: linear-gradient(135deg, #006400, #228b22); }
+        .badge.gcvo { background: linear-gradient(135deg, #8b0000, #b22222); }
+        .badge.kcb { background: linear-gradient(135deg, #00008b, #4169e1); }
+        .badge.bronze-wolf { background: linear-gradient(135deg, #8b4513, #cd853f); }
 
         /* Responsive Design */
         @media (max-width: 900px) {
@@ -662,15 +927,15 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 padding: 15px 20px;
-                min-height: auto; /* Allow height to adjust */
+                min-height: auto;
             }
             .header .logo {
                 flex-grow: 1;
                 font-size: 1.6em;
-                margin-bottom: 0; /* Remove margin-bottom */
+                margin-bottom: 0;
             }
             .controls {
-                order: 3; /* Move controls to bottom on small screens */
+                order: 3;
                 width: 100%;
                 justify-content: center;
                 margin-top: 15px;
@@ -684,7 +949,7 @@
                 gap: 10px;
                 background-color: var(--card-background-light);
                 position: absolute;
-                top: var(--header-height); /* Needs to be dynamic or adjusted */
+                top: var(--header-height);
                 left: 0;
                 box-shadow: 0 4px 8px var(--shadow-color);
                 padding: 15px 0;
@@ -695,7 +960,7 @@
             }
             .menu-toggle {
                 display: flex;
-                order: 2; /* Place toggle between logo and controls */
+                order: 2;
             }
             .hero-content h1 {
                 font-size: 3em;
@@ -706,15 +971,23 @@
             .section-card {
                 padding: 25px;
             }
-            /* Adjust image and text for smaller screens */
             .section-content-flex {
                 flex-direction: column;
             }
             .section-content-flex img {
-                width: 100%; /* Full width on mobile */
-                max-width: 300px; /* Max width for images on smaller screens */
-                height: auto; /* Auto height to maintain aspect ratio */
-                margin: 15px auto; /* Center image */
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                margin: 15px auto;
+            }
+            .honours-table {
+                font-size: 0.85em;
+            }
+            .honours-table td, .honours-table th {
+                padding: 8px 5px;
+            }
+            .honours-table img {
+                max-width: 60px;
             }
         }
 
@@ -741,14 +1014,22 @@
             .controls {
                 flex-direction: column;
                 gap: 10px;
-                align-items: center; /* Center controls on smallest screens */
+                align-items: center;
             }
             .lang-switcher button {
-                width: auto; /* Allow button to size naturally */
+                width: auto;
             }
             .theme-switcher {
                 justify-content: center;
                 width: auto;
+            }
+            .honours-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            .family-tree {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -767,10 +1048,11 @@
             </div>
             <ul class="nav-menu" id="nav-list">
                 <li><a href="#about" class="nav-link" data-en="About" data-bn="সম্পর্কে">সম্পর্কে</a></li>
+                <li><a href="#family" class="nav-link" data-en="Family" data-bn="পরিবার">পরিবার</a></li>
                 <li><a href="#military-career" class="nav-link" data-en="Military Career" data-bn="সামরিক কর্মজীবন">সামরিক কর্মজীবন</a></li>
+                <li><a href="#mafeking" class="nav-link" data-en="Siege of Mafeking" data-bn="মাফেকিং অবরোধ">মাফেকিং অবরোধ</a></li>
                 <li><a href="#scout-movement" class="nav-link" data-en="Scout Movement" data-bn="স্কাউট আন্দোলন">স্কাউট আন্দোলন</a></li>
                 <li><a href="#writings" class="nav-link" data-en="Writings" data-bn="লেখালেখি">লেখালেখি</a></li>
-                <li><a href="#artistic-skills" class="nav-link" data-en="Artistic Talents" data-bn="শৈল্পিক দক্ষতা">শৈল্পিক দক্ষতা</a></li>
                 <li><a href="#personal-life" class="nav-link" data-en="Personal Life" data-bn="ব্যক্তিগত জীবন">ব্যক্তিগত জীবন</a></li>
                 <li><a href="#recognition" class="nav-link" data-en="Recognition" data-bn="স্বীকৃতি">স্বীকৃতি</a></li>
             </ul>
@@ -794,108 +1076,418 @@
             <div class="hero-content">
                 <h1 data-en="Robert Stephenson Smyth Lord Baden-Powell of Gilwell" data-bn="রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েল অফ গিলওয়েল">রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েল অফ গিলওয়েল</h1>
                 <p data-en="The visionary founder of the worldwide Scout and Guide Movements, whose principles continue to inspire millions globally." data-bn="বিশ্বব্যাপী স্কাউট এবং গাইড আন্দোলনের দূরদর্শী প্রতিষ্ঠাতা, যার নীতিগুলি বিশ্বজুড়ে লক্ষ লক্ষ মানুষকে অনুপ্রাণিত করে চলেছে।">বিশ্বব্যাপী স্কাউট এবং গাইড আন্দোলনের দূরদর্শী প্রতিষ্ঠাতা, যার নীতিগুলি বিশ্বজুড়ে লক্ষ লক্ষ মানুষকে অনুপ্রাণিত করে চলেছে।</p>
-                <a href="#about" class="cta-button" data-en="Learn More About His Legacy" data-bn="তাঁর জীবনবৃত্তান্ত">তাঁর জীবনবৃত্তান্ত</a>
+                <a href="#about" class="cta-button" data-en="Discover His Legacy" data-bn="তাঁর জীবনবৃত্তান্ত জানুন">তাঁর জীবনবৃত্তান্ত জানুন</a>
             </div>
         </section>
 
-        <div class="container main-content">
+
+
             <section id="about" class="section-card">
-                <h2 data-en="Early Life and Inspiration" data-bn="প্রাথমিক জীবন ও অনুপ্রেরণা">প্রাথমিক জীবন ও অনুপ্রেরণা</h2>
+                <h2 data-en="Early Life and Education" data-bn="প্রাথমিক জীবন ও শিক্ষা">প্রাথমিক জীবন ও শিক্ষা</h2>
                 <div class="section-content-flex">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Robert_Baden-Powell_Vanity_Fair_19_April_1911.jpg/250px-Robert_Baden-Powell_Vanity_Fair_19_April_1911.jpg" loading="lazy" alt="Baden-Powell in 1911">
                     <div class="text-content">
-                        <p data-en="Robert Stephenson Smyth Lord Baden-Powell was born on 22 February 1857, in Paddington, London, Robert Baden-Powell was destined for a life of adventure and leadership. The penultimate son of Professor Baden Powell and Henrietta Grace Smyth, he grew up in a household that valued intellect and resilience. After his father's early passing, his mother ensured her children were educated and encouraged their independent spirit." data-bn="রবার্ট স্টিফেনসন স্মিথ পাওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।">রবার্ট স্টিফেনসন স্মিথ পাওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।</p>
-                        <p data-en="Educated at Charterhouse School, Baden-Powell developed a keen interest in outdoor skills, often exploring the nearby woods, honing his abilities in stalking and cooking while evading teachers. These early experiences laid the foundation for his later philosophies on self-reliance and nature." data-bn="চার্টারহাউস স্কুলে পড়াশোনা করার সময়, ব্যাডেন-পাওয়েল আউটডোর দক্ষতার প্রতি গভীর আগ্রহ তৈরি করেন, প্রায়শই কাছাকাছি বনভূমি অন্বেষণ করতেন, শিক্ষকদের এড়িয়ে চলার সময় শিকার এবং রান্নার দক্ষতা অর্জন করতেন। এই প্রাথমিক অভিজ্ঞতাগুলি আত্মনির্ভরশীলতা এবং প্রকৃতি সম্পর্কে তার পরবর্তী দর্শনের ভিত্তি স্থাপন করেছিল।">চার্টারহাউস স্কুলে পড়াশোনা করার সময়, ব্যাডেন-পাওয়েল আউটডোর দক্ষতার প্রতি গভীর আগ্রহ তৈরি করেন, প্রায়শই কাছাকাছি বনভূমি অন্বেষণ করতেন, শিক্ষকদের এড়িয়ে চলার সময় শিকার এবং রান্নার দক্ষতা অর্জন করতেন। এই প্রাথমিক অভিজ্ঞতাগুলি আত্মনির্ভরশীলতা এবং প্রকৃতি সম্পর্কে তার পরবর্তী দর্শনের ভিত্তি স্থাপন করেছিল।</p>
+                        <p data-en="Robert Stephenson Smyth Baden-Powell was born on 22 February 1857 at 6 Stanhope Street, Paddington, London. He was named after his godfather, Robert Stephenson, the famous railway and civil engineer. His father, Baden Powell, was a Savilian Professor of Geometry at Oxford University and a Church of England priest." data-bn="রবার্ট স্টিফেনসন স্মিথ ব্যাডেন-পাওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনের স্ট্যানহোপ স্ট্রিটের ৬ নম্বর বাড়িতে জন্মগ্রহণ করেন। তাঁর নামকরণ করা হয়েছিল তাঁর গডফাদার, বিখ্যাত রেলওয়ে ও সিভিল ইঞ্জিনিয়ার রবার্ট স্টিফেনসনের নামে। তাঁর পিতা ব্যাডেন পাওয়েল অক্সফোর্ড বিশ্ববিদ্যালয়ের স্যাভিলিয়ান অধ্যাপক অফ জিওমেট্রি এবং চার্চ অফ ইংল্যান্ডের যাজক ছিলেন।">রবার্ট স্টিফেনসন স্মিথ ব্যাডেন-পাওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনের স্ট্যানহোপ স্ট্রিটের ৬ নম্বর বাড়িতে জন্মগ্রহণ করেন। তাঁর নামকরণ করা হয়েছিল তাঁর গডফাদার, বিখ্যাত রেলওয়ে ও সিভিল ইঞ্জিনিয়ার রবার্ট স্টিফেনসনের নামে। তাঁর পিতা ব্যাডেন পাওয়েল অক্সফোর্ড বিশ্ববিদ্যালয়ের স্যাভিলিয়ান অধ্যাপক অফ জিওমেট্রি এবং চার্চ অফ ইংল্যান্ডের যাজক ছিলেন।</p>
+                        
+                        <p data-en="After his father's death in 1860, his mother, Henrietta Grace Smyth, changed the family name to Baden-Powell to honor her late husband. She was a strong woman who was determined that her children would succeed. In 1933, Baden-Powell said of her, 'The whole secret of my getting on, lay with my mother.'" data-bn="১৮৬০ সালে তাঁর পিতার মৃত্যুর পর, তাঁর মাতা হেনরিয়েটা গ্রেস স্মিথ প্রয়াত স্বামীর সম্মানে পরিবারের নাম পরিবর্তন করে ব্যাডেন-পাওয়েল রাখেন। তিনি ছিলেন একজন শক্তিশালী মহিলা যিনি তাঁর সন্তানদের সফল হবেন বলে দৃঢ়প্রতিজ্ঞ ছিলেন। ১৯৩৩ সালে, ব্যাডেন-পাওয়েল তাঁর সম্পর্কে বলেছিলেন, 'আমার এগিয়ে যাওয়ার পুরো রহস্য ছিল আমার মায়ের মধ্যে।'">১৮৬০ সালে তাঁর পিতার মৃত্যুর পর, তাঁর মাতা হেনরিয়েটা গ্রেস স্মিথ প্রয়াত স্বামীর সম্মানে পরিবারের নাম পরিবর্তন করে ব্যাডেন-পাওয়েল রাখেন। তিনি ছিলেন একজন শক্তিশালী মহিলা যিনি তাঁর সন্তানদের সফল হবেন বলে দৃঢ়প্রতিজ্ঞ ছিলেন। ১৯৩৩ সালে, ব্যাডেন-পাওয়েল তাঁর সম্পর্কে বলেছিলেন, 'আমার এগিয়ে যাওয়ার পুরো রহস্য ছিল আমার মায়ের মধ্যে।'</p>
+                        
+                        <p data-en="Baden-Powell attended Rose Hill School, Tunbridge Wells, and received a scholarship to Charterhouse School, a prestigious public school. During his time at Charterhouse, he developed a keen interest in outdoor skills, often exploring the nearby woods, stalking and cooking while evading teachers. These early experiences laid the foundation for his later philosophies on self-reliance and nature." data-bn="ব্যাডেন-পাওয়েল টানব্রিজ ওয়েলসের রোজ হিল স্কুলে পড়াশোনা করেন এবং চার্টারহাউস স্কুলে বৃত্তি লাভ করেন, যা একটি মর্যাদাপূর্ণ পাবলিক স্কুল ছিল। চার্টারহাউসে তাঁর সময়ে, তিনি আউটডোর দক্ষতার প্রতি গভীর আগ্রহ তৈরি করেন, প্রায়শই কাছাকাছি বনভূমি অন্বেষণ করতেন, শিক্ষকদের এড়িয়ে চলার সময় শিকার এবং রান্না করতেন। এই প্রাথমিক অভিজ্ঞতাগুলি আত্মনির্ভরশীলতা এবং প্রকৃতি সম্পর্কে তাঁর পরবর্তী দর্শনের ভিত্তি স্থাপন করেছিল।">ব্যাডেন-পাওয়েল টানব্রিজ ওয়েলসের রোজ হিল স্কুলে পড়াশোনা করেন এবং চার্টারহাউস স্কুলে বৃত্তি লাভ করেন, যা একটি মর্যাদাপূর্ণ পাবলিক স্কুল ছিল। চার্টারহাউসে তাঁর সময়ে, তিনি আউটডোর দক্ষতার প্রতি গভীর আগ্রহ তৈরি করেন, প্রায়শই কাছাকাছি বনভূমি অন্বেষণ করতেন, শিক্ষকদের এড়িয়ে চলার সময় শিকার এবং রান্না করতেন। এই প্রাথমিক অভিজ্ঞতাগুলি আত্মনির্ভরশীলতা এবং প্রকৃতি সম্পর্কে তাঁর পরবর্তী দর্শনের ভিত্তি স্থাপন করেছিল।</p>
                     </div>
                 </div>
             </section>
 
+            <section id="family" class="section-card">
+                <h2 data-en="Family Background" data-bn="পারিবারিক পটভূমি">পারিবারিক পটভূমি</h2>
+                <p data-en="Robert Baden-Powell had a large family with several siblings and half-siblings from his father's previous marriages. Here are his siblings:" data-bn="রবার্ট ব্যাডেন-পাওয়েলের একটি বড় পরিবার ছিল যেখানে তাঁর পিতার পূর্ববর্তী বিবাহ থেকে বেশ কয়েকজন ভাইবোন ও সৎ ভাইবোন ছিলেন। তাঁর ভাইবোনেরা হলেন:">রবার্ট ব্যাডেন-পাওয়েলের একটি বড় পরিবার ছিল যেখানে তাঁর পিতার পূর্ববর্তী বিবাহ থেকে বেশ কয়েকজন ভাইবোন ও সৎ ভাইবোন ছিলেন। তাঁর ভাইবোনেরা হলেন:</p>
+                
+                <div class="family-tree">
+                    <div class="family-member">
+                        <div class="name">ওয়ারিংটন</div>
+                        <div class="years">১৮৪৭-১৯২১</div>
+                    </div>
+                    <div class="family-member">
+                        <div class="name">জর্জ</div>
+                        <div class="years">১৮৪৭-১৮৯৮</div>
+                    </div>
+                    <div class="family-member">
+                        <div class="name">অগাস্টাস</div>
+                        <div class="years">১৮৪৯-১৮৬৩</div>
+                    </div>
+                    <div class="family-member">
+                        <div class="name">ফ্রান্সিস</div>
+                        <div class="years">১৮৫০-১৯৩৩</div>
+                    </div>
+                    <div class="family-member">
+                        <div class="name">অ্যাগনেস</div>
+                        <div class="years">১৮৫৮-১৯৪৫</div>
+                    </div>
+                    <div class="family-member">
+                        <div class="name">ব্যাডেন</div>
+                        <div class="years">১৮৬০-১৯৩৭</div>
+                    </div>
+                </div>
+                
+                <p data-en="Three children immediately preceding Baden-Powell had all died very young before he was born, so there was a seven-year gap between him and his next older brother Frank. He and his two younger siblings were almost like a separate family, of which he was the eldest." data-bn="ব্যাডেন-পাওয়েলের ঠিক আগের তিনটি শিশু তাঁর জন্মের আগেই খুব অল্প বয়সে মারা গিয়েছিল, তাই তাঁর এবং তাঁর পরবর্তী বড় ভাই ফ্রাঙ্কের মধ্যে সাত বছরের ব্যবধান ছিল। তিনি এবং তাঁর দুই ছোট ভাইবোন প্রায় একটি পৃথক পরিবারের মতো ছিলেন, যার মধ্যে তিনি ছিলেন eldest।">ব্যাডেন-পাওয়েলের ঠিক আগের তিনটি শিশু তাঁর জন্মের আগেই খুব অল্প বয়সে মারা গিয়েছিল, তাই তাঁর এবং তাঁর পরবর্তী বড় ভাই ফ্রাঙ্কের মধ্যে সাত বছরের ব্যবধান ছিল। তিনি এবং তাঁর দুই ছোট ভাইবোন প্রায় একটি পৃথক পরিবারের মতো ছিলেন, যার মধ্যে তিনি ছিলেন eldest।</p>
+            </section>
+
             <section id="military-career" class="section-card">
-                <h2 data-en="Distinguished Military Career" data-bn="বিশিষ্ট সামরিক কর্মজীবন">বিশিষ্ট সামরিক কর্মজীবন</h2>
+                <h2 data-en="Military Career" data-bn="সামরিক কর্মজীবন">সামরিক কর্মজীবন</h2>
                 <div class="section-content-flex">
                     <div class="text-content">
-                        <p data-en="Baden-Powell's early military career included service in India with the 13th Hussars in 1876. He later served in Africa, learning scouting skills from the Zulu people in the 1880s. In 1896, he served in the Second Matabele War where he met American scout Frederick Russell Burnham, who introduced him to woodcraft and the practical uses of the campaign hat and neckerchief - elements that would later become integral to Scouting." data-bn="ব্যাডেন-পাওয়েলের প্রাথমিক সামরিক কর্মজীবনে ১৮৭৬ সালে ভারতে ১৩তম হুসার্স-এ তার দায়িত্ব অন্তর্ভুক্ত ছিল। তিনি পরে আফ্রিকায় দায়িত্ব পালন করেন, যেখানে তিনি ১৮৮০-এর দশকে জুলু জনগণের কাছ থেকে স্কাউটিং দক্ষতা শেখেন। ১৮৯৬ সালে, তিনি দ্বিতীয় মাতাবেলে যুদ্ধে দায়িত্ব পালন করেন যেখানে তিনি আমেরিকান স্কাউট ফ্রেডেরিক রাসেল বার্নহামের সাথে দেখা হন, যিনি তাকে উডক্রাফ্ট এবং ক্যাম্পেইন হ্যাট ও নেকারচিফের ব্যবহারিক ব্যবহারের সাথে পরিচয় করিয়ে দেন -এই উপাদানগুলো পরে স্কাউটিং-এর অবিচ্ছেদ্য অংশ হয়ে ওঠে।">ব্যাডেন-পাওয়েলের প্রাথমিক সামরিক কর্মজীবনে ১৮৭৬ সালে ভারতে ১৩তম হুসার্স-এ তার দায়িত্ব অন্তর্ভুক্ত ছিল। তিনি পরে আফ্রিকায় দায়িত্ব পালন করেন, যেখানে তিনি ১৮৮০-এর দশকে জুলু জনগণের কাছ থেকে স্কাউটিং দক্ষতা শেখেন। ১৮৯৬ সালে, তিনি দ্বিতীয় মাতাবেলে যুদ্ধে দায়িত্ব পালন করেন যেখানে তিনি আমেরিকান স্কাউট ফ্রেডেরিক রাসেল বার্নহামের সাথে দেখা হন, যিনি তাকে উডক্রাফ্ট এবং ক্যাম্পেইন হ্যাট ও নেকারচিফের ব্যবহারিক ব্যবহারের সাথে পরিচয় করিয়ে দেন -এই উপাদানগুলো পরে স্কাউটিং-এর অবিচ্ছেদ্য অংশ হয়ে ওঠে।</p>
-                        <p data-en="During the 217-day Siege of Mafeking, Baden-Powell employed ingenious military deceptions including fake minefields and soldiers pretending to avoid non-existent barbed wire. He also used an armored locomotive loaded with sharpshooters to attack Boer encampments. His leadership during the siege made him a national hero in Britain." data-bn="২১৭ দিনব্যাপী মাফেকিং অবরোধের সময়, ব্যাডেন-পাওয়েল উদ্ভাবনী সামরিক কৌশল employed করেছিলেন যার মধ্যে নকল মাইনফিল্ড এবং অস্তিত্বহীন barbed wire এড়িয়ে চলার ভান করা soldiers অন্তর্ভুক্ত ছিল। তিনি বোর শিবিরে আক্রমণ করার জন্য sharpশুটার-ভরা একটি সাঁজোয়া লোকোমোটিভও ব্যবহার করেছিলেন। অবরোধের সময় তার নেতৃত্ব তাকে ব্রিটেনে একটি জাতীয় বীরে পরিণত করেছিল।">২১৭ দিনব্যাপী মাফেকিং অবরোধের সময়, ব্যাডেন-পাওয়েল উদ্ভাবনী সামরিক কৌশল employed করেছিলেন যার মধ্যে নকল মাইনফিল্ড এবং অস্তিত্বহীন barbed wire এড়িয়ে চলার ভান করা soldiers অন্তর্ভুক্ত ছিল। তিনি বোর শিবিরে আক্রমণ করার জন্য sharpশুটার-ভরা একটি সাঁজোয়া লোকোমোটিভও ব্যবহার করেছিলেন। অবরোধের সময় তার নেতৃত্ব তাকে ব্রিটেনে একটি জাতীয় বীরে পরিণত করেছিল।</p>
-                        <p data-en="He retired from the army in 1910 as a Lieutenant-General, dedicating his life fully to the burgeoning Scout Movement." data-bn="তিনি ১৯১০ সালে লেফটেন্যান্ট-জেনারেল হিসাবে সেনাবাহিনী থেকে অবসর গ্রহণ করেন, এবং তার জীবন সম্পূর্ণরূপে ক্রমবর্ধমান স্কাউট আন্দোলনের জন্য উৎসর্গ করেন।">তিনি ১৯১০ সালে লেফটেন্যান্ট-জেনারেল হিসাবে সেনাবাহিনী থেকে অবসর গ্রহণ করেন, এবং তার জীবন সম্পূর্ণরূপে ক্রমবর্ধমান স্কাউট আন্দোলনের জন্য উৎসর্গ করেন।</p>
+                        <p data-en="In 1876, Baden-Powell joined the 13th Hussars in India with the rank of lieutenant. He enhanced his military scouting skills among the Zulu in the early 1880s in Natal Province, South Africa, where he was mentioned in dispatches." data-bn="১৮৭৬ সালে, ব্যাডেন-পাওয়েল লেফটেন্যান্ট পদে ভারতে ১৩তম হুসার্সে যোগদান করেন। তিনি ১৮৮০-এর দশকের শুরুতে দক্ষিণ আফ্রিকার নাটাল প্রদেশে জুলুদের মধ্যে তাঁর সামরিক স্কাউটিং দক্ষতা উন্নত করেন, যেখানে তাঁর নাম উল্লেখ করা হয়েছিল।">১৮৭৬ সালে, ব্যাডেন-পাওয়েল লেফটেন্যান্ট পদে ভারতে ১৩তম হুসার্সে যোগদান করেন। তিনি ১৮৮০-এর দশকের শুরুতে দক্ষিণ আফ্রিকার নাটাল প্রদেশে জুলুদের মধ্যে তাঁর সামরিক স্কাউটিং দক্ষতা উন্নত করেন, যেখানে তাঁর নাম উল্লেখ করা হয়েছিল।</p>
+                        
+                        <p data-en="In 1896, he served in the Second Matabele War, where he commanded reconnaissance missions into enemy territory. It was during this campaign that he met and befriended the American scout Frederick Russell Burnham, who introduced him to woodcraft and the practical uses of the campaign hat and neckerchief – elements that would later become integral to Scouting." data-bn="১৮৯৬ সালে, তিনি দ্বিতীয় মাতাবেলে যুদ্ধে দায়িত্ব পালন করেন, যেখানে তিনি শত্রু অঞ্চলে রিকনেসান্স মিশনের নেতৃত্ব দেন। এই অভিযানের সময়ই তিনি আমেরিকান স্কাউট ফ্রেডেরিক রাসেল বার্নহামের সাথে দেখা করেন এবং বন্ধুত্ব করেন, যিনি তাকে উডক্রাফ্ট এবং ক্যাম্পেইন হ্যাট ও নেকারচিফের ব্যবহারিক ব্যবহারের সাথে পরিচয় করিয়ে দেন – এই উপাদানগুলো পরে স্কাউটিং-এর অবিচ্ছেদ্য অংশ হয়ে ওঠে।">১৮৯৬ সালে, তিনি দ্বিতীয় মাতাবেলে যুদ্ধে দায়িত্ব পালন করেন, যেখানে তিনি শত্রু অঞ্চলে রিকনেসান্স মিশনের নেতৃত্ব দেন। এই অভিযানের সময়ই তিনি আমেরিকান স্কাউট ফ্রেডেরিক রাসেল বার্নহামের সাথে দেখা করেন এবং বন্ধুত্ব করেন, যিনি তাকে উডক্রাফ্ট এবং ক্যাম্পেইন হ্যাট ও নেকারচিফের ব্যবহারিক ব্যবহারের সাথে পরিচয় করিয়ে দেন – এই উপাদানগুলো পরে স্কাউটিং-এর অবিচ্ছেদ্য অংশ হয়ে ওঠে।</p>
+                        
+                        <h3 data-en="Commissions and Promotions" data-bn="কমিশন ও পদোন্নতি">কমিশন ও পদোন্নতি</h3>
+                        <ul>
+                            <li data-en="1876: Sub-Lieutenant, 13th Hussars" data-bn="১৮৭৬: সাব-লেফটেন্যান্ট, ১৩তম হুসার্স">১৮৭৬: সাব-লেফটেন্যান্ট, ১৩তম হুসার্স</li>
+                            <li data-en="1883: Captain, 13th Hussars" data-bn="১৮৮৩: ক্যাপ্টেন, ১৩তম হুসার্স">১৮৮৩: ক্যাপ্টেন, ১৩তম হুসার্স</li>
+                            <li data-en="1897: Lieutenant Colonel, Commanding 5th Dragoon Guards" data-bn="১৮৯৭: লেফটেন্যান্ট কর্নেল, ৫ম ড্রাগন গার্ডসের অধিনায়ক">১৮৯৭: লেফটেন্যান্ট কর্নেল, ৫ম ড্রাগন গার্ডসের অধিনায়ক</li>
+                            <li data-en="1900: Major General" data-bn="১৯০০: মেজর জেনারেল">১৯০০: মেজর জেনারেল</li>
+                            <li data-en="1907: Lieutenant General" data-bn="১৯০৭: লেফটেন্যান্ট জেনারেল">১৯০৭: লেফটেন্যান্ট জেনারেল</li>
+                        </ul>
                     </div>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SA-S654b-Boer_War-Mafeking-10_Shillings_%281900%29.jpg/250px-SA-S654b-Boer_War-Mafeking-10_Shillings_%281900%29.jpg" loading="lazy" alt="Siege of Mafeking currency">
+                </div>
+            </section>
+
+            <section id="mafeking" class="section-card">
+                <h2 data-en="The Siege of Mafeking" data-bn="মাফেকিং অবরোধ">মাফেকিং অবরোধ</h2>
+                <div class="section-content-flex">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Baden_Powell.jpg/250px-Baden_Powell.jpg" loading="lazy" alt="Baden-Powell during the Boer War">
+                    <div class="text-content">
+                        <p data-en="During the Second Boer War, Baden-Powell commanded the garrison at Mafeking. The subsequent siege lasted 217 days, from October 1899 to May 1900. The town was surrounded by a Boer army, at times above 8,000 men." data-bn="দ্বিতীয় বোয়ার যুদ্ধের সময়, ব্যাডেন-পাওয়েল মাফেকিং-এর গ্যারিসনের নেতৃত্ব দেন। পরবর্তী অবরোধটি ২১৭ দিন স্থায়ী হয়েছিল, অক্টোবর ১৮৯৯ থেকে মে ১৯০০ পর্যন্ত। শহরটি বোয়ার সেনাবাহিনী দ্বারা বেষ্টিত ছিল, যা কখনও কখনও ৮,০০০ এরও বেশি সৈন্য ছিল।">দ্বিতীয় বোয়ার যুদ্ধের সময়, ব্যাডেন-পাওয়েল মাফেকিং-এর গ্যারিসনের নেতৃত্ব দেন। পরবর্তী অবরোধটি ২১৭ দিন স্থায়ী হয়েছিল, অক্টোবর ১৮৯৯ থেকে মে ১৯০০ পর্যন্ত। শহরটি বোয়ার সেনাবাহিনী দ্বারা বেষ্টিত ছিল, যা কখনও কখনও ৮,০০০ এরও বেশি সৈন্য ছিল।</p>
+                        
+                        <p data-en="Baden-Powell employed ingenious military deceptions to hold the town. Fake minefields were planted, and his soldiers pretended to avoid non-existent barbed wire while moving between trenches. In one daring attack, he loaded an armored locomotive with sharpshooters and sent it into the heart of the Boer encampment." data-bn="শহরটি ধরে রাখার জন্য ব্যাডেন-পাওয়েল উদ্ভাবনী সামরিক প্রতারণা employed করেছিলেন। নকল মাইনফিল্ড তৈরি করা হয়েছিল এবং তাঁর সৈন্যরা পরিখার মধ্যে চলাচলের সময় অস্তিত্বহীন barbed wire এড়িয়ে চলার ভান করেছিল। একটি সাহসী আক্রমণে, তিনি একটি সাঁজোয়া লোকোমোটিভকে sharpশুটার দিয়ে ভর্তি করে বোয়ার শিবিরের হৃদয়ে পাঠিয়েছিলেন।">শহরটি ধরে রাখার জন্য ব্যাডেন-পাওয়েল উদ্ভাবনী সামরিক প্রতারণা employed করেছিলেন। নকল মাইনফিল্ড তৈরি করা হয়েছিল এবং তাঁর সৈন্যরা পরিখার মধ্যে চলাচলের সময় অস্তিত্বহীন barbed wire এড়িয়ে চলার ভান করেছিল। একটি সাহসী আক্রমণে, তিনি একটি সাঁজোয়া লোকোমোটিভকে sharpশুটার দিয়ে ভর্তি করে বোয়ার শিবিরের হৃদয়ে পাঠিয়েছিলেন।</p>
+                        
+                        <p data-en="During the siege, the Mafeking Cadet Corps of white boys below fighting age stood guard, carried messages, and assisted in hospitals, freeing grown men to fight. This inspired the use of cadets in Scouting." data-bn="অবরোধের সময়, মাফেকিং ক্যাডেট কর্পস-এর সাদা ছেলেরা যারা যুদ্ধের বয়সের নীচে ছিল তারা পাহারা দিত, বার্তা বহন করত এবং হাসপাতালে সাহায্য করত, যা প্রাপ্তবয়স্ক পুরুষদের যুদ্ধের জন্য মুক্ত করে দেয়। এটি স্কাউটিং-এ ক্যাডেটদের ব্যবহারকে অনুপ্রাণিত করেছিল।">অবরোধের সময়, মাফেকিং ক্যাডেট কর্পস-এর সাদা ছেলেরা যারা যুদ্ধের বয়সের নীচে ছিল তারা পাহারা দিত, বার্তা বহন করত এবং হাসপাতালে সাহায্য করত, যা প্রাপ্তবয়স্ক পুরুষদের যুদ্ধের জন্য মুক্ত করে দেয়। এটি স্কাউটিং-এ ক্যাডেটদের ব্যবহারকে অনুপ্রাণিত করেছিল।</p>
+                        
+                        <p data-en="The siege was lifted on 17 May 1900. Baden-Powell became a national hero and was promoted to Major-General." data-bn="অবরোধটি ১৯০০ সালের ১৭ মে প্রত্যাহার করা হয়। ব্যাডেন-পাওয়েল একজন জাতীয় বীর হয়ে ওঠেন এবং মেজর-জেনারেল পদে উন্নীত হন।">অবরোধটি ১৯০০ সালের ১৭ মে প্রত্যাহার করা হয়। ব্যাডেন-পাওয়েল একজন জাতীয় বীর হয়ে ওঠেন এবং মেজর-জেনারেল পদে উন্নীত হন।</p>
+                    </div>
                 </div>
             </section>
 
             <section id="scout-movement" class="section-card">
                 <h2 data-en="Founding the Scout Movement" data-bn="স্কাউট আন্দোলনের প্রতিষ্ঠা">স্কাউট আন্দোলনের প্রতিষ্ঠা</h2>
                 <div class="section-content-flex">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Butt%2C_Baden-Powell%2C_Taft%2C_Bryce2.jpg/250px-Butt%2C_Baden-Powell%2C_Taft%2C_Bryce2.jpg" loading="lazy" alt="Reviewing Boy Scouts">
                     <div class="text-content">
-                        <p data-en="Upon his return from Africa, Baden-Powell discovered that his military manual, <em>Aids to Scouting</em>, had become unexpectedly popular among youth organizations. Inspired by this, and encouraged by figures like Ernest Thompson Seton, he reimagined his ideas for young people." data-bn="আফ্রিকা থেকে ফিরে আসার পর, ব্যাডেন-পাওয়েল দেখতে পান যে তার সামরিক ম্যানুয়াল, <em>এইডস টু স্কাউটিং</em>, যুব সংগঠনগুলির মধ্যে অপ্রত্যাশিতভাবে জনপ্রিয় হয়ে উঠেছে। এর দ্বারা অনুপ্রাণিত হয়ে, এবং আর্নেস্ট থম্পসন সেটনের মতো ব্যক্তিদের দ্বারা উৎসাহিত হয়ে, তিনি তরুণদের জন্য তার ধারণাগুলিকে নতুন করে কল্পনা করেন।">আফ্রিকা থেকে ফিরে আসার পর, ব্যাডেন-পাওয়েল দেখতে পান যে তার সামরিক ম্যানুয়াল, <em>এইডস টু স্কাউটিং</em>, যুব সংগঠনগুলির মধ্যে অপ্রত্যাশিতভাবে জনপ্রিয় হয়ে উঠেছে। এর দ্বারা অনুপ্রাণিত হয়ে, এবং আর্নেস্ট থম্পসন সেটনের মতো ব্যক্তিদের দ্বারা উৎসাহিত হয়ে, তিনি তরুণদের জন্য তার ধারণাগুলিকে নতুন করে কল্পনা করেন।</p>
-                        <p data-en="In August 1907, he organized an experimental camp on Brownsea Island with about twenty boys, testing his methods for character development, outdoor skills, and citizenship. This camp is widely regarded as the beginning of the Scout Movement." data-bn="১৯০৭ সালের আগস্ট মাসে, তিনি ব্রাউনসি দ্বীপে প্রায় বিশ জন ছেলেকে নিয়ে একটি পরীক্ষামূলক ক্যাম্পের আয়োজন করেন, যেখানে চরিত্র গঠন, আউটডোর দক্ষতা এবং নাগরিকত্বের জন্য তার পদ্ধতিগুলি পরীক্ষা করা হয়। এই ক্যাম্পটিকে স্কাউট আন্দোলনের সূচনা হিসাবে ব্যাপকভাবে বিবেচনা করা হয়।">১৯০৭ সালের আগস্ট মাসে, তিনি ব্রাউনসি দ্বীপে প্রায় বিশ জন ছেলেকে নিয়ে একটি পরীক্ষামূলক ক্যাম্পের আয়োজন করেন, যেখানে চরিত্র গঠন, আউটডোর দক্ষতা এবং নাগরিকত্বের জন্য তার পদ্ধতিগুলি পরীক্ষা করা হয়। এই ক্যাম্পটিকে স্কাউট আন্দোলনের সূচনা হিসাবে ব্যাপকভাবে বিবেচনা করা হয়।</p>
-                        <p data-en="In 1908, he published <a href='https://en.wikipedia.org/wiki/Scouting_for_Boys' target='_blank' style='color: var(--accent-color); text-decoration: none;'><em>Scouting for Boys</em></a>, which quickly became a global phenomenon. The movement grew organically, leading to the formation of the Boy Scouts Association. Recognizing the enthusiasm of girls, he also co-founded The Girl Guides Association with his sister Agnes in 1910. By 1939, Scouting had reached over 3.3 million young people in 32 countries, a testament to his enduring vision." data-bn="১৯০৮ সালে, তিনি <a href='https://en.wikipedia.org/wiki/Scouting_for_Boys' target='_blank' style='color: var(--accent-color); text-decoration: none;'><em>স্কাউটিং ফর বয়েজ</em></a> প্রকাশ করেন, যা দ্রুত বিশ্বব্যাপী জনপ্রিয় হয়ে ওঠে। আন্দোলনটি স্বতঃস্ফূর্তভাবে বৃদ্ধি পায়, যার ফলে বয় স্কাউটস অ্যাসোসিয়েশন গঠিত হয়। মেয়েদের উৎসাহ দেখে, তিনি ১৯১০ সালে তার বোন অ্যাগনেস-এর সাথে গার্ল গাইডস অ্যাসোসিয়েশনও সহ-প্রতিষ্ঠা করেন। ১৯৩৯ সালের মধ্যে, স্কাউটিং ৩২টি দেশে ৩৩ লক্ষেরও বেশি তরুণ-তরুণীর কাছে পৌঁছেছিল, যা তার স্থায়ী দৃষ্টিভঙ্গির প্রমাণ।">১৯০৮ সালে, তিনি <a href='https://en.wikipedia.org/wiki/Scouting_for_Boys' target='_blank' style='color: var(--accent-color); text-decoration: none;'><em>Scouting for Boys</em></a> প্রকাশ করেন, যা দ্রুত বিশ্বব্যাপী জনপ্রিয় হয়ে ওঠে। আন্দোলনটি স্বতঃস্ফূর্তভাবে বৃদ্ধি পায়, যার ফলে বয় স্কাউটস অ্যাসোসিয়েশন গঠিত হয়। মেয়েদের উৎসাহ দেখে, তিনি ১৯১০ সালে তার বোন অ্যাগনেস-এর সাথে গার্ল গাইডস অ্যাসোসিয়েশনও সহ-প্রতিষ্ঠা করেন। ১৯৩৯ সালের মধ্যে, স্কাউটিং ৩২টি দেশে ৩৩ লক্ষেরও বেশি তরুণ-তরুণীর কাছে পৌঁছেছিল, যা তার স্থায়ী দৃষ্টিভঙ্গির প্রমাণ।</p>
+                        <p data-en="Upon his return from Africa in 1903, Baden-Powell discovered that his military training manual, <em>Aids to Scouting</em>, had become a best-seller and was being used by teachers and youth organizations. With encouragement from Sir William Alexander Smith, founder of the Boys' Brigade, he decided to re-write it for a youth readership." data-bn="১৯০৩ সালে আফ্রিকা থেকে ফিরে আসার পর, ব্যাডেন-পাওয়েল দেখতে পান যে তাঁর সামরিক প্রশিক্ষণ ম্যানুয়াল, <em>এইডস টু স্কাউটিং</em>, একটি বেস্টসেলার হয়ে গেছে এবং শিক্ষক ও যুব সংগঠনগুলি এটি ব্যবহার করছে। বয়েজ ব্রিগেডের প্রতিষ্ঠাতা স্যার উইলিয়াম আলেকজান্ডার স্মিথের উৎসাহে, তিনি এটি তরুণ পাঠকদের জন্য পুনরায় লেখার সিদ্ধান্ত নেন।">১৯০৩ সালে আফ্রিকা থেকে ফিরে আসার পর, ব্যাডেন-পাওয়েল দেখতে পান যে তাঁর সামরিক প্রশিক্ষণ ম্যানুয়াল, <em>এইডস টু স্কাউটিং</em>, একটি বেস্টসেলার হয়ে গেছে এবং শিক্ষক ও যুব সংগঠনগুলি এটি ব্যবহার করছে। বয়েজ ব্রিগেডের প্রতিষ্ঠাতা স্যার উইলিয়াম আলেকজান্ডার স্মিথের উৎসাহে, তিনি এটি তরুণ পাঠকদের জন্য পুনরায় লেখার সিদ্ধান্ত নেন।</p>
+                        
+                        <h3 data-en="Brownsea Island Experiment" data-bn="ব্রাউনসি দ্বীপ পরীক্ষা">ব্রাউনসি দ্বীপ পরীক্ষা</h3>
+                        <p data-en="In August 1907, Baden-Powell held an experimental camp on Brownsea Island in Poole Harbour, Dorset, with about twenty boys from different social backgrounds. For 12 days, he tested his ideas for training boys in scouting, woodcraft, and citizenship. This camp is widely regarded as the beginning of the Scout Movement." data-bn="১৯০৭ সালের আগস্ট মাসে, ব্যাডেন-পাওয়েল ডরসেটের পুল হারবারের ব্রাউনসি দ্বীপে বিভিন্ন সামাজিক পটভূমির প্রায় বিশ জন ছেলেকে নিয়ে একটি পরীক্ষামূলক ক্যাম্পের আয়োজন করেন। ১২ দিন ধরে, তিনি ছেলেদের স্কাউটিং, উডক্রাফ্ট এবং নাগরিকত্বে প্রশিক্ষণের জন্য তাঁর ধারণাগুলি পরীক্ষা করেন। এই ক্যাম্পটিকে স্কাউট আন্দোলনের সূচনা হিসাবে ব্যাপকভাবে বিবেচনা করা হয়।">১৯০৭ সালের আগস্ট মাসে, ব্যাডেন-পাওয়েল ডরসেটের পুল হারবারের ব্রাউনসি দ্বীপে বিভিন্ন সামাজিক পটভূমির প্রায় বিশ জন ছেলেকে নিয়ে একটি পরীক্ষামূলক ক্যাম্পের আয়োজন করেন। ১২ দিন ধরে, তিনি ছেলেদের স্কাউটিং, উডক্রাফ্ট এবং নাগরিকত্বে প্রশিক্ষণের জন্য তাঁর ধারণাগুলি পরীক্ষা করেন। এই ক্যাম্পটিকে স্কাউট আন্দোলনের সূচনা হিসাবে ব্যাপকভাবে বিবেচনা করা হয়।</p>
+                        
+                        <h3 data-en="Scouting for Boys" data-bn="স্কাউটিং ফর বয়েজ">স্কাউটিং ফর বয়েজ</h3>
+                        <p data-en="In 1908, Baden-Powell published <em>Scouting for Boys</em> in six installments. The book became a global phenomenon, with boys spontaneously forming Scout troops. It has sold approximately 150 million copies, making it one of the best-selling books of the 20th century." data-bn="১৯০৮ সালে, ব্যাডেন-পাওয়েল ছয়টি কিস্তিতে <em>স্কাউটিং ফর বয়েজ</em> প্রকাশ করেন। বইটি বিশ্বব্যাপী জনপ্রিয় হয়ে ওঠে, ছেলেরা স্বতঃস্ফূর্তভাবে স্কাউট ট্রুপ গঠন করে। এটি প্রায় ১৫০ মিলিয়ন কপি বিক্রি হয়েছে, যা এটিকে ২০ শতকের সবচেয়ে বেশি বিক্রিত বইগুলির একটি করে তুলেছে।">১৯০৮ সালে, ব্যাডেন-পাওয়েল ছয়টি কিস্তিতে <em>স্কাউটিং ফর বয়েজ</em> প্রকাশ করেন। বইটি বিশ্বব্যাপী জনপ্রিয় হয়ে ওঠে, ছেলেরা স্বতঃস্ফূর্তভাবে স্কাউট ট্রুপ গঠন করে। এটি প্রায় ১৫০ মিলিয়ন কপি বিক্রি হয়েছে, যা এটিকে ২০ শতকের সবচেয়ে বেশি বিক্রিত বইগুলির একটি করে তুলেছে।</p>
+                        
+                        <h3 data-en="Girl Guides" data-bn="গার্ল গাইডস">গার্ল গাইডস</h3>
+                        <p data-en="In 1909, a rally of Scouts was held at Crystal Palace in London. Baden-Powell met many girls in Scout uniform who called themselves 'Girl Scouts.' In 1910, with his sister Agnes, he formed The Girl Guides Association." data-bn="১৯০৯ সালে, লন্ডনের ক্রিস্টাল প্যালেসে স্কাউটদের একটি সমাবেশ অনুষ্ঠিত হয়। ব্যাডেন-পাওয়েল স্কাউট ইউনিফর্মে অনেক মেয়ের সাথে দেখা করেন যারা নিজেদের 'গার্ল স্কাউটস' বলে ডাকত। ১৯১০ সালে, তাঁর বোন অ্যাগনেসের সাথে, তিনি গার্ল গাইডস অ্যাসোসিয়েশন গঠন করেন।">১৯০৯ সালে, লন্ডনের ক্রিস্টাল প্যালেসে স্কাউটদের একটি সমাবেশ অনুষ্ঠিত হয়। ব্যাডেন-পাওয়েল স্কাউট ইউনিফর্মে অনেক মেয়ের সাথে দেখা করেন যারা নিজেদের 'গার্ল স্কাউটস' বলে ডাকত। ১৯১০ সালে, তাঁর বোন অ্যাগনেসের সাথে, তিনি গার্ল গাইডস অ্যাসোসিয়েশন গঠন করেন।</p>
+                        
                         <div class="blockquote">
                             <p data-en="I have had a most happy life and I want each one of you to have a happy life too. I believe that God put us in this jolly world to be happy and enjoy life. Happiness does not come from being rich, nor merely being successful in your career, nor by self-indulgence. One step towards happiness is to make yourself healthy and strong while you are a boy, so that you can be useful and so you can enjoy life when you are a man. Nature study will show you how full of beautiful and wonderful things God has made the world for you to enjoy. Be contented with what you have got and make the best of it. Look on the bright side of things instead of the gloomy one. But the real way to get happiness is by giving out happiness to other people. Try and leave this world a little better than you found it and when your turn comes to die, you can die happy in feeling that at any rate you have not wasted your time but have done your best. 'Be prepared' in this way, to live happy and to die happy – stick to your Scout Promise always – even after you have ceased to be a boy – and God help you to do it." data-bn="আমার একটি অত্যন্ত সুখী জীবন ছিল এবং আমি চাই আপনারা প্রত্যেকেও একটি সুখী জীবন পান। আমি বিশ্বাস করি যে ঈশ্বর আমাদের এই আনন্দময় পৃথিবীতে সুখী হওয়ার এবং জীবন উপভোগ করার জন্য পাঠিয়েছেন। সুখ ধনী হওয়ার মাধ্যমে আসে না, বা কেবল আপনার কর্মজীবনে সফল হওয়ার মাধ্যমেও আসে না, বা আত্মতৃপ্তির মাধ্যমেও আসে না। সুখের দিকে একটি পদক্ষেপ হলো যখন আপনি বালক, তখন নিজেকে সুস্থ ও শক্তিশালী করে তোলা, যাতে আপনি একজন পুরুষ হলে উপকারী হতে পারেন এবং জীবন উপভোগ করতে পারেন। প্রকৃতি অধ্যয়ন আপনাকে দেখাবে যে ঈশ্বর আপনার উপভোগের জন্য পৃথিবীটিকে কত সুন্দর এবং বিস্ময়কর জিনিস দিয়ে পূর্ণ করেছেন। আপনার যা আছে তা নিয়ে সন্তুষ্ট থাকুন এবং তার সর্বোত্তম ব্যবহার করুন। হতাশাজনক দিকের পরিবর্তে উজ্জ্বল দিকটি দেখুন। কিন্তু সুখ পাওয়ার আসল উপায় হলো অন্য মানুষকে সুখ বিলিয়ে দেওয়া। এই পৃথিবীটিকে যেমন পেয়েছেন তার চেয়ে একটু ভালো অবস্থায় রেখে যাওয়ার চেষ্টা করুন এবং যখন আপনার মৃত্যুর সময় আসবে, তখন আপনি এই অনুভূতি নিয়ে খুশি মনে মরতে পারবেন যে আপনি অন্তত আপনার সময় নষ্ট করেননি বরং আপনার সেরাটা দিয়েছেন। এই উপায়ে 'প্রস্তুত থাকুন', সুখী জীবন যাপন করতে এবং সুখী মনে মরতে – সর্বদা আপনার স্কাউট প্রতিজ্ঞায় অটল থাকুন – এমনকি আপনি বালক না হলেও – এবং ঈশ্বর আপনাকে এটি করতে সাহায্য করুন।">আমার একটি অত্যন্ত সুখী জীবন ছিল এবং আমি চাই আপনারা প্রত্যেকেও একটি সুখী জীবন পান। আমি বিশ্বাস করি যে ঈশ্বর আমাদের এই আনন্দময় পৃথিবীতে সুখী হওয়ার এবং জীবন উপভোগ করার জন্য পাঠিয়েছেন। সুখ ধনী হওয়ার মাধ্যমে আসে না, বা কেবল আপনার কর্মজীবনে সফল হওয়ার মাধ্যমেও আসে না, বা আত্মতৃপ্তির মাধ্যমেও আসে না। সুখের দিকে একটি পদক্ষেপ হলো যখন আপনি বালক, তখন নিজেকে সুস্থ ও শক্তিশালী করে তোলা, যাতে আপনি একজন পুরুষ হলে উপকারী হতে পারেন এবং জীবন উপভোগ করতে পারেন। প্রকৃতি অধ্যয়ন আপনাকে দেখাবে যে ঈশ্বর আপনার উপভোগের জন্য পৃথিবীটিকে কত সুন্দর এবং বিস্ময়কর জিনিস দিয়ে পূর্ণ করেছেন। আপনার যা আছে তা নিয়ে সন্তুষ্ট থাকুন এবং তার সর্বোত্তম ব্যবহার করুন। হতাশাজনক দিকের পরিবর্তে উজ্জ্বল দিকটি দেখুন। কিন্তু সুখ পাওয়ার আসল উপায় হলো অন্য মানুষকে সুখ বিলিয়ে দেওয়া। এই পৃথিবীটিকে যেমন পেয়েছেন তার চেয়ে একটু ভালো অবস্থায় রেখে যাওয়ার চেষ্টা করুন এবং যখন আপনার মৃত্যুর সময় আসবে, তখন আপনি এই অনুভূতি নিয়ে খুশি মনে মরতে পারবেন যে আপনি অন্তত আপনার সময় নষ্ট করেননি বরং আপনার সেরাটা দিয়েছেন। এই উপায়ে 'প্রস্তুত থাকুন', সুখী জীবন যাপন করতে এবং সুখী মনে মরতে – সর্বদা আপনার স্কাউট প্রতিজ্ঞায় অটল থাকুন – এমনকি আপনি বালক না হলেও – এবং ঈশ্বর আপনাকে এটি করতে সাহায্য করুন।</p>
-                            <footer data-en="— Robert Baden-Powell's final letter to the Scouts" data-bn="— রবার্ট ব্যাডেন-পাওয়েলের স্কাউটদের প্রতি শেষ চিঠি">— রবার্ট ব্যাডেন-পাওয়েলের স্কাউটদের প্রতি শেষ চিঠি</footer>
+                            <footer data-en="— Robert Baden-Powell's final letter to the Scouts (1941)" data-bn="— রবার্ট ব্যাডেন-পাওয়েলের স্কাউটদের প্রতি শেষ চিঠি (১৯৪১)">— রবার্ট ব্যাডেন-পাওয়েলের স্কাউটদের প্রতি শেষ চিঠি (১৯৪১)</footer>
                         </div>
                     </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Butt%2C_Baden-Powell%2C_Taft%2C_Bryce2.jpg/250px-Butt%2C_Baden-Powell%2C_Taft%2C_Bryce2.jpg" loading="lazy" alt="Baden-Powell with President Taft">
                 </div>
             </section>
 
             <section id="writings" class="section-card">
                 <h2 data-en="Writings and Publications" data-bn="লেখালেখি ও প্রকাশনা">লেখালেখি ও প্রকাশনা</h2>
-                <div class="section-content-flex">
-                    <div class="text-content">
-                        <p data-en="Baden-Powell was a prolific writer, using his literary talents to document his experiences, educate his troops, and later, to guide the expanding Scout Movement. His publications ranged from military manuals to inspiring books for youth, many adorned with his unique and often humorous illustrations. Key works include:" data-bn="ব্যাডেন-পাওয়েল একজন অত্যন্ত ফলপ্রসূ লেখক ছিলেন, যিনি তার সাহিত্যিক প্রতিভাকে তার অভিজ্ঞতা নথিভুক্ত করতে, তার সৈন্যদের শিক্ষিত করতে এবং পরে, ক্রমবর্ধমান স্কাউট আন্দোলনকে পথ দেখাতে ব্যবহার করেছিলেন। তার প্রকাশনাগুলি সামরিক ম্যানুয়াল থেকে শুরু করে যুবকদের জন্য অনুপ্রেরণামূলক বই পর্যন্ত বিস্তৃত ছিল, যার অনেকগুলিতে তার অনন্য এবং প্রায়শই হাস্যকর চিত্রাবলী শোভা পেত। প্রধান কাজগুলির মধ্যে রয়েছে:">ব্যাডেন-পাওয়েল একজন অত্যন্ত ফলপ্রসূ লেখক ছিলেন, যিনি তার সাহিত্যিক প্রতিভাকে তার অভিজ্ঞতা নথিভুক্ত করতে, তার সৈন্যদের শিক্ষিত করতে এবং পরে, ক্রমবর্ধমান স্কাউট আন্দোলনকে পথ দেখাতে ব্যবহার করেছিলেন। তার প্রকাশনাগুলি সামরিক ম্যানুয়াল থেকে শুরু করে যুবকদের জন্য অনুপ্রেরণামূলক বই পর্যন্ত বিস্তৃত ছিল, যার অনেকগুলিতে তার অনন্য এবং প্রায়শই হাস্যকর চিত্রাবলী শোভা পেত। প্রধান কাজগুলির মধ্যে রয়েছে:</p>
-                        <ul>
-                            <li data-en="<strong>1884: <em>Reconnaissance and Scouting</em></strong> - A foundational military training manual." data-bn="<strong>১৮৮৪: <em>রিকনেসান্স অ্যান্ড স্কাউটিং</em></strong> - একটি মৌলিক সামরিক প্রশিক্ষণ ম্যানুয়াল।"><strong>১৮৮৪: <em>রিকনেসান্স অ্যান্ড স্কাউটিং</em></strong> - একটি মৌলিক সামরিক প্রশিক্ষণ ম্যানুয়াল।</li>
-                            <li data-en="<strong>1899: <em>Aids to Scouting for N.-C.Os and Men</em></strong> - A summary of his lectures on military scouting." data-bn="<strong>১৮৯৯: <em>নন-কমিশনড অফিসার এবং পুরুষদের জন্য স্কাউটিং-এর সাহায্য</em></strong> - সামরিক স্কাউটিংয়ের উপর তার বক্তৃতার সারসংক্ষেপ।"><strong>১৮৯৯: <em>নন-কমিশনড অফিসার এবং পুরুষদের জন্য স্কাউটিং-এর সাহায্য</em></strong> - সামরিক স্কাউটিংয়ের উপর তার বক্তৃতার সারসংক্ষেপ।</li>
-                            <li data-en="<strong>1908: <em>Scouting for Boys</em></strong> - The seminal work that launched the Scout Movement, becoming one of the best-selling books of the 20th century." data-bn="<strong>১৯০৮: <em>স্কাউটিং ফর বয়েজ</em></strong> - স্কাউট আন্দোলন শুরু করার মূল কাজ, যা ২০ শতকের অন্যতম সেরা বিক্রিত বই হয়ে ওঠে।"><strong>১৯০৮: <em>Scouting for Boys</em></strong> - স্কাউট আন্দোলন শুরু করার মূল কাজ, যা ২০ শতকের অন্যতম সেরা বিক্রিত বই হয়ে ওঠে।</li>
-                            <li data-en="<strong>1912: <em>The Handbook for the Girl Guides or How Girls Can Help to Build Up the Empire</em></strong> (co-authored with Agnes Baden-Powell)." data-bn="<strong>১৯১২: <em>দ্য হ্যান্ডবুক ফর দ্য গার্ল গাইডস অর হাউ গার্লস ক্যান হেল্প টু বিল্ড আপ দ্য এম্পায়ার</em></strong> (অ্যাগনেস ব্যাডেন-পাওয়েলের সাথে সহ-রচিত)।"><strong>১৯১২: <em>The Handbook for the Girl Guides or How Girls Can Help to Build Up the Empire</em></strong> (অ্যাগনেস ব্যাডেন-পাওয়েলের সাথে সহ-রচিত)।</li>
-                            <li data-en="<strong>1916: <em>The Wolf Cub's Handbook</em></strong> - Guiding younger members of the movement." data-bn="<strong>১৯১৬: <em>দ্য উলফ কাব'স হ্যান্ডবুক</em></strong> - আন্দোলনের কনিষ্ঠ সদস্যদের নির্দেশনা।"><strong>১৯১৬: <em>The Wolf Cub's Handbook</em></strong> - Guiding younger members of the movement.</li>
-                            <li data-en="<strong>1922: <em>Rovering to Success</em></strong> - A guide for young men." data-bn="<strong>১৯২২: <em>রোভারিং টু সাকসেস</em></strong> - তরুণ পুরুষদের জন্য একটি নির্দেশিকা।"><strong>১৯২২: <em>Rovering to Success</em></strong> - তরুণ পুরুষদের জন্য একটি নির্দেশিকা.</li>
-                        </ul>
-                        <p data-en="His writings underscore his deep belief in practical education, character development, and the importance of outdoor living." data-bn="তার লেখাগুলি ব্যবহারিক শিক্ষা, চরিত্র গঠন এবং আউটডোর জীবনযাপনের গুরুত্বে তার গভীর বিশ্বাসকে তুলে ধরে।">তার লেখাগুলি ব্যবহারিক শিক্ষা, চরিত্র গঠন এবং আউটডোর জীবনযাপনের গুরুত্বে তার গভীর বিশ্বাসকে তুলে ধরে।</p>
+                <p data-en="Baden-Powell was a prolific writer who published numerous books throughout his life, often illustrating them himself. Here are some of his most important works:" data-bn="ব্যাডেন-পাওয়েল একজন অত্যন্ত ফলপ্রসূ লেখক ছিলেন যিনি তাঁর সারা জীবন অসংখ্য বই প্রকাশ করেছেন, প্রায়শই নিজেই সেগুলি চিত্রিত করতেন। এখানে তাঁর সবচেয়ে গুরুত্বপূর্ণ কিছু কাজ রয়েছে:">ব্যাডেন-পাওয়েল একজন অত্যন্ত ফলপ্রসূ লেখক ছিলেন যিনি তাঁর সারা জীবন অসংখ্য বই প্রকাশ করেছেন, প্রায়শই নিজেই সেগুলি চিত্রিত করতেন। এখানে তাঁর সবচেয়ে গুরুত্বপূর্ণ কিছু কাজ রয়েছে:</p>
+                
+                <div class="publications-grid">
+                    <div class="publication-item">
+                        <div class="publication-year">১৮৮৪</div>
+                        <div class="publication-title">রিকনেসান্স অ্যান্ড স্কাউটিং</div>
                     </div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Scouting_for_boys_1_1908.jpg/190px-Scouting_for_boys_1_1908.jpg" loading="lazy" alt="Scouting for Boys cover">
-                </div>
-            </section>
-
-            <section id="artistic-skills" class="section-card">
-                <h2 data-en="Artistic Talents" data-bn="শৈল্পিক দক্ষতা">শৈল্পিক দক্ষতা</h2>
-                <div class="section-content-flex">
-                    <div class="text-content">
-                        <p data-en="Baden-Powell was an accomplished artist who painted or sketched almost every day of his life. He was ambidextrous and could draw equally well with either hand. His books are filled with his whimsical pen-and-ink illustrations, and he always traveled with a sketchpad. Many of his works had humorous or informative character, and twelve of his paintings hang in the British Scout Headquarters at Gilwell Park." data-bn="ব্যাডেন-পাওয়েল একজন দক্ষ শিল্পী ছিলেন যিনি তার জীবনের প্রায় প্রতিদিনই আঁকতেন বা স্কেচ করতেন। তিনি ছিলেন ambidextrous এবং উভয় হাত দিয়ে সমানভাবে ভালো আঁকতে পারতেন। তার বইগুলি তার হাস্যরসাত্মক pen-and-ink চিত্রাঙ্কনে পূর্ণ, এবং তিনি সর্বদা একটি sketchpad নিয়ে ভ্রমণ করতেন। তার অনেক কাজই হাস্যরসাত্মক বা তথ্যপূর্ণ চরিত্রের ছিল, এবং বারোটি painting ব্রিটিশ স্কাউট সদর দপ্তর Gilwell Park-এ টাঙানো আছে।">ব্যাডেন-পাওয়েল একজন দক্ষ শিল্পী ছিলেন যিনি তার জীবনের প্রায় প্রতিদিনই আঁকতেন বা স্কেচ করতেন। তিনি ছিলেন ambidextrous এবং উভয় হাত দিয়ে সমানভাবে ভালো আঁকতে পারতেন। তার বইগুলি তার হাস্যরসাত্মক pen-and-ink চিত্রাঙ্কনে পূর্ণ, এবং তিনি সর্বদা একটি sketchpad নিয়ে ভ্রমণ করতেন। তার অনেক কাজই হাস্যরসাত্মক বা তথ্যপূর্ণ চরিত্রের ছিল, এবং বারোটি painting ব্রিটিশ স্কাউট সদর দপ্তর Gilwell Park-এ টাঙানো আছে।</p>
+                    <div class="publication-item">
+                        <div class="publication-year">১৮৯৯</div>
+                        <div class="publication-title">এইডস টু স্কাউটিং ফর এন.-সি.ওস অ্যান্ড মেন</div>
                     </div>
-                    <img src="https://greenhowards.org.uk/wp-content/uploads/2018/07/R-Baden-Powell.jpg" loading="lazy" alt="Baden-Powell Self Portrait">
+                    <div class="publication-item">
+                        <div class="publication-year">১৯০৮</div>
+                        <div class="publication-title">স্কাউটিং ফর বয়েজ</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-year">১৯১২</div>
+                        <div class="publication-title">দ্য হ্যান্ডবুক ফর দ্য গার্ল গাইডস</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-year">১৯১৫</div>
+                        <div class="publication-title">মাই অ্যাডভেঞ্চারস অ্যাজ আ স্পাই</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-year">১৯১৬</div>
+                        <div class="publication-title">দ্য উলফ কাব'স হ্যান্ডবুক</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-year">১৯১৮</div>
+                        <div class="publication-title">গার্ল গাইডিং</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-year">১৯২২</div>
+                        <div class="publication-title">রোভারিং টু সাকসেস</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-year">১৯৩৩</div>
+                        <div class="publication-title">লেসনস ফ্রম দ্য ভার্সিটি অফ লাইফ</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-year">১৯৩৫</div>
+                        <div class="publication-title">স্কাউটিং রাউন্ড দ্য ওয়ার্ল্ড</div>
+                    </div>
                 </div>
+                
+                <p data-en="Baden-Powell's books have been translated into many languages and continue to inspire young people worldwide." data-bn="ব্যাডেন-পাওয়েলের বইগুলি অনেক ভাষায় অনূদিত হয়েছে এবং বিশ্বব্যাপী তরুণদের অনুপ্রাণিত করে চলেছে।">ব্যাডেন-পাওয়েলের বইগুলি অনেক ভাষায় অনূদিত হয়েছে এবং বিশ্বব্যাপী তরুণদের অনুপ্রাণিত করে চলেছে।</p>
             </section>
 
             <section id="personal-life" class="section-card">
-                <h2 data-en="Personal Life and Legacy" data-bn="ব্যক্তিগত জীবন ও উত্তরাধিকার">ব্যক্তিগত জীবন ও উত্তরাধিকার</h2>
+                <h2 data-en="Personal Life" data-bn="ব্যক্তিগত জীবন">ব্যক্তিগত জীবন</h2>
                 <div class="section-content-flex">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC1vXMtOYgqkNIMSEG4YXxREYf1g2C7bGA5SA205IRxQ&s" loading="lazy" alt="Baden-Powell family">
                     <div class="text-content">
-                        <p data-en="In 1912, Robert Baden-Powell married Olave St Clair Soames, a woman 32 years his junior who would become a formidable partner in the Scouting and Guiding movements. They shared a birthday, February 22nd, a date now celebrated as Founder's Day by Scouts and World Thinking Day by Guides." data-bn="১৯১২ সালে, রবার্ট ব্যাডেন-পাওয়েল ওলাভ সেন্ট ক্লেয়ার সোমসের সাথে বিবাহ বন্ধনে আবদ্ধ হন, যিনি তার থেকে ৩২ বছরের ছোট ছিলেন এবং স্কাউটিং ও গাইডিং আন্দোলনে একজন শক্তিশালী অংশীদার হয়ে ওঠেন। তাদের জন্মদিন ছিল ২২শে ফেব্রুয়ারি, যা এখন স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়।">১৯১২ সালে, রবার্ট ব্যাডেন-পাওয়েল ওলাভ সেন্ট ক্লেয়ার সোমসের সাথে বিবাহ বন্ধনে আবদ্ধ হন, যিনি তার থেকে ৩২ বছরের ছোট ছিলেন এবং স্কাউটিং ও গাইডিং আন্দোলনে একজন শক্তিশালী অংশীদার হয়ে ওঠেন। তাদের জন্মদিন ছিল ২২শে ফেব্রুয়ারি, যা এখন স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়।</p>
-                        <p data-en="Baden-Powell and Olave shared the same birthday, February 22nd, which is now celebrated worldwide as Founder's Day by Scouts and World Thinking Day by Guides. Their wedding gift from Scouts was a 20 h.p. Standard motor car, paid for by 100,000 Scouts who each donated one penny." data-bn="ব্যাডেন-পাওয়েল এবং ওলাভের একই জন্মদিন ছিল, ২২শে ফেব্রুয়ারি, যা এখন বিশ্বব্যাপী স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়। স্কাউটদের কাছ থেকে তাদের wedding gift ছিল একটি ২০ h.p. স্ট্যান্ডার্ড মোটর গাড়ি, যা ১০০,০০০ স্কাউট প্রদান করেছিল যারা প্রত্যেকে এক পেনি দান করেছিল।">ব্যাডেন-পাওয়েল এবং ওলাভের একই জন্মদিন ছিল, ২২শে ফেব্রুয়ারি, যা এখন বিশ্বব্যাপী স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়। স্কাউটদের কাছ থেকে তাদের wedding gift ছিল একটি ২০ h.p. স্ট্যান্ডার্ড মোটর গাড়ি, যা ১০০,০০০ স্কাউট প্রদান করেছিল যারা প্রত্যেকে এক পেনি দান করেছিল।</p>
-                        <p data-en="Together, they had three children: Arthur Robert Peter, Heather Grace, and Betty St Clair. Olave became the World Chief Guide, making the Baden-Powells a dynamic duo at the helm of the global youth movements." data-bn="একসাথে, তাদের তিনটি সন্তান ছিল: আর্থার রবার্ট পিটার, হেদার গ্রেস এবং বেটি সেন্ট ক্লেয়ার। ওলাভ বিশ্ব প্রধান গাইড হয়েছিলেন, যা ব্যাডেন-পাওয়েলদের বিশ্বব্যাপী যুব আন্দোলনের নেতৃত্বে একটি গতিশীল জুটি করে তুলেছিল।">একসাথে, তাদের তিনটি সন্তান ছিল: আর্থার রবার্ট পিটার, হেদার গ্রেস এবং বেটি সেন্ট ক্লেয়ার। ওলাভ বিশ্ব প্রধান গাইড হয়েছিলেন, যা ব্যাডেন-পাওয়েলদের বিশ্বব্যাপী যুব আন্দোলনের নেতৃত্বে একটি গতিশীল জুটি করে তুলেছিল।</p>
-                        <p data-en="Baden-Powell spent his final years in Nyeri, Kenya, where he found peace and inspiration in the natural beauty of the region. He passed away on January 8, 1941, and his grave in St Peter's Cemetery bears the Scouting trail sign 'ʘ', meaning 'Going Home.' His legacy lives on through the millions of Scouts and Guides worldwide who continue to uphold the values he championed." data-bn="ব্যাডেন-পাওয়েল তার শেষ বছরগুলি কেনিয়ার নেরি-তে কাটান, যেখানে তিনি অঞ্চলের প্রাকৃতিক সৌন্দর্যে শান্তি এবং অনুপ্রেরণা খুঁজে পান। তিনি ১৯৪১ সালের ৮ জানুয়ারি মারা যান এবং সেন্ট পিটার্স সেমেটারিতে তার কবরের উপর স্কাউটিং ট্রেইল সাইন 'ʘ' রয়েছে, যার অর্থ 'বাড়িতে ফেরা'। বিশ্বজুড়ে লক্ষ লক্ষ স্কাউট এবং গাইডের মাধ্যমে তার উত্তরাধিকার বেঁচে আছে, যারা তার প্রচারিত মূল্যবোধগুলি ধারণ করে চলেছে।">ব্যাডেন-পাওয়েল তার শেষ বছরগুলি কেনিয়ার নেরি-তে কাটান, যেখানে তিনি অঞ্চলের প্রাকৃতিক সৌন্দর্যে শান্তি এবং অনুপ্রেরণা খুঁজে পান। তিনি ১৯৪১ সালের ৮ জানুয়ারি মারা যান এবং সেন্ট পিটার্স সেমেটারিতে তার কবরের উপর স্কাউটিং ট্রেইল সাইন 'ʘ' রয়েছে, যার অর্থ 'বাড়িতে ফেরা'। বিশ্বজুড়ে লক্ষ লক্ষ স্কাউট এবং গাইডের মাধ্যমে তার উত্তরাধিকার বেঁচে আছে, যারা তার প্রচারিত মূল্যবোধগুলি ধারণ করে চলেছে।</p>
+                        <h3 data-en="Marriage to Olave Soames" data-bn="ওলাভ সোমসের সাথে বিবাহ">ওলাভ সোমসের সাথে বিবাহ</h3>
+                        <p data-en="In January 1912, Baden-Powell met Olave St Clair Soames on an ocean liner bound for New York. She was 23, and he was 55. Remarkably, they shared the same birthday, 22 February. They became engaged in September and married privately on 30 October 1912 at St Peter's Church, Parkstone, to avoid press intrusion." data-bn="১৯১২ সালের জানুয়ারিতে, ব্যাডেন-পাওয়েল নিউ ইয়র্কগামী একটি সমুদ্রগামী জাহাজে ওলাভ সেন্ট ক্লেয়ার সোমসের সাথে দেখা করেন। তাঁর বয়স ছিল ২৩, আর ব্যাডেন-পাওয়েলের ৫৫। উল্লেখযোগ্যভাবে, তাদের জন্মদিন একই ছিল, ২২ ফেব্রুয়ারি। সেপ্টেম্বরে তাদের বাগদান হয় এবং ১৯১২ সালের ৩০ অক্টোবর পার্কস্টোনের সেন্ট পিটার্স চার্চে গোপনে বিবাহ বন্ধনে আবদ্ধ হন, যা সংবাদমাধ্যমের অনুপ্রবেশ এড়াতে করা হয়।">১৯১২ সালের জানুয়ারিতে, ব্যাডেন-পাওয়েল নিউ ইয়র্কগামী একটি সমুদ্রগামী জাহাজে ওলাভ সেন্ট ক্লেয়ার সোমসের সাথে দেখা করেন। তাঁর বয়স ছিল ২৩, আর ব্যাডেন-পাওয়েলের ৫৫। উল্লেখযোগ্যভাবে, তাদের জন্মদিন একই ছিল, ২২ ফেব্রুয়ারি। সেপ্টেম্বরে তাদের বাগদান হয় এবং ১৯১২ সালের ৩০ অক্টোবর পার্কস্টোনের সেন্ট পিটার্স চার্চে গোপনে বিবাহ বন্ধনে আবদ্ধ হন, যা সংবাদমাধ্যমের অনুপ্রবেশ এড়াতে করা হয়।</p>
+                        
+                        <p data-en="Approximately 100,000 Scouts each donated one penny to buy Baden-Powell a wedding gift: a 20-horsepower Standard car. Their shared birthday, 22 February, is now celebrated worldwide as Founder's Day by Scouts and World Thinking Day by Guides." data-bn="প্রায় ১০০,০০০ স্কাউট প্রত্যেকে এক পেনি দান করে ব্যাডেন-পাওয়েলকে একটি বিবাহ উপহার কিনতে: একটি ২০-হর্সপাওয়ার স্ট্যান্ডার্ড গাড়ি। তাদের ভাগ করা জন্মদিন, ২২ ফেব্রুয়ারি, এখন বিশ্বব্যাপী স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়।">প্রায় ১০০,০০০ স্কাউট প্রত্যেকে এক পেনি দান করে ব্যাডেন-পাওয়েলকে একটি বিবাহ উপহার কিনতে: একটি ২০-হর্সপাওয়ার স্ট্যান্ডার্ড গাড়ি। তাদের ভাগ করা জন্মদিন, ২২ ফেব্রুয়ারি, এখন বিশ্বব্যাপী স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়।</p>
+                        
+                        <h3 data-en="Children" data-bn="সন্তান">সন্তান</h3>
+                        <p data-en="The Baden-Powells had three children:" data-bn="ব্যাডেন-পাওয়েল দম্পতির তিনটি সন্তান ছিল:">ব্যাডেন-পাওয়েল দম্পতির তিনটি সন্তান ছিল:</p>
+                        <ul>
+                            <li data-en="<strong>Arthur Robert Peter (1913-1962)</strong> - Later became the 2nd Baron Baden-Powell" data-bn="<strong>আর্থার রবার্ট পিটার (১৯১৩-১৯৬২)</strong> - পরে ২য় ব্যারন ব্যাডেন-পাওয়েল হন"><strong>আর্থার রবার্ট পিটার (১৯১৩-১৯৬২)</strong> - পরে ২য় ব্যারন ব্যাডেন-পাওয়েল হন</li>
+                            <li data-en="<strong>Heather Grace (1915-1986)</strong>" data-bn="<strong>হিদার গ্রেস (১৯১৫-১৯৮৬)</strong>"><strong>হিদার গ্রেস (১৯১৫-১৯৮৬)</strong></li>
+                            <li data-en="<strong>Betty St Clair (1917-2004)</strong>" data-bn="<strong>বেটি সেন্ট ক্লেয়ার (১৯১৭-২০০৪)</strong>"><strong>বেটি সেন্ট ক্লেয়ার (১৯১৭-২০০৪)</strong></li>
+                        </ul>
+                        
+                        <h3 data-en="Later Years" data-bn="শেষ জীবন">শেষ জীবন</h3>
+                        <p data-en="In 1939, the Baden-Powells moved to a cottage in Nyeri, Kenya, near Mount Kenya. Baden-Powell named it Paxtu. He continued to write and sketch until his final days." data-bn="১৯৩৯ সালে, ব্যাডেন-পাওয়েল দম্পতি কেনিয়ার নেরিতে মাউন্ট কেনিয়ার কাছে একটি কটেজে চলে যান। ব্যাডেন-পাওয়েল এর নাম দেন প্যাক্সটু। তিনি তাঁর শেষ দিন পর্যন্ত লিখতে এবং স্কেচ করতে থাকেন।">১৯৩৯ সালে, ব্যাডেন-পাওয়েল দম্পতি কেনিয়ার নেরিতে মাউন্ট কেনিয়ার কাছে একটি কটেজে চলে যান। ব্যাডেন-পাওয়েল এর নাম দেন প্যাক্সটু। তিনি তাঁর শেষ দিন পর্যন্ত লিখতে এবং স্কেচ করতে থাকেন।</p>
+                        
+                        <h3 data-en="Death and Burial" data-bn="মৃত্যু ও সমাধি">মৃত্যু ও সমাধি</h3>
+                        <p data-en="Robert Baden-Powell died on 8 January 1941 in Nyeri, Kenya. He is buried at St Peter's Cemetery in Nyeri. His gravestone bears the Scout trail sign 'ʘ', which means 'Going Home' or 'I have gone home.' In 2001, the Kenyan government declared his grave a national monument." data-bn="রবার্ট ব্যাডেন-পাওয়েল ১৯৪১ সালের ৮ জানুয়ারি কেনিয়ার নেরিতে মারা যান। তাঁকে নেরির সেন্ট পিটার্স সেমেটারিতে সমাহিত করা হয়। তাঁর সমাধিফলকে স্কাউটিং ট্রেইল সাইন 'ʘ' রয়েছে, যার অর্থ 'বাড়িতে ফেরা' বা 'আমি বাড়ি চলে গেছি।' ২০০১ সালে, কেনিয়ান সরকার তাঁর কবরকে একটি জাতীয় স্মৃতিস্তম্ভ ঘোষণা করে।">রবার্ট ব্যাডেন-পাওয়েল ১৯৪১ সালের ৮ জানুয়ারি কেনিয়ার নেরিতে মারা যান। তাঁকে নেরির সেন্ট পিটার্স সেমেটারিতে সমাহিত করা হয়। তাঁর সমাধিফলকে স্কাউটিং ট্রেইল সাইন 'ʘ' রয়েছে, যার অর্থ 'বাড়িতে ফেরা' বা 'আমি বাড়ি চলে গেছি।' ২০০১ সালে, কেনিয়ান সরকার তাঁর কবরকে একটি জাতীয় স্মৃতিস্তম্ভ ঘোষণা করে।</p>
+                        
+                        <p data-en="His wife Olave died in 1977, and her ashes were taken to Kenya and interred beside her husband." data-bn="তাঁর স্ত্রী ওলাভ ১৯৭৭ সালে মারা যান এবং তাঁর ছাই কেনিয়ায় নিয়ে গিয়ে স্বামীর পাশে সমাহিত করা হয়।">তাঁর স্ত্রী ওলাভ ১৯৭৭ সালে মারা যান এবং তাঁর ছাই কেনিয়ায় নিয়ে গিয়ে স্বামীর পাশে সমাহিত করা হয়।</p>
                     </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Olave_Baden-Powell.jpg/250px-Olave_Baden-Powell.jpg" loading="lazy" alt="Olave Baden-Powell">
                 </div>
             </section>
 
             <section id="recognition" class="section-card">
                 <h2 data-en="Awards and Recognition" data-bn="পুরস্কার ও স্বীকৃতি">পুরস্কার ও স্বীকৃতি</h2>
-                <div class="section-content-flex">
-                    <div class="text-content">
-                        <p data-en="Robert Baden-Powell received numerous accolades for his military service and his pioneering work with youth. These honors reflect the global impact of his vision:" data-bn="রবার্ট ব্যাডেন-পাওয়েল তার সামরিক পরিষেবা এবং যুবকদের সাথে তার অগ্রণী কাজের জন্য অসংখ্য প্রশংসা পেয়েছিলেন। এই সম্মাননাগুলি তার দৃষ্টিভঙ্গির বিশ্বব্যাপী প্রভাবকে প্রতিফলিত করে:">রবার্ট ব্যাডেন-পাওয়েল তার সামরিক পরিষেবা এবং যুবকদের সাথে তার অগ্রণী কাজের জন্য অসংখ্য প্রশংসা পেয়েছিলেন। এই সম্মাননাগুলি তার দৃষ্টিভঙ্গির বিশ্বব্যাপী প্রভাবকে প্রতিফলিত করে:</p>
-                        <ul>
-                            <li data-en="<strong>Order of Merit (OM):</strong> One of the most exclusive awards in the British honours system, bestowed in 1937." data-bn="<strong>অর্ডার অফ মেরিট (OM):</strong> ব্রিটিশ সম্মাননা পদ্ধতির অন্যতম একচেটিয়া পুরস্কার, যা ১৯৩৭ সালে প্রদান করা হয়।"><strong>Order of Merit (OM):</strong> ব্রিটিশ সম্মাননা পদ্ধতির অন্যতম একচেটিয়া পুরস্কার, যা ১৯৩৭ সালে প্রদান করা হয়।</li>
-                            <li data-en="<strong>Wateler Peace Prize:</strong> Awarded in 1937, recognizing his contributions to peace through youth development." data-bn="<strong>ওয়াটেলার শান্তি পুরস্কার:</strong> ১৯৩৭ সালে প্রদান করা হয়, যুব উন্নয়নের মাধ্যমে শান্তিতে তার অবদানের স্বীকৃতি স্বরূপ।"><strong>Wateler Peace Prize:</strong> ১৯৩৭ সালে প্রদান করা হয়, যুব উন্নয়নের মাধ্যমে শান্তিতে তার অবদানের স্বীকৃতি স্বরূপ।</li>
-                            <li data-en="<strong>Knight Grand Cross of the Order of St Michael and St George (GCMG)</strong> and <strong>Knight Grand Cross of the Royal Victorian Order (GCVO)</strong>." data-bn="<strong>নাইট গ্র্যান্ড ক্রস অফ দ্য অর্ডার অফ সেন্ট মাইকেল অ্যান্ড সেন্ট জর্জ (GCMG)</strong> এবং <strong>নাইট গ্র্যান্ড ক্রস অফ দ্য রয়্যাল ভিক্টোরিয়ান অর্ডার (GCVO)</strong>।"><strong>Knight Grand Cross of the Order of St Michael and St George (GCMG)</strong> and <strong>Knight Grand Cross of the Royal Victorian Order (GCVO)</strong>.</li>
-                            <li data-en="<strong>Bronze Wolf Award:</strong> The highest honor of the World Organization of the Scout Movement, awarded to him in 1935." data-bn="<strong>ব্রোঞ্জ উলফ অ্যাওয়ার্ড:</strong> ওয়ার্ল্ড অর্গানাইজেশন অফ দ্য স্কাউট মুভমেন্টের সর্বোচ্চ সম্মাননা, যা তাকে ১৯৩৫ সালে প্রদান করা হয়।"><strong>Bronze Wolf Award:</strong> ওয়ার্ল্ড অর্গানাইজেশন অফ দ্য স্কাউট মুভমেন্টের সর্বোচ্চ সম্মাননা, যা তাকে ১৯৩৫ সালে প্রদান করা হয়।</li>
-                            <li data-en="<strong>Silver Buffalo Award:</strong> The highest award of the Boy Scouts of America, received in 1926." data-bn="<strong>সিলভার বাফেলো অ্যাওয়ার্ড:</strong> বয় স্কাউটস অফ আমেরিকার সর্বোচ্চ পুরস্কার, যা ১৯২৬ সালে প্রাপ্ত।"><strong>Silver Buffalo Award:</strong> বয় স্কাউটস অফ আমেরিকার সর্বোচ্চ পুরস্কার, যা ১৯২৬ সালে প্রাপ্ত।</li>
-                            <li data-en="His legacy is also celebrated through memorials like Mount Baden-Powell in California and Baden-Powell Peak in Nepal." data-bn="তার উত্তরাধিকার ক্যালিফোর্নিয়ার মাউন্ট ব্যাডেন-পাওয়েল এবং নেপালের ব্যাডেন-পাওয়েল পিকের মতো স্মৃতিস্তম্ভের মাধ্যমেও পালিত হয়।">His legacy is also celebrated through memorials like Mount Baden-Powell in California and Baden-Powell Peak in Nepal.</li>
-                        </ul>
-                        <p data-en="In 2002, he was named 13th in the BBC's list of the 100 Greatest Britons, underscoring his lasting influence on British and global culture." data-bn="২০০২ সালে, তাকে বিবিসির ১০০ গ্রেটেস্ট ব্রিটিশনস-এর তালিকায় ১৩তম স্থান দেওয়া হয়, যা ব্রিটিশ এবং বিশ্ব সংস্কৃতিতে তার স্থায়ী প্রভাবকে তুলে ধরে।">In 2002, he was named 13th in the BBC's list of the 100 Greatest Britons, underscoring his lasting influence on British and global culture.</p>
+                
+                <div class="badge-container">
+                    <span class="badge om">Order of Merit (OM)</span>
+                    <span class="badge gcmg">GCMG</span>
+                    <span class="badge gcvo">GCVO</span>
+                    <span class="badge kcb">KCB</span>
+                    <span class="badge bronze-wolf">Bronze Wolf</span>
+                </div>
+                
+                <p data-en="Robert Baden-Powell received numerous honors for his military service and his pioneering work with youth:" data-bn="রবার্ট ব্যাডেন-পাওয়েল তাঁর সামরিক পরিষেবা এবং যুবকদের সাথে তাঁর অগ্রণী কাজের জন্য অসংখ্য সম্মাননা পেয়েছিলেন:">রবার্ট ব্যাডেন-পাওয়েল তাঁর সামরিক পরিষেবা এবং যুবকদের সাথে তাঁর অগ্রণী কাজের জন্য অসংখ্য সম্মাননা পেয়েছিলেন:</p>
+                
+                <h3 data-en="United Kingdom Honours" data-bn="যুক্তরাজ্যের সম্মাননা">যুক্তরাজ্যের সম্মাননা</h3>
+                <table class="honours-table">
+                    <thead>
+                        <tr>
+                            <th data-en="Ribbon" data-bn="ফিতা">ফিতা</th>
+                            <th data-en="Award" data-bn="পুরস্কার">পুরস্কার</th>
+                            <th data-en="Year" data-bn="সাল">সাল</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Ashanti_Star_BAR.svg/120px-Ashanti_Star_BAR.svg.png" width="85" height="23" loading="lazy" alt="Ashanti Star"></td>
+                            <td>Ashanti Star</td>
+                            <td>1895</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/British_South_Africa_Company_Medal_Ribbon_BAR.jpg" width="85" height="26" loading="lazy" alt="British South Africa Company Medal"></td>
+                            <td>British South Africa Company Medal</td>
+                            <td>1896</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Queen%27s_South_Africa_Medal.png/120px-Queen%27s_South_Africa_Medal.png" width="85" height="26" loading="lazy" alt="Queen's South Africa Medal"></td>
+                            <td>Queen's South Africa Medal</td>
+                            <td>1899-1900</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Order_of_the_Bath_UK_ribbon.svg/120px-Order_of_the_Bath_UK_ribbon.svg.png" width="85" height="23" loading="lazy" alt="Order of the Bath"></td>
+                            <td>Companion of the Order of the Bath (CB)</td>
+                            <td>1901</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/UK_Royal_Victorian_Order_ribbon.svg/120px-UK_Royal_Victorian_Order_ribbon.svg.png" width="85" height="23" loading="lazy" alt="Royal Victorian Order"></td>
+                            <td>Knight Commander of the Royal Victorian Order (KCVO)</td>
+                            <td>1909</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Order_of_the_Bath_UK_ribbon.svg/120px-Order_of_the_Bath_UK_ribbon.svg.png" width="85" height="23" loading="lazy" alt="Order of the Bath"></td>
+                            <td>Knight Commander of the Order of the Bath (KCB)</td>
+                            <td>1909</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/UK_Royal_Victorian_Order_ribbon.svg/120px-UK_Royal_Victorian_Order_ribbon.svg.png" width="85" height="23" loading="lazy" alt="Royal Victorian Order"></td>
+                            <td>Knight Grand Cross of the Royal Victorian Order (GCVO)</td>
+                            <td>1923</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/UK_Order_St-Michael_St-George_ribbon.svg/120px-UK_Order_St-Michael_St-George_ribbon.svg.png" width="85" height="23" loading="lazy" alt="Order of St Michael and St George"></td>
+                            <td>Knight Grand Cross of the Order of St Michael and St George (GCMG)</td>
+                            <td>1927</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Baron Baden-Powell of Gilwell</td>
+                            <td>1929</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Gal%C3%B3_de_l%27Orde_del_M%C3%A8rit_%28UK%29.svg/120px-Gal%C3%B3_de_l%27Orde_del_M%C3%A8rit_%28UK%29.svg.png" width="85" height="23" loading="lazy" alt="Order of Merit"></td>
+                            <td>Member of the Order of Merit (OM)</td>
+                            <td>1937</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 data-en="International Honours" data-bn="আন্তর্জাতিক সম্মাননা">আন্তর্জাতিক সম্মাননা</h3>
+                <table class="honours-table">
+                    <thead>
+                        <tr>
+                            <th data-en="Country" data-bn="দেশ">দেশ</th>
+                            <th data-en="Award" data-bn="পুরস্কার">পুরস্কার</th>
+                            <th data-en="Year" data-bn="সাল">সাল</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Portugal</td>
+                            <td>Grand Officer of the Order of Christ</td>
+                            <td>1919</td>
+                        </tr>
+                        <tr>
+                            <td>Greece</td>
+                            <td>Grand Commander of the Order of the Redeemer</td>
+                            <td>1920</td>
+                        </tr>
+                        <tr>
+                            <td>Denmark</td>
+                            <td>Grand Cross of the Order of the Dannebrog</td>
+                            <td>1921</td>
+                        </tr>
+                        <tr>
+                            <td>France</td>
+                            <td>Commander of the Legion of Honour</td>
+                            <td>1925</td>
+                        </tr>
+                        <tr>
+                            <td>USA</td>
+                            <td>Silver Buffalo Award (Boy Scouts of America)</td>
+                            <td>1926</td>
+                        </tr>
+                        <tr>
+                            <td>Czechoslovakia</td>
+                            <td>Grand Cross of the Order of the White Lion</td>
+                            <td>1929</td>
+                        </tr>
+                        <tr>
+                            <td>Hungary</td>
+                            <td>Order of Merit (1st Class)</td>
+                            <td>1929</td>
+                        </tr>
+                        <tr>
+                            <td>Greece</td>
+                            <td>Grand Cross of the Order of the Phoenix</td>
+                            <td>1930</td>
+                        </tr>
+                        <tr>
+                            <td>Netherlands</td>
+                            <td>Grand Cross of the Order of Orange-Nassau</td>
+                            <td>1932</td>
+                        </tr>
+                        <tr>
+                            <td>International</td>
+                            <td>Bronze Wolf Award (World Scouting)</td>
+                            <td>1935</td>
+                        </tr>
+                        <tr>
+                            <td>Netherlands</td>
+                            <td>Wateler Peace Prize</td>
+                            <td>1937</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 data-en="Other Tributes" data-bn="অন্যান্য শ্রদ্ধাঞ্জলি">অন্যান্য শ্রদ্ধাঞ্জলি</h3>
+                <ul>
+                    <li data-en="<strong>Mount Baden-Powell</strong> in California, dedicated by Frederick Russell Burnham in 1931" data-bn="<strong>মাউন্ট ব্যাডেন-পাওয়েল</strong> ক্যালিফোর্নিয়ায়, ১৯৩১ সালে ফ্রেডেরিক রাসেল বার্নহাম দ্বারা উৎসর্গীকৃত"><strong>মাউন্ট ব্যাডেন-পাওয়েল</strong> ক্যালিফোর্নিয়ায়, ১৯৩১ সালে ফ্রেডেরিক রাসেল বার্নহাম দ্বারা উৎসর্গীকৃত</li>
+                    <li data-en="<strong>Baden-Powell Peak</strong> in Nepal, renamed in 2007 for the Scouting Centenary" data-bn="<strong>ব্যাডেন-পাওয়েল পিক</strong> নেপালে, ২০০৭ সালে স্কাউটিং শতবর্ষে পুনঃনামকরণ করা হয়"><strong>ব্যাডেন-পাওয়েল পিক</strong> নেপালে, ২০০৭ সালে স্কাউটিং শতবর্ষে পুনঃনামকরণ করা হয়</li>
+                    <li data-en="<strong>Statue in London</strong> outside Baden-Powell House, by Don Potter" data-bn="<strong>লন্ডনে মূর্তি</strong> ব্যাডেন-পাওয়েল হাউসের বাইরে, ডন পটার দ্বারা"><strong>লন্ডনে মূর্তি</strong> ব্যাডেন-পাওয়েল হাউসের বাইরে, ডন পটার দ্বারা</li>
+                    <li data-en="<strong>Statue in Poole</strong>, Dorset, installed in 2008" data-bn="<strong>পুলে মূর্তি</strong>, ডরসেট, ২০০৮ সালে স্থাপিত"><strong>পুলে মূর্তি</strong>, ডরসেট, ২০০৮ সালে স্থাপিত</li>
+                    <li data-en="<strong>Memorial plaque</strong> in Westminster Abbey, London" data-bn="<strong>স্মারক ফলক</strong> ওয়েস্টমিনস্টার অ্যাবিতে, লন্ডন"><strong>স্মারক ফলক</strong> ওয়েস্টমিনস্টার অ্যাবিতে, লন্ডন</li>
+                    <li data-en="<strong>13th in BBC's 100 Greatest Britons</strong> (2002)" data-bn="<strong>বিবিসির ১০০ গ্রেটেস্ট ব্রিটিশনস-এ ১৩তম</strong> (২০০২)"><strong>বিবিসির ১০০ গ্রেটেস্ট ব্রিটিশনস-এ ১৩তম</strong> (২০০২)</li>
+                </ul>
+            </section>
+
+            <section id="timeline" class="section-card">
+                <h2 data-en="Life Timeline" data-bn="জীবনকালের সময়রেখা">জীবনকালের সময়রেখা</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৮৫৭</div>
+                        <div class="timeline-title">জন্ম</div>
+                        <div>২২ ফেব্রুয়ারি, লন্ডনের প্যাডিংটনে জন্মগ্রহণ</div>
                     </div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Robert_Baden-Powell_Monument_London.jpg/190px-Robert_Baden-Powell_Monument_London.jpg" loading="lazy" alt="Baden-Powell Monument London">
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৮৭৬</div>
+                        <div class="timeline-title">সামরিক জীবন শুরু</div>
+                        <div>১৩তম হুসার্সে যোগদান, ভারতে প্রেরিত</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৮৮০-৮৪</div>
+                        <div class="timeline-title">দক্ষিণ আফ্রিকা</div>
+                        <div>জুলুদের মধ্যে স্কাউটিং দক্ষতা অর্জন</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৮৯৬</div>
+                        <div class="timeline-title">মাতাবেলে যুদ্ধ</div>
+                        <div>ফ্রেডেরিক রাসেল বার্নহামের সাথে সাক্ষাৎ</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৮৯৯-১৯০০</div>
+                        <div class="timeline-title">মাফেকিং অবরোধ</div>
+                        <div>২১৭ দিন ধরে শহর রক্ষা, জাতীয় বীরে পরিণত</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৯০৭</div>
+                        <div class="timeline-title">ব্রাউনসি দ্বীপ ক্যাম্প</div>
+                        <div>প্রথম স্কাউট পরীক্ষামূলক ক্যাম্প</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৯০৮</div>
+                        <div class="timeline-title">স্কাউটিং ফর বয়েজ</div>
+                        <div>বই প্রকাশ, স্কাউট আন্দোলনের আনুষ্ঠানিক সূচনা</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৯১০</div>
+                        <div class="timeline-title">সেনাবাহিনী থেকে অবসর</div>
+                        <div>লেফটেন্যান্ট জেনারেল পদে অবসর, স্কাউটিং-এ পূর্ণ সময় দেওয়া</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৯১২</div>
+                        <div class="timeline-title">বিবাহ</div>
+                        <div>ওলাভ সেন্ট ক্লেয়ার সোমসের সাথে বিবাহ</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৯২৯</div>
+                        <div class="timeline-title">ব্যারন উপাধি</div>
+                        <div>১ম ব্যারন ব্যাডেন-পাওয়েল অফ গিলওয়েল</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৯৩৭</div>
+                        <div class="timeline-title">অর্ডার অফ মেরিট</div>
+                        <div>যুক্তরাজ্যের অন্যতম সর্বোচ্চ সম্মাননা</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">১৯৪১</div>
+                        <div class="timeline-title">মৃত্যু</div>
+                        <div>৮ জানুয়ারি, কেনিয়ার নেরিতে মৃত্যু</div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -903,308 +1495,301 @@
 
     <footer class="footer">
         <p data-en="&copy; <span id='currentYear'></span> A Tribute by Md. Ashfaqur Rahman Tanim. All rights reserved." data-bn="&copy; <span id='currentYear'></span> মোঃ আশফাকুর রহমান তানিম কর্তৃক একটি শ্রদ্ধাঞ্জলি। সর্বস্বত্ব সংরক্ষিত।">&copy; <span id="currentYear"></span> মোঃ আশফাকুর রহমান তানিম কর্তৃক একটি শ্রদ্ধাঞ্জলি। সর্বস্বত্ব সংরক্ষিত।</p>
-        <p data-en="Inspired by the life and legacy of Baden-Powell." data-bn="ব্যাডেন-পাওয়েলের জীবন ও উত্তরাধিকার দ্বারা অনুপ্রাণিত।">Inspired by the life and legacy of Baden-Powell.</p>
+        <p data-en="Inspired by the life and legacy of Robert Baden-Powell, Founder of the Scout Movement." data-bn="স্কাউট আন্দোলনের প্রতিষ্ঠাতা রবার্ট ব্যাডেন-পাওয়েলের জীবন ও উত্তরাধিকার দ্বারা অনুপ্রাণিত।">Inspired by the life and legacy of Robert Baden-Powell, Founder of the Scout Movement.</p>
+        <p>🌲 <span data-en="Be Prepared" data-bn="সর্বদা প্রস্তুত">সর্বদা প্রস্তুত</span> 🌲</p>
+        <p>
+            <a href="https://www.scout.org/" target="_blank" rel="noopener">World Scouting</a> | 
+            <a href="https://www.scouts.org.uk/" target="_blank" rel="noopener">The Scout Association</a> | 
+            <a href="https://en.wikipedia.org/wiki/Robert_Baden-Powell,_1st_Baron_Baden-Powell" target="_blank" rel="noopener">Wikipedia</a>
+        </p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navList = document.getElementById('nav-list');
-            const darkModeToggle = document.getElementById('darkModeToggle');
-            const langToggle = document.getElementById('langToggle');
-            const sections = document.querySelectorAll('.section-card');
-            const currentYearSpan = document.getElementById('currentYear');
-            const heroSection = document.querySelector('.hero-section');
-            const header = document.querySelector('.header');
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const langToggle = document.getElementById('langToggle');
+        const sections = document.querySelectorAll('.section-card');
+        const currentYearSpan = document.getElementById('currentYear');
+        const heroSection = document.querySelector('.hero-section');
+        const header = document.querySelector('.header');
 
-            // Set current year in footer
+        // Set current year in footer
+        if (currentYearSpan) {
             currentYearSpan.textContent = new Date().getFullYear();
+        }
 
-            // Function to update header height variable
-            const updateHeaderHeight = () => {
-                document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
-            };
+        // Function to update header height variable
+        const updateHeaderHeight = () => {
+            document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
+        };
 
-            // Update header height on load and resize
-            updateHeaderHeight();
-            window.addEventListener('resize', updateHeaderHeight);
+        // Update header height on load and resize
+        updateHeaderHeight();
+        window.addEventListener('resize', updateHeaderHeight);
 
-
-            // Generate particles for hero section
+        // Generate particles for hero section
+        if (heroSection) {
             function createParticle() {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
                 heroSection.appendChild(particle);
 
-                const size = Math.random() * 10 + 5; // 5 to 15px
+                const size = Math.random() * 10 + 5;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
                 particle.style.left = `${Math.random() * 100}%`;
-                particle.style.bottom = `-${size}px`; // Start from below the section
-                particle.style.animationDuration = `${Math.random() * 10 + 5}s`; // 5 to 15s
-                particle.style.animationDelay = `${Math.random() * 5}s`; // 0 to 5s delay
+                particle.style.bottom = `-${size}px`;
+                particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
             }
 
             for (let i = 0; i < 30; i++) {
                 createParticle();
             }
+        }
 
-            const translations = {
-                en: {
-                    bpTribute: "Baden-Powell",
-                    tributeText: "Tribute",
-                    about: "About",
-                    militaryCareer: "Military Career",
-                    scoutMovement: "Scout Movement",
-                    writings: "Writings",
-                    artisticSkills: "Artistic Talents",
-                    personalLife: "Personal Life",
-                    recognition: "Recognition",
-                    darkMode: "Dark Mode",
-                    heroTitle: "Robert Stephenson Smyth Lord Baden-Powell of Gilwell",
-                    heroSubtitle: "The visionary founder of the worldwide Scout and Guide Movements, whose principles continue to inspire millions globally.",
-                    learnMore: "Learn More About His Legacy",
-                    earlyLifeTitle: "Early Life and Inspiration",
-                    earlyLifeP1: "Robert Stephenson Smyth Lord Baden-Powell was born on 22 February 1857, in Paddington, London, Robert Baden-Powell was destined for a life of adventure and leadership. The penultimate son of Professor Baden Powell and Henrietta Grace Smyth, he grew up in a household that valued intellect and resilience. After his father's early passing, his mother ensured her children were educated and encouraged their independent spirit.",
-                    earlyLifeP2: "Educated at Charterhouse School, Baden-Powell developed a keen interest in outdoor skills, often exploring the nearby woods, honing his abilities in stalking and cooking while evading teachers. These early experiences laid the foundation for his later philosophies on self-reliance and nature.",
-                    militaryCareerTitle: "Distinguished Military Career",
-                    militaryCareerP1: "Baden-Powell's early military career included service in India with the 13th Hussars in 1876. He later served in Africa, learning scouting skills from the Zulu people in the 1880s. In 1896, he served in the Second Matabele War where he met American scout Frederick Russell Burnham, who introduced him to woodcraft and the practical uses of the campaign hat and neckerchief - elements that would later become integral to Scouting.",
-                    militaryCareerP2: "During the 217-day Siege of Mafeking, Baden-Powell employed ingenious military deceptions including fake minefields and soldiers pretending to avoid non-existent barbed wire. He also used an armored locomotive loaded with sharpshooters to attack Boer encampments. His leadership during the siege made him a national hero in Britain.",
-                    militaryCareerP3: "He retired from the army in 1910 as a Lieutenant-General, dedicating his life fully to the burgeoning Scout Movement.",
-                    scoutMovementTitle: "Founding the Scout Movement",
-                    scoutMovementP1: "Upon his return from Africa, Baden-Powell discovered that his military manual, <em>Aids to Scouting</em>, had become unexpectedly popular among youth organizations. Inspired by this, and encouraged by figures like Ernest Thompson Seton, he reimagined his ideas for young people.",
-                    scoutMovementP2: "In August 1907, he organized an experimental camp on Brownsea Island with about twenty boys, testing his methods for character development, outdoor skills, and citizenship. This camp is widely regarded as the beginning of the Scout Movement.",
-                    scoutMovementP3: "In 1908, he published <a href='https://en.wikipedia.org/wiki/Scouting_for_Boys' target='_blank' style='color: var(--accent-color); text-decoration: none;'><em>Scouting for Boys</em></a>, which quickly became a global phenomenon. The movement grew organically, leading to the formation of the Boy Scouts Association. Recognizing the enthusiasm of girls, he also co-founded The Girl Guides Association with his sister Agnes in 1910. By 1939, Scouting had reached over 3.3 million young people in 32 countries, a testament to his enduring vision.",
-                    scoutQuote: "I have had a most happy life and I want each one of you to have a happy life too. I believe that God put us in this jolly world to be happy and enjoy life. Happiness does not come from being rich, nor merely being successful in your career, nor by self-indulgence. One step towards happiness is to make yourself healthy and strong while you are a boy, so that you can be useful and so you can enjoy life when you are a man. Nature study will show you how full of beautiful and wonderful things God has made the world for you to enjoy. Be contented with what you have got and make the best of it. Look on the bright side of things instead of the gloomy one. But the real way to get happiness is by giving out happiness to other people. Try and leave this world a little better than you found it and when your turn comes to die, you can die happy in feeling that at any rate you have not wasted your time but have done your best. 'Be prepared' in this way, to live happy and to die happy – stick to your Scout Promise always – even after you have ceased to be a boy – and God help you to do it.",
-                    scoutQuoteFooter: "— Robert Baden-Powell's final letter to the Scouts",
-                    writingsTitle: "Writings and Publications",
-                    writingsP1: "Baden-Powell was a prolific writer, using his literary talents to document his experiences, educate his troops, and later, to guide the expanding Scout Movement. His publications ranged from military manuals to inspiring books for youth, many adorned with his unique and often humorous illustrations. Key works include:",
-                    writingsL1: "<strong>1884: <em>Reconnaissance and Scouting</em></strong> - A foundational military training manual.",
-                    writingsL2: "<strong>1899: <em>Aids to Scouting for N.-C.Os and Men</em></strong> - A summary of his lectures on military scouting.",
-                    writingsL3: "<strong>1908: <em>Scouting for Boys</em></strong> - The seminal work that launched the Scout Movement, becoming one of the best-selling books of the 20th century.",
-                    writingsL4: "<strong>1912: <em>The Handbook for the Girl Guides or How Girls Can Help to Build Up the Empire</em></strong> (co-authored with Agnes Baden-Powell).",
-                    writingsL5: "<strong>1916: <em>The Wolf Cub's Handbook</em></strong> - Guiding younger members of the movement.",
-                    writingsL6: "<strong>1922: <em>Rovering to Success</em></strong> - A guide for young men.",
-                    writingsP2: "His writings underscore his deep belief in practical education, character development, and the importance of outdoor living.",
-                    artisticSkillsTitle: "Artistic Talents",
-                    artisticSkillsP1: "Baden-Powell was an accomplished artist who painted or sketched almost every day of his life. He was ambidextrous and could draw equally well with either hand. His books are filled with his whimsical pen-and-ink illustrations, and he always traveled with a sketchpad. Many of his works had humorous or informative character, and twelve of his paintings hang in the British Scout Headquarters at Gilwell Park.",
-                    personalLifeTitle: "Personal Life and Legacy",
-                    personalLifeP1: "In 1912, Robert Baden-Powell married Olave St Clair Soames, a woman 32 years his junior who would become a formidable partner in the Scouting and Guiding movements. They shared a birthday, February 22nd, a date now celebrated as Founder's Day by Scouts and World Thinking Day by Guides.",
-                    personalLifeP2: "Baden-Powell and Olave shared the same birthday, February 22nd, which is now celebrated worldwide as Founder's Day by Scouts and World Thinking Day by Guides. Their wedding gift from Scouts was a 20 h.p. Standard motor car, paid for by 100,000 Scouts who each donated one penny.",
-                    personalLifeP3: "Together, they had three children: Arthur Robert Peter, Heather Grace, and Betty St Clair. Olave became the World Chief Guide, making the Baden-Powells a dynamic duo at the helm of the global youth movements.",
-                    personalLifeP4: "Baden-Powell spent his final years in Nyeri, Kenya, where he found peace and inspiration in the natural beauty of the region. He passed away on January 8, 1941, and his grave in St Peter's Cemetery bears the Scouting trail sign 'ʘ', meaning 'Going Home.' His legacy lives on through the millions of Scouts and Guides worldwide who continue to uphold the values he championed.",
-                    recognitionTitle: "Awards and Recognition",
-                    recognitionP1: "Robert Baden-Powell received numerous accolades for his military service and his pioneering work with youth. These honors reflect the global impact of his vision:",
-                    recognitionL1: "<strong>Order of Merit (OM):</strong> One of the most exclusive awards in the British honours system, bestowed in 1937.",
-                    recognitionL2: "<strong>Wateler Peace Prize:</strong> Awarded in 1937, recognizing his contributions to peace through youth development.",
-                    recognitionL3: "<strong>Knight Grand Cross of the Order of St Michael and St George (GCMG)</strong> and <strong>Knight Grand Cross of the Royal Victorian Order (GCVO)</strong>.",
-                    recognitionL4: "<strong>Bronze Wolf Award:</strong> The highest honor of the World Organization of the Scout Movement, awarded to him in 1935.",
-                    recognitionL5: "<strong>Silver Buffalo Award:</strong> The highest award of the Boy Scouts of America, received in 1926.",
-                    recognitionL6: "His legacy is also celebrated through memorials like Mount Baden-Powell in California and Baden-Powell Peak in Nepal.",
-                    recognitionP2: "In 2002, he was named 13th in the BBC's list of the 100 Greatest Britons, underscoring his lasting influence on British and global culture.",
-                    footerCopy: "&copy; <span id='currentYear'></span> A Tribute by Md. Ashfaqur Rahman Tanim. All rights reserved.",
-                    footerInspired: "Inspired by the life and legacy of Baden-Powell."
-                },
-                bn: {
-                    bpTribute: "ব্যাডেন-পাওয়েল",
-                    tributeText: "শ্রদ্ধাঞ্জলি",
-                    about: "সম্পর্কে",
-                    militaryCareer: "সামরিক কর্মজীবন",
-                    scoutMovement: "স্কাউট আন্দোলন",
-                    writings: "লেখালেখি",
-                    artisticSkills: "শৈল্পিক দক্ষতা",
-                    personalLife: "ব্যক্তিগত জীবন",
-                    recognition: "স্বীকৃতি",
-                    darkMode: "ডার্ক মোড",
-                    heroTitle: "রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েল অফ গিলওয়েল",
-                    heroSubtitle: "বিশ্বব্যাপী স্কাউট এবং গাইড আন্দোলনের দূরদর্শী প্রতিষ্ঠাতা, যার নীতিগুলি বিশ্বজুড়ে লক্ষ লক্ষ মানুষকে অনুপ্রাণিত করে চলেছে।",
-                    learnMore: "তাঁর জীবনবৃত্তান্ত",
-                    earlyLifeTitle: "প্রাথমিক জীবন ও অনুপ্রেরণা",
-                    earlyLifeP1: "রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েল অফ গিলওয়েল ১৮৫৭ সালের ২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। রবার্ট ব্যাডেন-পাওয়েল অ্যাডভেঞ্চার ও নেতৃত্বের জীবনযাত্রার জন্য নির্ধারিত ছিলেন। অধ্যাপক ব্যাডেন পাওয়েল এবং হেনরিয়েটা গ্রেস স্মিথের দ্বিতীয় শেষ সন্তান হিসেবে তিনি এমন একটি পরিবারে বেড়ে ওঠেন যেখানে প্রজ্ঞা এবং স্থিতিস্থাপকতাকে মূল্য দেওয়া হতো। তার বাবার অকাল মৃত্যুর পর, তার মা নিশ্চিত করেছিলেন যে তার সন্তানদের শিক্ষিত করা হবে এবং তাদের স্বাধীন মনোভাবকে উৎসাহিত করা হবে।",
-                    earlyLifeP2: "চার্টারহাউস স্কুলে পড়াশোনা করার সময়, ব্যাডেন-পাওয়েল আউটডোর দক্ষতার প্রতি গভীর আগ্রহ তৈরি করেন, প্রায়শই কাছাকাছি বনভূমি অন্বেষণ করতেন, শিক্ষকদের এড়িয়ে চলার সময় শিকার এবং রান্নার দক্ষতা অর্জন করতেন। এই প্রাথমিক অভিজ্ঞতাগুলি আত্মনির্ভরশীলতা এবং প্রকৃতি সম্পর্কে তার পরবর্তী দর্শনের ভিত্তি স্থাপন করেছিল।",
-                    militaryCareerTitle: "বিশিষ্ট সামরিক কর্মজীবন",
-                    militaryCareerP1: "ব্যাডেন-পাওয়েলের প্রাথমিক সামরিক কর্মজীবনে ১৮৭৬ সালে ভারতে ১৩তম হুসার্স-এ তার দায়িত্ব অন্তর্ভুক্ত ছিল। তিনি পরে আফ্রিকায় দায়িত্ব পালন করেন, যেখানে তিনি ১৮৮০-এর দশকে জুলু জনগণের কাছ থেকে স্কাউটিং দক্ষতা শেখেন। ১৮৯৬ সালে, তিনি দ্বিতীয় মাতাবেলে যুদ্ধে দায়িত্ব পালন করেন যেখানে তিনি আমেরিকান স্কাউট ফ্রেডেরিক রাসেল বার্নহামের সাথে দেখা হন, যিনি তাকে উডক্রাফ্ট এবং ক্যাম্পেইন হ্যাট ও নেকারচিফের ব্যবহারিক ব্যবহারের সাথে পরিচয় করিয়ে দেন -এই উপাদানগুলো পরে স্কাউটিং-এর অবিচ্ছেদ্য অংশ হয়ে ওঠে।",
-                    militaryCareerP2: "২১৭ দিনব্যাপী মাফেকিং অবরোধের সময়, ব্যাডেন-পাওয়েল উদ্ভাবনী সামরিক কৌশল employed করেছিলেন যার মধ্যে নকল মাইনফিল্ড এবং অস্তিত্বহীন barbed wire এড়িয়ে চলার ভান করা soldiers অন্তর্ভুক্ত ছিল। তিনি বোর শিবিরে আক্রমণ করার জন্য sharpশুটার-ভরা একটি সাঁজোয়া লোকোমোটিভও ব্যবহার করেছিলেন। অবরোধের সময় তার নেতৃত্ব তাকে ব্রিটেনে একটি জাতীয় বীরে পরিণত করেছিল।",
-                    militaryCareerP3: "তিনি ১৯১০ সালে লেফটেন্যান্ট-জেনারেল হিসাবে সেনাবাহিনী থেকে অবসর গ্রহণ করেন, এবং তার জীবন সম্পূর্ণরূপে ক্রমবর্ধমান স্কাউট আন্দোলনের জন্য উৎসর্গ করেন।",
-                    scoutMovementTitle: "স্কাউট আন্দোলনের প্রতিষ্ঠা",
-                    scoutMovementP1: "আফ্রিকা থেকে ফিরে আসার পর, ব্যাডেন-পাওয়েল দেখতে পান যে তার সামরিক ম্যানুয়াল, <em>এইডস টু স্কাউটিং</em>, যুব সংগঠনগুলির মধ্যে অপ্রত্যাশিতভাবে জনপ্রিয় হয়ে উঠেছে। এর দ্বারা অনুপ্রাণিত হয়ে, এবং আর্নেস্ট থম্পসন সেটনের মতো ব্যক্তিদের দ্বারা উৎসাহিত হয়ে, তিনি তরুণদের জন্য তার ধারণাগুলিকে নতুন করে কল্পনা করেন।",
-                    scoutMovementP2: "১৯০৭ সালের আগস্ট মাসে, তিনি ব্রাউনসি দ্বীপে প্রায় বিশ জন ছেলেকে নিয়ে একটি পরীক্ষামূলক ক্যাম্পের আয়োজন করেন, যেখানে চরিত্র গঠন, আউটডোর দক্ষতা এবং নাগরিকত্বের জন্য তার পদ্ধতিগুলি পরীক্ষা করা হয়। এই ক্যাম্পটিকে স্কাউট আন্দোলনের সূচনা হিসাবে ব্যাপকভাবে বিবেচনা করা হয়।",
-                    scoutMovementP3: "১৯০৮ সালে, তিনি <a href='https://en.wikipedia.org/wiki/Scouting_for_Boys' target='_blank' style='color: var(--accent-color); text-decoration: none;'><em>স্কাউটিং ফর বয়েজ</em></a> প্রকাশ করেন, যা দ্রুত বিশ্বব্যাপী জনপ্রিয় হয়ে ওঠে। আন্দোলনটি স্বতঃস্ফূর্তভাবে বৃদ্ধি পায়, যার ফলে বয় স্কাউটস অ্যাসোসিয়েশন গঠিত হয়। মেয়েদের উৎসাহ দেখে, তিনি ১৯১০ সালে তার বোন অ্যাগনেস-এর সাথে গার্ল গাইডস অ্যাসোসিয়েশনও সহ-প্রতিষ্ঠা করেন। ১৯৩৯ সালের মধ্যে, স্কাউটিং ৩২টি দেশে ৩৩ লক্ষেরও বেশি তরুণ-তরুণীর কাছে পৌঁছেছিল, যা তার স্থায়ী দৃষ্টিভঙ্গির প্রমাণ।",
-                    scoutQuote: "আমার একটি অত্যন্ত সুখী জীবন ছিল এবং আমি চাই আপনারা প্রত্যেকেও একটি সুখী জীবন পান। আমি বিশ্বাস করি যে ঈশ্বর আমাদের এই আনন্দময় পৃথিবীতে সুখী হওয়ার এবং জীবন উপভোগ করার জন্য পাঠিয়েছেন। সুখ ধনী হওয়ার মাধ্যমে আসে না, বা কেবল আপনার কর্মজীবনে সফল হওয়ার মাধ্যমেও আসে না, বা আত্মতৃপ্তির মাধ্যমেও আসে না। সুখের দিকে একটি পদক্ষেপ হলো যখন আপনি বালক, তখন নিজেকে সুস্থ ও শক্তিশালী করে তোলা, যাতে আপনি একজন পুরুষ হলে উপকারী হতে পারেন এবং জীবন উপভোগ করতে পারেন। প্রকৃতি অধ্যয়ন আপনাকে দেখাবে যে ঈশ্বর আপনার উপভোগের জন্য পৃথিবীটিকে কত সুন্দর এবং বিস্ময়কর জিনিস দিয়ে পূর্ণ করেছেন। আপনার যা আছে তা নিয়ে সন্তুষ্ট থাকুন এবং তার সর্বোত্তম ব্যবহার করুন। হতাশাজনক দিকের পরিবর্তে উজ্জ্বল দিকটি দেখুন। কিন্তু সুখ পাওয়ার আসল উপায় হলো অন্য মানুষকে সুখ বিলিয়ে দেওয়া। এই পৃথিবীটিকে যেমন পেয়েছেন তার চেয়ে একটু ভালো অবস্থায় রেখে যাওয়ার চেষ্টা করুন এবং যখন আপনার মৃত্যুর সময় আসবে, তখন আপনি এই অনুভূতি নিয়ে খুশি মনে মরতে পারবেন যে আপনি অন্তত আপনার সময় নষ্ট করেননি বরং আপনার সেরাটা দিয়েছেন। এই উপায়ে 'প্রস্তুত থাকুন', সুখী জীবন যাপন করতে এবং সুখী মনে মরতে – সর্বদা আপনার স্কাউট প্রতিজ্ঞায় অটল থাকুন – এমনকি আপনি বালক না হলেও – এবং ঈশ্বর আপনাকে এটি করতে সাহায্য করুন।",
-                    scoutQuoteFooter: "— রবার্ট ব্যাডেন-পাওয়েলের স্কাউটদের প্রতি শেষ চিঠি",
-                    writingsTitle: "লেখালেখি ও প্রকাশনা",
-                    writingsP1: "ব্যাডেন-পাওয়েল একজন অত্যন্ত ফলপ্রসূ লেখক ছিলেন, যিনি তার সাহিত্যিক প্রতিভাকে তার অভিজ্ঞতা নথিভুক্ত করতে, তার সৈন্যদের শিক্ষিত করতে এবং পরে, ক্রমবর্ধমান স্কাউট আন্দোলনকে পথ দেখাতে ব্যবহার করেছিলেন। তার প্রকাশনাগুলি সামরিক ম্যানুয়াল থেকে শুরু করে যুবকদের জন্য অনুপ্রেরণামূলক বই পর্যন্ত বিস্তৃত ছিল, যার অনেকগুলিতে তার অনন্য এবং প্রায়শই হাস্যকর চিত্রাবলী শোভা পেত। প্রধান কাজগুলির মধ্যে রয়েছে:",
-                    writingsL1: "<strong>১৮৮৪: <em>রিকনেসান্স অ্যান্ড স্কাউটিং</em></strong> - একটি মৌলিক সামরিক প্রশিক্ষণ ম্যানুয়াল।",
-                    writingsL2: "<strong>১৮৯৯: <em>নন-কমিশনড অফিসার এবং পুরুষদের জন্য স্কাউটিং-এর সাহায্য</em></strong> - সামরিক স্কাউটিংয়ের উপর তার বক্তৃতার সারসংক্ষেপ।",
-                    writingsL3: "<strong>১৯০৮: <em>স্কাউটিং ফর বয়েজ</em></strong> - স্কাউট আন্দোলন শুরু করার মূল কাজ, যা ২০ শতকের অন্যতম সেরা বিক্রিত বই হয়ে ওঠে।",
-                    writingsL4: "<strong>১৯১২: <em>দ্য হ্যান্ডবুক ফর দ্য গার্ল গাইডস অর হাউ গার্লস ক্যান হেল্প টু বিল্ড আপ দ্য এম্পায়ার</em></strong> (অ্যাগনেস ব্যাডেন-পাওয়েলের সাথে সহ-রচিত)।",
-                    writingsL5: "<strong>১৯১৬: <em>দ্য উলফ কাব'স হ্যান্ডবুক</em></strong> - আন্দোলনের কনিষ্ঠ সদস্যদের নির্দেশনা।",
-                    writingsL6: "<strong>১৯২২: <em>রোভারিং টু সাকসেস</em></strong> - তরুণ পুরুষদের জন্য একটি নির্দেশিকা।",
-                    writingsP2: "তার লেখাগুলি ব্যবহারিক শিক্ষা, চরিত্র গঠন এবং আউটডোর জীবনযাপনের গুরুত্বে তার গভীর বিশ্বাসকে তুলে ধরে।",
-                    artisticSkillsTitle: "শৈল্পিক দক্ষতা",
-                    artisticSkillsP1: "ব্যাডেন-পাওয়েল একজন দক্ষ শিল্পী ছিলেন যিনি তার জীবনের প্রায় প্রতিদিনই আঁকতেন বা স্কেচ করতেন। তিনি ছিলেন ambidextrous এবং উভয় হাত দিয়ে সমানভাবে ভালো আঁকতে পারতেন। তার বইগুলি তার হাস্যরসাত্মক pen-and-ink চিত্রাঙ্কনে পূর্ণ, এবং তিনি সর্বদা একটি sketchpad নিয়ে ভ্রমণ করতেন। তার অনেক কাজই হাস্যরসাত্মক বা তথ্যপূর্ণ চরিত্রের ছিল, এবং বারোটি painting ব্রিটিশ স্কাউট সদর দপ্তর Gilwell Park-এ টাঙানো আছে।",
-                    personalLifeTitle: "ব্যক্তিগত জীবন ও উত্তরাধিকার",
-                    personalLifeP1: "১৯১২ সালে, রবার্ট ব্যাডেন-পাওয়েল ওলাভ সেন্ট ক্লেয়ার সোমসের সাথে বিবাহ বন্ধনে আবদ্ধ হন, যিনি তার থেকে ৩২ বছরের ছোট ছিলেন এবং স্কাউটিং ও গাইডিং আন্দোলনে একজন শক্তিশালী অংশীদার হয়ে ওঠেন। তাদের জন্মদিন ছিল ২২শে ফেব্রুয়ারি, যা এখন স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়।",
-                    personalLifeP2: "ব্যাডেন-পাওয়েল এবং ওলাভের একই জন্মদিন ছিল, ২২শে ফেব্রুয়ারি, যা এখন বিশ্বব্যাপী স্কাউটদের দ্বারা প্রতিষ্ঠাতা দিবস এবং গাইডদের দ্বারা বিশ্ব থিঙ্কিং ডে হিসাবে পালিত হয়। স্কাউটদের কাছ থেকে তাদের wedding gift ছিল একটি ২০ h.p. স্ট্যান্ডার্ড মোটর গাড়ি, যা ১০০,০০০ স্কাউট প্রদান করেছিল যারা প্রত্যেকে এক পেনি দান করেছিল।",
-                    personalLifeP3: "একসাথে, তাদের তিনটি সন্তান ছিল: আর্থার রবার্ট পিটার, হেদার গ্রেস এবং বেটি সেন্ট ক্লেয়ার। ওলাভ বিশ্ব প্রধান গাইড হয়েছিলেন, যা ব্যাডেন-পাওয়েলদের বিশ্বব্যাপী যুব আন্দোলনের নেতৃত্বে একটি গতিশীল জুটি করে তুলেছিল।",
-                    personalLifeP4: "ব্যাডেন-পাওয়েল তার শেষ বছরগুলি কেনিয়ার নেরি-তে কাটান, যেখানে তিনি অঞ্চলের প্রাকৃতিক সৌন্দর্যে শান্তি এবং অনুপ্রেরণা খুঁজে পান। তিনি ১৯৪১ সালের ৮ জানুয়ারি মারা যান এবং সেন্ট পিটার্স সেমেটারিতে তার কবরের উপর স্কাউটিং ট্রেইল সাইন 'ʘ' রয়েছে, যার অর্থ 'বাড়িতে ফেরা'। বিশ্বজুড়ে লক্ষ লক্ষ স্কাউট এবং গাইডের মাধ্যমে তার উত্তরাধিকার বেঁচে আছে, যারা তার প্রচারিত মূল্যবোধগুলি ধারণ করে চলেছে।",
-                    recognitionTitle: "পুরস্কার ও স্বীকৃতি",
-                    recognitionP1: "রবার্ট ব্যাডেন-পাওয়েল তার সামরিক পরিষেবা এবং যুবকদের সাথে তার অগ্রণী কাজের জন্য অসংখ্য প্রশংসা পেয়েছিলেন। এই সম্মাননাগুলি তার দৃষ্টিভঙ্গির বিশ্বব্যাপী প্রভাবকে প্রতিফলিত করে:",
-                    recognitionL1: "<strong>অর্ডার অফ মেরিট (OM):</strong> ব্রিটিশ সম্মাননা পদ্ধতির অন্যতম একচেটিয়া পুরস্কার, যা ১৯৩৭ সালে প্রদান করা হয়।",
-                    recognitionL2: "<strong>ওয়াটেলার শান্তি পুরস্কার:</strong> ১৯৩৭ সালে প্রদান করা হয়, যুব উন্নয়নের মাধ্যমে শান্তিতে তার অবদানের স্বীকৃতি স্বরূপ।",
-                    recognitionL3: "<strong>নাইট গ্র্যান্ড ক্রস অফ দ্য অর্ডার অফ সেন্ট মাইকেল অ্যান্ড সেন্ট জর্জ (GCMG)</strong> এবং <strong>নাইট গ্র্যান্ড ক্রস অফ দ্য রয়্যাল ভিক্টোরিয়ান অর্ডার (GCVO)</strong>।",
-                    recognitionL4: "<strong>ব্রোঞ্জ উলফ অ্যাওয়ার্ড:</strong> ওয়ার্ল্ড অর্গানাইজেশন অফ দ্য স্কাউট মুভমেন্টের সর্বোচ্চ সম্মাননা, যা তাকে ১৯৩৫ সালে প্রদান করা হয়।",
-                    recognitionL5: "<strong>সিলভার বাফেলো অ্যাওয়ার্ড:</strong> বয় স্কাউটস অফ আমেরিকার সর্বোচ্চ পুরস্কার, যা ১৯২৬ সালে প্রাপ্ত।",
-                    recognitionL6: "তার উত্তরাধিকার ক্যালিফোর্নিয়ার মাউন্ট ব্যাডেন-পাওয়েল এবং নেপালের ব্যাডেন-পাওয়েল পিকের মতো স্মৃতিস্তম্ভের মাধ্যমেও পালিত হয়।",
-                    recognitionP2: "২০০২ সালে, তাকে বিবিসির ১০০ গ্রেটেস্ট ব্রিটিশনস-এর তালিকায় ১৩তম স্থান দেওয়া হয়, যা ব্রিটিশ এবং বিশ্ব সংস্কৃতিতে তার স্থায়ী প্রভাবকে তুলে ধরে।",
-                    footerCopy: "&copy; <span id='currentYear'></span> মোঃ আশফাকুর রহমান তানিম কর্তৃক একটি শ্রদ্ধাঞ্জলি। সর্বস্বত্ব সংরক্ষিত।",
-                    footerInspired: "ব্যাডেন-পাওয়েলের জীবন ও উত্তরাধিকার দ্বারা অনুপ্রাণিত।"
+        const translations = {
+            en: {
+                bpTribute: "Baden-Powell",
+                tributeText: "Tribute",
+                about: "About",
+                family: "Family",
+                militaryCareer: "Military Career",
+                mafeking: "Siege of Mafeking",
+                scoutMovement: "Scout Movement",
+                writings: "Writings",
+                personalLife: "Personal Life",
+                recognition: "Recognition",
+                darkMode: "Dark Mode",
+                heroTitle: "Robert Stephenson Smyth Lord Baden-Powell of Gilwell",
+                heroSubtitle: "The visionary founder of the worldwide Scout and Guide Movements, whose principles continue to inspire millions globally.",
+                learnMore: "Discover His Legacy",
+                pronunciation: "Pronunciation: /ˈbeɪdən ˈpoʊəl/ (BAY-dən POH-əl)",
+                footerText: "A Tribute by Md. Ashfaqur Rahman Tanim. All rights reserved.",
+                footerInspiration: "Inspired by the life and legacy of Robert Baden-Powell, Founder of the Scout Movement.",
+                bePrepared: "Be Prepared",
+                navAbout: "About",
+                navFamily: "Family",
+                navMilitary: "Military Career",
+                navMafeking: "Siege of Mafeking",
+                navScout: "Scout Movement",
+                navWritings: "Writings",
+                navPersonal: "Personal Life",
+                navRecognition: "Recognition"
+            },
+            bn: {
+                bpTribute: "ব্যাডেন-পাওয়েল",
+                tributeText: "শ্রদ্ধাঞ্জলি",
+                about: "সম্পর্কে",
+                family: "পরিবার",
+                militaryCareer: "সামরিক কর্মজীবন",
+                mafeking: "মাফেকিং অবরোধ",
+                scoutMovement: "স্কাউট আন্দোলন",
+                writings: "লেখালেখি",
+                personalLife: "ব্যক্তিগত জীবন",
+                recognition: "স্বীকৃতি",
+                darkMode: "ডার্ক মোড",
+                heroTitle: "রবার্ট স্টিফেনসন স্মিথ লর্ড ব্যাডেন-পাওয়েল অফ গিলওয়েল",
+                heroSubtitle: "বিশ্বব্যাপী স্কাউট এবং গাইড আন্দোলনের দূরদর্শী প্রতিষ্ঠাতা, যার নীতিগুলি বিশ্বজুড়ে লক্ষ লক্ষ মানুষকে অনুপ্রাণিত করে চলেছে।",
+                learnMore: "তাঁর জীবনবৃত্তান্ত জানুন",
+                pronunciation: ": বে-ডেন পো-এল",
+                footerText: "মোঃ আশফাকুর রহমান তানিম কর্তৃক একটি শ্রদ্ধাঞ্জলি। সর্বস্বত্ব সংরক্ষিত।",
+                footerInspiration: "স্কাউট আন্দোলনের প্রতিষ্ঠাতা রবার্ট ব্যাডেন-পাওয়েলের জীবন ও উত্তরাধিকার দ্বারা অনুপ্রাণিত।",
+                bePrepared: "সর্বদা প্রস্তুত",
+                navAbout: "সম্পর্কে",
+                navFamily: "পরিবার",
+                navMilitary: "সামরিক কর্মজীবন",
+                navMafeking: "মাফেকিং অবরোধ",
+                navScout: "স্কাউট আন্দোলন",
+                navWritings: "লেখালেখি",
+                navPersonal: "ব্যক্তিগত জীবন",
+                navRecognition: "স্বীকৃতি"
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            
+            // Update meta description
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.setAttribute('content', translations[lang].heroSubtitle);
+            }
+            
+            // Update title
+            document.title = (lang === 'bn' ? 'রবার্ট ব্যাডেন-পাওয়েলকে শ্রদ্ধাঞ্জলি - মোঃ আশফাকুর রহমান তানিম' : 'Tribute to Robert Baden-Powell - Md. Ashfaqur Rahman Tanim');
+
+            // Update logo text
+            const logoBp = document.querySelector('.logo .text-bp');
+            const logoTribute = document.querySelector('.logo .text-tribute');
+            if (logoBp) logoBp.textContent = translations[lang].bpTribute;
+            if (logoTribute) logoTribute.textContent = translations[lang].tributeText;
+            
+            // Update all elements with data-en and data-bn attributes
+            document.querySelectorAll('[data-en][data-bn]').forEach(element => {
+                if (element.dataset[lang]) {
+                    // Handle HTML content safely
+                    if (element.innerHTML.includes('<')) {
+                        // For elements with HTML, we need to be careful
+                        // Store the HTML structure and only replace text content
+                        const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+                        let node;
+                        while (node = walker.nextNode()) {
+                            if (node.nodeType === 3) { // Text node
+                                node.textContent = element.dataset[lang];
+                                break; // Only replace the first text node
+                            }
+                        }
+                    } else {
+                        element.textContent = element.dataset[lang];
+                    }
                 }
-            };
+            });
 
-            function setLanguage(lang) {
-                document.documentElement.lang = lang;
-                document.querySelector('meta[name="description"]').setAttribute('content', translations[lang].heroSubtitle);
-                document.querySelector('meta[name="keywords"]').setAttribute('content', (lang === 'bn' ? 'রবার্ট ব্যাডেন-পাওয়েল, স্কাউটিং, বয় স্কাউটস, গার্ল গাইডস, শ্রদ্ধাঞ্জলি, মোঃ আশফাকুর রহমান তানিম' : 'Robert Baden-Powell, Scouting, Boy Scouts, Girl Guides, Tribute, Md. Ashfaqur Rahman Tanim'));
-                document.title = (lang === 'bn' ? 'রবার্ট ব্যাডেন-পাওয়েলকে শ্রদ্ধাঞ্জলি - মোঃ আশফাকুর রহমান তানিম' : 'Tribute to Robert Baden-Powell - Md. Ashfaqur Rahman Tanim');
-
-                document.querySelector('.logo .text-bp').textContent = translations[lang].bpTribute;
-                document.querySelector('.logo .text-tribute').textContent = translations[lang].tributeText;
-                
-                document.querySelectorAll('.nav-link').forEach(link => {
+            // Update navigation links specially (they have data-en/data-bn)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.dataset[lang]) {
                     link.textContent = link.dataset[lang];
-                });
+                }
+            });
 
-                document.querySelector('.text-dark-mode').textContent = translations[lang].darkMode;
+            // Update dark mode text
+            const darkModeText = document.querySelector('.text-dark-mode');
+            if (darkModeText) darkModeText.textContent = translations[lang].darkMode;
 
-                document.querySelector('.hero-content h1').innerHTML = translations[lang].heroTitle;
-                document.querySelector('.hero-content p').innerHTML = translations[lang].heroSubtitle;
-                document.querySelector('.cta-button').innerHTML = translations[lang].learnMore;
+            // Update hero section
+            const heroTitle = document.querySelector('.hero-content h1');
+            const heroSubtitle = document.querySelector('.hero-content p');
+            const ctaButton = document.querySelector('.cta-button');
+            
+            if (heroTitle) heroTitle.innerHTML = translations[lang].heroTitle;
+            if (heroSubtitle) heroSubtitle.innerHTML = translations[lang].heroSubtitle;
+            if (ctaButton) ctaButton.innerHTML = translations[lang].learnMore;
 
-                document.querySelector('#about h2').innerHTML = translations[lang].earlyLifeTitle;
-                document.querySelector('#about .text-content p:nth-of-type(1)').innerHTML = translations[lang].earlyLifeP1;
-                document.querySelector('#about .text-content p:nth-of-type(2)').innerHTML = translations[lang].earlyLifeP2;
-
-                document.querySelector('#military-career h2').innerHTML = translations[lang].militaryCareerTitle;
-                document.querySelector('#military-career .text-content p:nth-of-type(1)').innerHTML = translations[lang].militaryCareerP1;
-                document.querySelector('#military-career .text-content p:nth-of-type(2)').innerHTML = translations[lang].militaryCareerP2;
-                document.querySelector('#military-career .text-content p:nth-of-type(3)').innerHTML = translations[lang].militaryCareerP3;
-
-                document.querySelector('#scout-movement h2').innerHTML = translations[lang].scoutMovementTitle;
-                document.querySelector('#scout-movement .text-content p:nth-of-type(1)').innerHTML = translations[lang].scoutMovementP1;
-                document.querySelector('#scout-movement .text-content p:nth-of-type(2)').innerHTML = translations[lang].scoutMovementP2;
-                document.querySelector('#scout-movement .text-content p:nth-of-type(3)').innerHTML = translations[lang].scoutMovementP3;
-                document.querySelector('.blockquote p').innerHTML = translations[lang].scoutQuote;
-                document.querySelector('.blockquote footer').innerHTML = translations[lang].scoutQuoteFooter;
-
-                document.querySelector('#writings h2').innerHTML = translations[lang].writingsTitle;
-                document.querySelector('#writings .text-content p:nth-of-type(1)').innerHTML = translations[lang].writingsP1;
-                document.querySelector('#writings .text-content ul li:nth-of-type(1)').innerHTML = translations[lang].writingsL1;
-                document.querySelector('#writings .text-content ul li:nth-of-type(2)').innerHTML = translations[lang].writingsL2;
-                document.querySelector('#writings .text-content ul li:nth-of-type(3)').innerHTML = translations[lang].writingsL3;
-                document.querySelector('#writings .text-content ul li:nth-of-type(4)').innerHTML = translations[lang].writingsL4;
-                document.querySelector('#writings .text-content ul li:nth-of-type(5)').innerHTML = translations[lang].writingsL5;
-                document.querySelector('#writings .text-content ul li:nth-of-type(6)').innerHTML = translations[lang].writingsL6;
-                document.querySelector('#writings .text-content p:nth-of-type(2)').innerHTML = translations[lang].writingsP2;
-
-                document.querySelector('#artistic-skills h2').innerHTML = translations[lang].artisticSkillsTitle;
-                document.querySelector('#artistic-skills .text-content p').innerHTML = translations[lang].artisticSkillsP1;
-
-                document.querySelector('#personal-life h2').innerHTML = translations[lang].personalLifeTitle;
-                document.querySelector('#personal-life .text-content p:nth-of-type(1)').innerHTML = translations[lang].personalLifeP1; 
-                document.querySelector('#personal-life .text-content p:nth-of-type(2)').innerHTML = translations[lang].personalLifeP2; 
-                document.querySelector('#personal-life .text-content p:nth-of-type(3)').innerHTML = translations[lang].personalLifeP3;
-                document.querySelector('#personal-life .text-content p:nth-of-type(4)').innerHTML = translations[lang].personalLifeP4;
-
-
-                document.querySelector('#recognition h2').innerHTML = translations[lang].recognitionTitle;
-                document.querySelector('#recognition .text-content p:nth-of-type(1)').innerHTML = translations[lang].recognitionP1;
-                document.querySelector('#recognition .text-content ul li:nth-of-type(1)').innerHTML = translations[lang].recognitionL1;
-                document.querySelector('#recognition .text-content ul li:nth-of-type(2)').innerHTML = translations[lang].recognitionL2; 
-                document.querySelector('#recognition .text-content ul li:nth-of-type(3)').innerHTML = translations[lang].recognitionL3;
-                document.querySelector('#recognition .text-content ul li:nth-of-type(4)').innerHTML = translations[lang].recognitionL4;
-                document.querySelector('#recognition .text-content ul li:nth-of-type(5)').innerHTML = translations[lang].recognitionL5;
-                document.querySelector('#recognition .text-content ul li:nth-of-type(6)').innerHTML = translations[lang].recognitionL6;
-                document.querySelector('#recognition .text-content p:nth-of-type(2)').innerHTML = translations[lang].recognitionP2;
-
-                document.querySelector('.footer p:nth-of-type(1)').innerHTML = translations[lang].footerCopy.replace("<span id='currentYear'></span>", `<span id='currentYear'>${new Date().getFullYear()}</span>`);
-                document.querySelector('.footer p:nth-of-type(2)').innerHTML = translations[lang].footerInspired;
-
-                langToggle.textContent = lang === 'bn' ? 'English' : 'বাংলা';
-                langToggle.dataset.lang = lang;
+            // Update pronunciation
+            const pron = document.querySelector('.pronunciation .ipa');
+            if (pron) {
+                pron.innerHTML = translations[lang].pronunciation;
             }
 
-            // Mobile Menu Toggle
+            // Update footer content
+            const footerPs = document.querySelectorAll('.footer p');
+            if (footerPs.length >= 1) {
+                // First footer paragraph (copyright)
+                const copyrightSpan = footerPs[0].querySelector('span');
+                if (copyrightSpan) {
+                    footerPs[0].innerHTML = `&copy; ${copyrightSpan.outerHTML} ${translations[lang].footerText}`;
+                }
+            }
+            if (footerPs.length >= 2) {
+                // Second footer paragraph
+                footerPs[1].textContent = translations[lang].footerInspiration;
+            }
+            if (footerPs.length >= 3) {
+                // Third footer paragraph (Be Prepared)
+                const bePreparedSpan = footerPs[2].querySelector('span');
+                if (bePreparedSpan) {
+                    footerPs[2].innerHTML = `🌲 ${bePreparedSpan.outerHTML} 🌲`;
+                    bePreparedSpan.textContent = translations[lang].bePrepared;
+                }
+            }
+
+            // Update language toggle button
+            langToggle.textContent = lang === 'bn' ? 'English' : 'বাংলা';
+            langToggle.dataset.lang = lang;
+        }
+
+        // Mobile Menu Toggle
+        if (mobileMenu && navList) {
             mobileMenu.addEventListener('click', () => {
                 navList.classList.toggle('active');
                 mobileMenu.classList.toggle('active');
             });
 
-            // Dark Mode Toggle
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navList.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Dark Mode Toggle
+        if (darkModeToggle) {
             darkModeToggle.addEventListener('change', () => {
                 document.body.classList.toggle('dark-mode');
                 localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
             });
+        }
 
-            // Language Toggle
+        // Language Toggle
+        if (langToggle) {
             langToggle.addEventListener('click', () => {
-                const currentLang = langToggle.dataset.lang;
+                const currentLang = langToggle.dataset.lang || 'bn';
                 const newLang = currentLang === 'bn' ? 'en' : 'bn';
                 setLanguage(newLang);
                 localStorage.setItem('language', newLang);
             });
+        }
 
-            // Check for saved preferences
-            const savedDarkMode = localStorage.getItem('darkMode');
-            if (savedDarkMode === 'true') {
-                document.body.classList.add('dark-mode');
-                darkModeToggle.checked = true;
-            }
+        // Check for saved preferences
+        const savedDarkMode = localStorage.getItem('darkMode');
+        if (savedDarkMode === 'true') {
+            document.body.classList.add('dark-mode');
+            if (darkModeToggle) darkModeToggle.checked = true;
+        }
 
-            const savedLanguage = localStorage.getItem('language');
-            if (savedLanguage) {
-                setLanguage(savedLanguage);
-            } else {
-                setLanguage('bn'); // Default to Bangla
-            }
+        const savedLanguage = localStorage.getItem('language');
+        if (savedLanguage) {
+            setLanguage(savedLanguage);
+        } else {
+            setLanguage('bn'); // Default to Bangla
+        }
 
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
                         behavior: 'smooth'
                     });
-
-                    // Close mobile menu if open
-                    if (navList.classList.contains('active')) {
-                        navList.classList.remove('active');
-                        mobileMenu.classList.remove('active');
-                    }
-                });
-            });
-
-            // Fade-in animation on scroll
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            sections.forEach(section => {
-                observer.observe(section);
+                }
             });
         });
-    </script>
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Also observe timeline items
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            observer.observe(item);
+        });
+    });
+</script>
 </body>
 </html>
